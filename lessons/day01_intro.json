@@ -1,0 +1,98 @@
+{
+  "day": 1,
+  "slug": "day01_intro",
+  "label": "CHANNEL INTRO",
+  "series": "Welcome",
+  "thumb_tag": "START HERE",
+  "thumb_line1": "FROM SAND",
+  "thumb_line2": "TO SILICON",
+  "yt_title": "From Sand to Silicon: Welcome to Atoms to Chips",
+  "yt_description": "Every phone, car, laptop and satellite runs on chips made from one of the most common materials on Earth. Atoms to Chips explains how, from the physics of a single atom to the factories that build billions of transistors on a sliver of silicon.\n\nIn this lesson:\n- Why chips matter\n- What you'll learn\n\nWhat's coming:\n• Semiconductor Basics: what a semiconductor is, doping, diodes and transistors\n• From Sand to Wafer: how silicon wafers are made\n• Inside the Cleanroom: how fabs stay cleaner than an operating theatre\n• How Chips Are Made: lithography, etching, deposition and more\n• Vacuum & Equipment: the machines behind the magic\n• Packaging & Test: from wafer to finished chip\n• Industry & Careers: the global chip industry, India's semiconductor push, and how to build a career\n\nA new video every morning. No prior knowledge needed. Subscribe and start the journey from atoms to chips.\n\n#Semiconductors #Chips #VLSI #SemiconductorIndia #AtomsToChips",
+  "yt_tags": [
+    "semiconductors",
+    "how chips are made",
+    "semiconductor basics",
+    "what is a wafer",
+    "semiconductor fab",
+    "chip manufacturing",
+    "semiconductor india",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "From Sand to Silicon",
+      "sub": "Welcome to Atoms to Chips",
+      "say": "Pick up a handful of sand. Now look at the phone in your hand. Believe it or not, these two things are connected. The chip inside your phone started its life as silicon, one of the most common elements on Earth. This channel is about the incredible journey between the two. Welcome to Atoms to Chips."
+    },
+    {
+      "head": "Chips are everywhere",
+      "points": [
+        "Phones, laptops and servers",
+        "Cars, trains and aircraft",
+        "Hospitals, power grids and satellites",
+        "Even your washing machine"
+      ],
+      "say": "Chips, or semiconductors, are everywhere. They're in your phone and your laptop, of course, and in the data centres that run the internet. But they're also in cars, trains, aircraft, medical equipment, power grids and satellites. Even a modern washing machine or a television has chips inside. If electricity does something smart, there's almost certainly a semiconductor making the decision."
+    },
+    {
+      "head": "Billions of tiny switches",
+      "points": [
+        "A chip is made of transistors",
+        "Each one is a tiny on–off switch",
+        "Modern chips hold billions of them",
+        "Many features are far smaller than a virus"
+      ],
+      "say": "At the heart of every chip are transistors. A transistor is basically a tiny switch that can turn electric current on and off. One switch can't do much. But put billions of them together, and they can store photos, play videos, run artificial intelligence and guide rockets. The most advanced chips today pack billions of transistors into an area smaller than your fingernail, with some features far smaller than a virus. Building something that small, perfectly, millions of times over, is one of the greatest engineering achievements in history."
+    },
+    {
+      "head": "Why learn about semiconductors?",
+      "points": [
+        "They power the modern economy",
+        "Countries are racing to build fabs",
+        "India is building its own industry",
+        "Huge demand for skilled people"
+      ],
+      "say": "So why should you learn about semiconductors? First, they power almost every part of the modern economy. Second, countries around the world are now racing to build their own chip factories, because chips have become as strategic as oil. Third, India is building its own semiconductor industry, with new fabrication and packaging plants being set up. And all of this creates a huge demand for people who understand how chips work and how they are made. Whether you're a student, an engineer, or just curious, this knowledge is valuable."
+    },
+    {
+      "head": "What you'll learn here",
+      "points": [
+        "The physics, explained simply",
+        "How wafers and chips are made",
+        "Inside the cleanroom and the fab",
+        "Equipment, packaging and careers"
+      ],
+      "say": "On this channel, we'll start right from the beginning. What is a semiconductor? Why silicon? What does doping mean, and how does a transistor actually switch? Then we'll follow silicon on its journey: from sand, to pure crystal, to a polished wafer. We'll step inside the cleanroom, walk through every major process step, from lithography and etching to deposition, and look at the vacuum systems and machines that make it all possible. Finally, we'll cover packaging, testing, the global chip industry, and the careers it offers."
+    },
+    {
+      "head": "How the channel works",
+      "points": [
+        "A new video every morning",
+        "Organised into playlists",
+        "Basics first, then advanced",
+        "No prior knowledge needed"
+      ],
+      "say": "Here's how it works. A new video goes live every morning. The videos are organised into playlists, so each topic is like a short course. We begin with the basics and build up step by step towards more advanced topics. Between playlists, there will also be standalone videos on big questions, like what does three nanometres actually mean? You don't need any background in physics or engineering. If you can follow a story, you can follow this channel."
+    },
+    {
+      "head": "The playlists",
+      "points": [
+        "1 · Semiconductor Basics",
+        "2 · From Sand to Wafer",
+        "3 · Inside the Cleanroom",
+        "4 · How Chips Are Made",
+        "5 · Vacuum & Equipment",
+        "6 · Packaging & Test",
+        "7 · Industry & Careers"
+      ],
+      "say": "Here's the roadmap for season one. Playlist one, semiconductor basics. Playlist two, from sand to wafer. Playlist three, inside the cleanroom. Playlist four, how chips are made, step by step. Playlist five, vacuum and equipment. Playlist six, packaging and test. And playlist seven, the semiconductor industry, India's role in it, and careers. Sixty days, from atoms all the way to chips."
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 1",
+      "sub": "What is a semiconductor?",
+      "say": "Tomorrow we start the semiconductor basics playlist with the most important question of all: what exactly is a semiconductor, and why is it different from a metal or an insulator? Subscribe and turn on notifications so you don't miss it, and tell me in the comments what you'd most like to understand about chips. See you tomorrow morning on Atoms to Chips."
+    }
+  ]
+}
