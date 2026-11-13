@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Compound School video builder: lesson JSON -> MP4 + thumbnail.
-Usage: python3 build.py lessons/day01.json out_dir voice_model.onnx
+"""Atoms to Chips video builder: lesson JSON -> MP4 + thumbnail + description.
+Usage: python3 tools/build.py lessons/dayNN_slug.json out/dayNN
+If lessons/dayNN_slug_figs.py exists it is run first (from the repo root) to draw the diagrams.
 """
 import json, os, subprocess, sys, wave
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -36,44 +37,110 @@ def bars(d, x0, y0, w, h, n=5, color=GOLD):
         d.rounded_rectangle([x, y0 + h - bh, x + bw, y0 + h], radius=bw * 0.18, fill=color)
 
 
+SERIES_ACCENT = {  # one accent colour per playlist, so episodes don't all look the same
+    "semiconductor basics": (56, 205, 230), "from sand to wafer": (255, 176, 59),
+    "inside the cleanroom": (46, 196, 160), "how chips are made": (167, 139, 250),
+    "vacuum & equipment": (255, 107, 107), "packaging & test": (120, 200, 120),
+    "industry & careers": (255, 205, 90),
+}
+
+
+def accent(lesson):
+    return SERIES_ACCENT.get(lesson.get("series", "").lower(), GOLD)
+
+
 def base(lesson, idx, total):
+    A = accent(lesson)
     im = Image.new("RGB", (W, H), NAVY); d = ImageDraw.Draw(im)
     for i in range(0, W, 80): d.line([(i, 0), (i, H)], fill=NAVY2, width=1)
     for j in range(0, H, 80): d.line([(0, j), (W, j)], fill=NAVY2, width=1)
     mark(d, 125, 85, 42, lw=3)
     d.text((190, 85), "ATOMS TO CHIPS", font=font("Bold", 28), fill=CREAM, anchor="lm")
-    d.text((W - 80, 85), lesson["label"], font=font("Bold", 28), fill=GOLD, anchor="rm")
-    # progress bar
+    d.text((W - 80, 85), lesson["label"], font=font("Bold", 28), fill=A, anchor="rm")
     d.rectangle([0, H - 10, W, H], fill=NAVY2)
-    d.rectangle([0, H - 10, int(W * (idx + 1) / total), H], fill=GOLD)
+    d.rectangle([0, H - 10, int(W * (idx + 1) / total), H], fill=A)
     d.text((80, H - 50), "youtube.com/@AtomsToChips", font=font("Medium", 22), fill=MUTED, anchor="lm")
     return im, d
 
 
-def slide_img(lesson, s, idx, total, path):
-    im, d = base(lesson, idx, total)
+def heading(d, text, x, y, maxw, A, size=84):
+    for ln in wrap(d, text, font("Black", size), maxw):
+        d.text((x, y), ln, font=font("Black", size), fill=CREAM, anchor="lm"); y += int(size * 1.2)
+    d.rectangle([x, y - 20, x + 180, y - 12], fill=A)
+    return y + 60
+
+
+def bullets(d, pts, x, y, maxw, A, big=True):
+    fs, lh, gap = (54, 72, 28) if big and len(pts) <= 5 else (44, 58, 18)
+    for p in pts:
+        d.ellipse([x + 5, y - 12, x + 29, y + 12], fill=A)
+        for ln in wrap(d, p, font("SemiBold", fs), maxw):
+            d.text((x + 60, y), ln, font=font("SemiBold", fs), fill=CREAM, anchor="lm"); y += lh
+        y += gap
+    return y
+
+
+def paste_fig(im, path, box):
+    """Fit an image into box (x0, y0, x1, y1), centred."""
+    fig = Image.open(path).convert("RGBA")
+    bw, bh = box[2] - box[0], box[3] - box[1]
+    r = min(bw / fig.width, bh / fig.height)
+    fig = fig.resize((int(fig.width * r), int(fig.height * r)), Image.LANCZOS)
+    im.paste(fig, (box[0] + (bw - fig.width) // 2, box[1] + (bh - fig.height) // 2), fig)
+
+
+def slide_img(lesson, s, idx, total, path, root="."):
+    """Slide kinds:
+    title / outro : head + sub, centred
+    points        : head + 3-5 bullets (default)
+    split         : head + bullets on the left, figure on the right   ("figure": path)
+    figure        : head + one large figure + optional caption        ("figure", "caption")
+    compare       : head + two columns  ("left": {"title","points"}, "right": {...})
+    stat          : one big number/phrase + caption  ("stat", "caption")
+    quote         : one key sentence in large type ("quote")
+    """
+    im, d = base(lesson, idx, total); A = accent(lesson)
     kind = s.get("kind", "points")
+    fig = os.path.join(root, s["figure"]) if s.get("figure") else None
     if kind in ("title", "outro"):
-        d.text((W // 2, 360), lesson["series"].upper() if kind == "title" else "COMING UP", font=font("Bold", 34), fill=TEAL, anchor="mm")
+        d.text((W // 2, 360), lesson["series"].upper() if kind == "title" else "COMING UP", font=font("Bold", 34), fill=A, anchor="mm")
         y = 470
         for ln in wrap(d, s["head"], font("Black", 110), 1300):
             d.text((W // 2, y), ln, font=font("Black", 110), fill=CREAM, anchor="mm"); y += 130
         for ln in wrap(d, s.get("sub", ""), font("Medium", 48), 1500):
-            d.text((W // 2, y + 30), ln, font=font("Medium", 48), fill=GOLD, anchor="mm"); y += 62
+            d.text((W // 2, y + 30), ln, font=font("Medium", 48), fill=A, anchor="mm"); y += 62
+    elif kind == "split":
+        y = heading(d, s["head"], 120, 230, 820, A, size=72)
+        bullets(d, s.get("points", []), 120, y, 760, A, big=False)
+        if fig: paste_fig(im, fig, (1000, 170, 1840, 980))
+    elif kind == "figure":
+        d.text((W // 2, 200), s["head"], font=font("Black", 68), fill=CREAM, anchor="mm")
+        if fig: paste_fig(im, fig, (260, 260, 1660, 920))
+        if s.get("caption"):
+            d.text((W // 2, 965), s["caption"], font=font("Medium", 38), fill=A, anchor="mm")
+    elif kind == "compare":
+        y = heading(d, s["head"], 120, 230, 1700, A, size=76)
+        for col, x in ((s.get("left", {}), 120), (s.get("right", {}), 1000)):
+            d.rounded_rectangle([x, y - 10, x + 800, 940], radius=28, outline=A, width=4)
+            d.text((x + 50, y + 50), col.get("title", ""), font=font("Black", 52), fill=A, anchor="lm")
+            yy = y + 140
+            for p in col.get("points", []):
+                for ln in wrap(d, p, font("SemiBold", 40), 690):
+                    d.text((x + 50, yy), ln, font=font("SemiBold", 40), fill=CREAM, anchor="lm"); yy += 54
+                yy += 22
+    elif kind == "stat":
+        d.text((W // 2, 470), s["stat"], font=font("Black", 190), fill=A, anchor="mm")
+        y = 640
+        for ln in wrap(d, s.get("caption", ""), font("SemiBold", 52), 1500):
+            d.text((W // 2, y), ln, font=font("SemiBold", 52), fill=CREAM, anchor="mm"); y += 68
+    elif kind == "quote":
+        d.text((160, 300), "\u201c", font=font("Black", 220), fill=A, anchor="lm")
+        y = 430
+        for ln in wrap(d, s["quote"], font("Bold", 76), 1560):
+            d.text((180, y), ln, font=font("Bold", 76), fill=CREAM, anchor="lm"); y += 98
     else:
-        y = 230
-        for ln in wrap(d, s["head"], font("Black", 84), 1700):
-            d.text((120, y), ln, font=font("Black", 84), fill=CREAM, anchor="lm"); y += 100
-        d.rectangle([120, y - 20, 300, y - 12], fill=GOLD)
-        y += 60
-        pts = s.get("points", [])
-        fs, lh, gap = (54, 72, 28) if len(pts) <= 5 else (44, 58, 18)
-        for p in pts:
-            lines = wrap(d, p, font("SemiBold", fs), 1550)
-            d.ellipse([125, y - 12, 149, y + 12], fill=GOLD)
-            for ln in lines:
-                d.text((180, y), ln, font=font("SemiBold", fs), fill=CREAM, anchor="lm"); y += lh
-            y += gap
+        y = heading(d, s["head"], 120, 230, 1700, A)
+        bullets(d, s.get("points", []), 120, y, 1550, A)
     im.save(path)
 
 
@@ -82,10 +149,11 @@ def thumbnail(lesson, path):
     mark(d, 1030, 360, 190, lw=10)
     tag = lesson.get("thumb_tag", f"EP {lesson['day']}")
     tw = d.textlength(tag, font=font("Black", 44))
-    d.rounded_rectangle([60, 60, 60 + tw + 60, 130], radius=16, fill=GOLD)
+    A = accent(lesson)
+    d.rounded_rectangle([60, 60, 60 + tw + 60, 130], radius=16, fill=A)
     d.text((90, 95), tag, font=font("Black", 44), fill=NAVY, anchor="lm")
     d.text((60, 300), lesson["thumb_line1"], font=font("Black", 96), fill=CREAM, anchor="lm")
-    d.text((60, 420), lesson["thumb_line2"], font=font("Black", 96), fill=GOLD, anchor="lm")
+    d.text((60, 420), lesson["thumb_line2"], font=font("Black", 96), fill=A, anchor="lm")
     d.text((60, 640), "ATOMS TO CHIPS", font=font("Bold", 36), fill=TEAL, anchor="lm")
     im.save(path)
 
@@ -113,18 +181,28 @@ def tts(text, wav):
 def main():
     lesson_path, out = sys.argv[1:3]
     lesson = json.load(open(lesson_path))
+    root = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+    figs_py = lesson_path[:-5] + "_figs.py"
+    if os.path.exists(figs_py):
+        subprocess.run([sys.executable, os.path.abspath(figs_py)], check=True, cwd=root)
     os.makedirs(out, exist_ok=True)
     work = os.path.join(out, "work"); os.makedirs(work, exist_ok=True)
     slides = lesson["slides"]; parts = []; chapters = []; t = 0.0
     for i, s in enumerate(slides):
         png = f"{work}/s{i:02d}.png"; wav = f"{work}/s{i:02d}.wav"; mp4 = f"{work}/s{i:02d}.mp4"
-        slide_img(lesson, s, i, len(slides), png)
+        slide_img(lesson, s, i, len(slides), png, root)
         tts(s["say"], wav)
         with wave.open(wav) as w:
             dur = w.getnframes() / w.getframerate() + 0.8
-        chapters.append((t, s["head"])); t += dur
-        run(["ffmpeg", "-y", "-loop", "1", "-i", png, "-i", wav, "-af", "apad=pad_dur=0.8",
-             "-t", f"{dur:.2f}", "-vf", "fade=in:0:12,format=yuv420p", "-r", "30",
+        chapters.append((t, s.get("head") or s.get("chapter") or s.get("stat") or "Key idea")); t += dur
+        frames = int(dur * 30) + 1
+        if s.get("figure"):  # slow push-in on diagram slides for a bit of motion
+            vf = (f"scale=3840:-1,zoompan=z='1+0.05*on/{frames}':d=1:x='iw/2-(iw/zoom/2)':"
+                  f"y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,fade=in:0:12,format=yuv420p")
+        else:
+            vf = "fade=in:0:12,format=yuv420p"
+        run(["ffmpeg", "-y", "-loop", "1", "-framerate", "30", "-i", png, "-i", wav, "-af", "apad=pad_dur=0.8",
+             "-t", f"{dur:.2f}", "-vf", vf, "-r", "30",
              "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-crf", "20",
              "-c:a", "aac", "-b:a", "160k", "-ar", "44100", mp4])
         parts.append(mp4)
