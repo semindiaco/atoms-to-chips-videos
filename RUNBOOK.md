@@ -10,7 +10,7 @@ mkdir -p kokoro && for f in kokoro-v1.0.onnx voices-v1.0.bin; do curl -sSLf -o k
 ```
 
 ## 2. Pick today's video
-- Open `plan.md`. The first line marked `[ ]` is today's episode. Today's date, the IST day number and the posted list in `posted.md` must agree. Never make the same episode twice. If `posted.md` already has an entry for today's date, stop.
+- Open `plan.md`. The first line marked `[ ]` is today's episode. Today's date, the IST day number and the posted list in `posted.md` must agree. Never make the same episode twice. If `posted.md` already has an episode scheduled for 09:00 today, stop (the 2026-11-14 00:42 intro does not count).
 
 ## 3. Write the lesson file `lessons/dayNN_<slug>.json`
 Copy the structure of `lessons/day01_intro.json`:
@@ -31,7 +31,7 @@ cp out/dayNN/<slug>_thumb.jpg thumbs/
 Check that it worked: view 2–3 slide PNGs in `out/dayNN/work/` and the thumbnail, check that no text overflows, and confirm the duration is 6–10 minutes.
 
 ## 5. Publish the files
-Commit `lessons/`, `videos/`, `thumbs/`, mark the episode `[x]` in `plan.md`, and append a line to `posted.md`: `YYYY-MM-DD | dayNN | title | metricool post id`. Push to `main`.
+Commit `lessons/`, `videos/`, `thumbs/`, mark the episode `[x]` in `plan.md`, and append a line to `posted.md`: `YYYY-MM-DD 09:00 | dayNN | title | metricool post id`. Push to `main`.
 The public URLs are `https://raw.githubusercontent.com/semindiaco/atoms-to-chips-videos/main/videos/<slug>.mp4` (and `/thumbs/<slug>_thumb.jpg`).
 
 ## 6. Create the Metricool draft
