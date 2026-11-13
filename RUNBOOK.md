@@ -5,7 +5,7 @@ The daily scheduled task follows these steps once each morning (IST). The goal i
 ## 1. Set up (fresh session each day)
 ```bash
 git clone --depth 1 https://github.com/semindiaco/atoms-to-chips-videos ~/atc && cd ~/atc
-pip install --break-system-packages -q kokoro-onnx soundfile
+pip install --break-system-packages -q kokoro-onnx soundfile matplotlib
 mkdir -p kokoro && for f in kokoro-v1.0.onnx voices-v1.0.bin; do curl -sSLf -o kokoro/$f "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f"; done
 ```
 
