@@ -11,7 +11,7 @@ Status key: [ ] planned · [x] posted
 1. [x] Welcome to Atoms to Chips — what this channel is, what you'll learn, how the playlists work
 
 ## Playlist 1 — Semiconductor Basics (Days 2–10)
-2. [ ] What is a semiconductor? Conductors, insulators and the in-between
+2. [x] What is a semiconductor? Conductors, insulators and the in-between
 3. [ ] Why silicon? The element that runs the modern world
 4. [ ] Energy bands and the bandgap — explained without heavy maths
 5. [ ] Electrons and holes: how current flows in a semiconductor

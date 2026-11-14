@@ -152,8 +152,11 @@ def thumbnail(lesson, path):
     A = accent(lesson)
     d.rounded_rectangle([60, 60, 60 + tw + 60, 130], radius=16, fill=A)
     d.text((90, 95), tag, font=font("Black", 44), fill=NAVY, anchor="lm")
-    d.text((60, 300), lesson["thumb_line1"], font=font("Black", 96), fill=CREAM, anchor="lm")
-    d.text((60, 420), lesson["thumb_line2"], font=font("Black", 96), fill=A, anchor="lm")
+    fs = 96  # shrink both lines together so neither runs into the logo mark
+    while fs > 56 and max(d.textlength(lesson[k], font=font("Black", fs)) for k in ("thumb_line1", "thumb_line2")) > 760:
+        fs -= 4
+    d.text((60, 300), lesson["thumb_line1"], font=font("Black", fs), fill=CREAM, anchor="lm")
+    d.text((60, 300 + int(fs * 1.25)), lesson["thumb_line2"], font=font("Black", fs), fill=A, anchor="lm")
     d.text((60, 640), "ATOMS TO CHIPS", font=font("Bold", 36), fill=TEAL, anchor="lm")
     im.save(path)
 

@@ -1,0 +1,177 @@
+{
+  "day": 2,
+  "slug": "day02_semiconductor",
+  "label": "BASICS · EP 1",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 1",
+  "thumb_line1": "WHAT IS A",
+  "thumb_line2": "SEMICONDUCTOR",
+  "yt_title": "What Is a Semiconductor? | Semiconductor Basics Ep 1 | Atoms to Chips",
+  "yt_description": "Metals carry current easily, glass and rubber block it, and semiconductors sit in between. In this lesson we see why, using free electrons, a simple picture of energy bands, and the one property that makes semiconductors so useful: we can control how well they conduct, with heat, light, a few added atoms and an electric field.\n\nIn this lesson:\n\nNext video: Why silicon? The element that runs the modern world.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #SemiconductorBasics #Physics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "what is a semiconductor",
+    "semiconductor basics",
+    "conductors insulators semiconductors",
+    "band gap explained",
+    "how semiconductors work",
+    "semiconductor physics for beginners",
+    "silicon",
+    "doping",
+    "electronics basics",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "What Is a Semiconductor?",
+      "sub": "Conductors, insulators and the in-between",
+      "say": "Here's a question that sounds simple. Why does the copper wire in your charger carry electricity so easily, while the plastic coating around it carries almost none? And what kind of material sits somewhere in between? The answer to that last question is the reason your phone, your laptop and the entire internet exist. Welcome to the first episode of Semiconductor Basics on Atoms to Chips. Today, we find out what a semiconductor really is."
+    },
+    {
+      "kind": "split",
+      "head": "Conductors",
+      "points": [
+        "Metals: copper, silver, aluminium",
+        "Outer electrons break free",
+        "A 'sea' of electrons drifts",
+        "Current flows easily"
+      ],
+      "figure": "out/figs/day02_metal_sea.png",
+      "chapter": "Conductors",
+      "say": "Let's start with conductors, like copper, silver and aluminium. Everything is made of atoms, and every atom has electrons around it. In a metal, each atom lets go of its outermost electrons. Look at the diagram. The orange circles are the metal atoms, which stay fixed in place. The small blue dots are the freed electrons, and they wander through the whole metal like a sea. Connect a battery, and this sea of electrons drifts in one direction. That drift is an electric current. Because there are so many free electrons, current flows very easily."
+    },
+    {
+      "kind": "split",
+      "head": "Insulators",
+      "points": [
+        "Glass, rubber, plastic, ceramic",
+        "Electrons locked in bonds",
+        "Almost nothing free to move",
+        "Current is blocked"
+      ],
+      "figure": "out/figs/day02_insulator_bonds.png",
+      "chapter": "Insulators",
+      "say": "Now the opposite: insulators, like glass, rubber, plastic and ceramic. Here, the atoms hold on to their electrons very tightly. In this diagram, each line between two atoms is a chemical bond, and each bond holds a pair of electrons, shown in the highlighted box. Those electrons are locked in place. There is almost nothing free to move, so even if you connect a battery, practically no current flows. That's exactly why we wrap wires in plastic, and why power lines hang from glass or ceramic insulators."
+    },
+    {
+      "kind": "compare",
+      "head": "Two extremes",
+      "left": {
+        "title": "Conductor",
+        "points": [
+          "Many free electrons",
+          "Current flows easily",
+          "Wires, contacts, heaters"
+        ]
+      },
+      "right": {
+        "title": "Insulator",
+        "points": [
+          "Electrons locked in bonds",
+          "Current is blocked",
+          "Coatings, supports, safety"
+        ]
+      },
+      "say": "So we have two extremes. A conductor has huge numbers of free electrons, and current flows easily. We use conductors for wires, contacts and heating elements. An insulator keeps its electrons locked in bonds, so current is blocked. We use insulators for coatings, supports and safety. Both are useful, but both are fixed. A copper wire is always a good conductor, and a piece of glass is always an insulator. You can't switch them on and off. Keep that thought in mind."
+    },
+    {
+      "kind": "stat",
+      "stat": "10²⁵ ×",
+      "caption": "The difference in resistance between copper and quartz: one of the widest ranges in physics",
+      "chapter": "A huge range",
+      "say": "How different are these two extremes? Enormously. A material's resistivity tells you how strongly it resists current. Quartz resists current roughly ten to the power twenty five times more strongly than copper. That's a one followed by twenty five zeros. Very few physical properties of everyday materials span such a huge range. And right in the middle of that range, there's a special family of materials."
+    },
+    {
+      "kind": "figure",
+      "head": "Where semiconductors sit",
+      "figure": "out/figs/day02_resistivity_ladder.png",
+      "caption": "Pure silicon sits in the middle, and doping moves it much closer to the metals",
+      "say": "Here's that range drawn as a ladder. Each step to the right means ten thousand times more resistance. On the far left are the conductors, copper and iron. On the far right are the insulators, glass, rubber and quartz. In the middle are the semiconductors. Find pure silicon: it resists current more than a hundred billion times more strongly than copper, but it still conducts far better than glass. Germanium sits nearby. And notice doped silicon, much further to the left. Adding the right impurities moves silicon a long way along this ladder. We'll see why in a moment."
+    },
+    {
+      "head": "So, what is a semiconductor?",
+      "points": [
+        "Conducts better than an insulator",
+        "Conducts worse than a metal",
+        "Its conductivity can be controlled",
+        "That control is the whole point"
+      ],
+      "say": "So here's our definition. A semiconductor is a material that conducts electricity better than an insulator, but worse than a metal. The word semi means half, so it's literally a half conductor. But that's only part of the story. The really important thing is that a semiconductor's conductivity can be changed and controlled, by heat, by light, by adding tiny amounts of other atoms, and by electric fields. That control is the whole point. It's what lets us build switches, and switches are what computers are made of."
+    },
+    {
+      "kind": "figure",
+      "head": "The band picture",
+      "figure": "out/figs/day02_three_bands.png",
+      "caption": "The size of the energy gap decides how a material behaves",
+      "chapter": "The band picture",
+      "say": "Physicists explain this with a picture called energy bands. Look at the three diagrams. The orange block is the valence band, where electrons are tied up in bonds. The blue block is the conduction band, where electrons are free to move. In a metal, on the left, the two bands overlap, so electrons are always free. In an insulator, on the right, there's a huge energy gap between them, and almost no electron can jump across. A semiconductor, in the middle, has a small gap. For silicon, it's about one point one electron volts. It's small enough that some electrons can make the jump, and large enough that we stay in control. We'll explore bands properly in episode three."
+    },
+    {
+      "kind": "split",
+      "head": "Heat changes everything",
+      "points": [
+        "Metals: more heat, more resistance",
+        "Semiconductors: the opposite",
+        "Heat frees electrons across the gap",
+        "Pure silicon: few free electrons"
+      ],
+      "figure": "out/figs/day02_temperature.png",
+      "say": "Here's a surprising difference. Heat a metal wire, and its resistance goes up, slowly, as the vibrating atoms get in the way of the moving electrons. That's the blue line. Heat a semiconductor, and its resistance falls, often very quickly. That's the orange curve. Why? Heat gives electrons the energy to jump across the band gap and become free. At room temperature, pure silicon has only about one free electron for every few trillion atoms. Warm it up, and that number climbs fast. Engineers use this effect in temperature sensors called thermistors."
+    },
+    {
+      "kind": "quote",
+      "quote": "A semiconductor's superpower isn't how well it conducts. It's that we can control it.",
+      "chapter": "The superpower",
+      "say": "This is the key idea of today's lesson, so let's pause on it. A semiconductor's superpower isn't how well it conducts. On its own, pure silicon is actually a rather poor conductor. Its superpower is that we can control it. Heat, light, a few added atoms or an electric field can change how well it conducts, sometimes by millions of times. No metal and no insulator can do that."
+    },
+    {
+      "kind": "split",
+      "head": "Four ways to control it",
+      "points": [
+        "Heat: temperature sensors",
+        "Light: solar cells, cameras",
+        "Doping: a few added atoms",
+        "Electric field: transistors"
+      ],
+      "figure": "out/figs/day02_lattice_P.png",
+      "chapter": "Four ways to control it",
+      "say": "Let's list the four main ways. First, heat, which we just saw. Second, light. When light hits a semiconductor, it can free electrons. That's how solar panels make electricity and how the camera in your phone captures a picture. Third, doping. Look at the diagram: it's a grid of silicon atoms with one phosphorus atom swapped in. Phosphorus brings one more electron than silicon needs for its bonds, and that extra electron, shown in orange, is free to move. Adding just a few such atoms for every million silicon atoms can make silicon conduct many thousands of times better. And fourth, an electric field, which is how a transistor switches. We'll cover doping and transistors in their own episodes."
+    },
+    {
+      "head": "Meet the family",
+      "points": [
+        "Silicon: almost every chip",
+        "Germanium: the first transistor, 1947",
+        "Gallium arsenide: LEDs, radio chips",
+        "Silicon carbide, gallium nitride: power"
+      ],
+      "say": "Silicon is the most famous semiconductor, and it's used in the vast majority of chips. But it has relatives. Germanium was used in the very first transistor, built at Bell Labs in nineteen forty seven. Gallium arsenide, a compound of two elements, is used in LEDs, lasers and high frequency radio chips. And silicon carbide and gallium nitride are used in power electronics, from electric vehicle inverters to small, fast phone chargers. We'll meet these materials again later in the season."
+    },
+    {
+      "kind": "figure",
+      "head": "From control to chips",
+      "figure": "out/figs/day02_control_to_chip.png",
+      "caption": "Every chip begins with one idea: controlling conductivity",
+      "say": "Now let's connect today's idea to the chip in your phone. Follow the boxes from left to right. Because we can control a semiconductor's conductivity, we can build a switch: something that is on, or off. A tiny, fast switch made from a semiconductor is called a transistor. And when you put billions of transistors together on one piece of silicon, you get a chip. Every app, photo and message on your phone comes down to billions of these switches turning on and off."
+    },
+    {
+      "kind": "split",
+      "head": "Today's recap",
+      "points": [
+        "Conductors: free electrons",
+        "Insulators: locked electrons",
+        "Semiconductors: in between",
+        "Controllable, so we can build switches"
+      ],
+      "figure": "out/figs/day02_three_bands.png",
+      "chapter": "Recap",
+      "say": "Let's recap. Conductors, like copper, have a sea of free electrons. Insulators, like glass, keep their electrons locked in bonds. Semiconductors sit in between, because their band gap is small. And most importantly, we can control how well a semiconductor conducts, using heat, light, doping and electric fields. That controllability is what makes switches, transistors and chips possible."
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 2",
+      "sub": "Why silicon? The element that runs the modern world",
+      "say": "Tomorrow, we'll ask why silicon, out of all these materials, became the one that runs the modern world. Here's a hint: part of the answer is in the sand under your feet. If this lesson helped, subscribe and turn on notifications, and tell me in the comments one thing you'd like explained more simply. See you tomorrow morning on Atoms to Chips."
+    }
+  ]
+}
