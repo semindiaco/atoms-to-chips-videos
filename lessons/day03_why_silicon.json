@@ -1,0 +1,178 @@
+{
+  "day": 3,
+  "slug": "day03_why_silicon",
+  "label": "BASICS · EP 2",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 2",
+  "thumb_line1": "WHY",
+  "thumb_line2": "SILICON?",
+  "yt_title": "Why Silicon? | Semiconductor Basics Ep 2 | Atoms to Chips",
+  "yt_description": "Almost every chip in the world is made of silicon, yet the first transistor was made of germanium. In this lesson we see why silicon won: it is everywhere in the Earth's crust, it forms a perfect crystal with four bonds per atom, its bandgap is just right for everyday electronics, and it grows its own near-perfect insulator when heated in oxygen.\n\nIn this lesson:\n\nNext video: Energy bands and the bandgap, explained without heavy maths.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #Silicon #SemiconductorBasics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "why silicon",
+    "why are chips made of silicon",
+    "silicon vs germanium",
+    "silicon semiconductor",
+    "silicon dioxide",
+    "band gap of silicon",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "electronics basics",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Why Silicon?",
+      "sub": "The element that runs the modern world",
+      "say": "In the last episode, we learned that a semiconductor is a material whose ability to conduct electricity can be controlled. There are many semiconductors in nature. So here's today's question. Out of all of them, why is almost every chip in the world made of one element, silicon? Why not germanium, which was used for the very first transistor? Welcome back to Semiconductor Basics on Atoms to Chips. Let's find out why silicon won."
+    },
+    {
+      "kind": "stat",
+      "stat": "≈ 28%",
+      "caption": "of the Earth's crust, by mass, is silicon",
+      "chapter": "Silicon is everywhere",
+      "say": "Let's start with a surprising number. Roughly twenty eight percent of the Earth's crust, by mass, is silicon. Pick up a handful of beach sand, a piece of granite or a lump of clay, and you are holding silicon. You have walked on it your whole life. So the very first reason is simple. Silicon is not rare, and nobody will ever run out of it."
+    },
+    {
+      "kind": "figure",
+      "head": "Second only to oxygen",
+      "figure": "out/figs/day03_crust.png",
+      "caption": "Silicon is plentiful, but it always comes bonded to oxygen",
+      "say": "Here's what the Earth's crust is made of. The longest bar is oxygen, at about forty six percent. The blue bar is silicon, at about twenty eight percent, far ahead of aluminium, iron and calcium. But look at the note at the bottom. In nature, silicon is never found pure. It is always locked together with oxygen, as silicon dioxide in sand and quartz, or in rocks. Getting it out and making it pure is a big job, and we'll cover it in the From Sand to Wafer playlist."
+    },
+    {
+      "kind": "split",
+      "head": "Meet the silicon atom",
+      "points": [
+        "Atomic number 14",
+        "Electrons in shells: 2, 8, 4",
+        "4 outer (valence) electrons",
+        "Same group as carbon and germanium"
+      ],
+      "figure": "out/figs/day03_si_atom.png",
+      "chapter": "The silicon atom",
+      "say": "Now let's zoom into a single silicon atom. Its nucleus, the orange circle in the middle, has fourteen protons. Around it are fourteen electrons, arranged in shells. Look at the diagram. Two electrons sit in the inner shell, eight in the middle shell, and just four in the outer shell, shown in blue. Those four outer electrons are called valence electrons, and they decide how silicon bonds with other atoms. Carbon and germanium sit in the same column of the periodic table, and they also have four."
+    },
+    {
+      "kind": "split",
+      "head": "Four bonds, a perfect crystal",
+      "points": [
+        "Each atom shares with 4 neighbours",
+        "Each bond: one shared pair",
+        "Outer shell feels full with 8",
+        "Repeats into a regular crystal"
+      ],
+      "figure": "out/figs/day03_four_bonds.png",
+      "say": "Four outer electrons turn out to be the perfect number. An atom is most stable when its outer shell feels full, with eight electrons. So each silicon atom shares one electron with each of four neighbours, and each neighbour shares one back. In the diagram, the orange atom in the centre is bonded to four purple neighbours, and the highlighted box shows one shared pair, which is one bond. In real silicon, these four bonds point to the corners of a tiny pyramid, and the pattern repeats in every direction to build a very regular crystal."
+    },
+    {
+      "kind": "compare",
+      "head": "The rival: germanium",
+      "chapter": "Silicon vs germanium",
+      "left": {
+        "title": "Germanium",
+        "points": [
+          "First transistor, 1947",
+          "Electrons move faster",
+          "Leaks badly when warm",
+          "Its oxide dissolves in water"
+        ]
+      },
+      "right": {
+        "title": "Silicon",
+        "points": [
+          "Took over from the late 1950s",
+          "Small leakage at room temperature",
+          "Works hot, up to about 150 °C",
+          "Grows a tough, stable oxide"
+        ]
+      },
+      "say": "Germanium also has four outer electrons, and it came first. The first transistor, built at Bell Labs in nineteen forty seven, was made of germanium, and electrons actually move faster through it. So why did silicon take over? Germanium has two big problems. It leaks current badly when it gets warm, and its oxide is weak and even dissolves in water. Silicon devices leak far less and keep working when hot, up to roughly one hundred and fifty degrees Celsius. And silicon grows a tough, stable oxide. Let's look at each of these."
+    },
+    {
+      "kind": "figure",
+      "head": "A bandgap that's just right",
+      "figure": "out/figs/day03_bandgaps.png",
+      "caption": "Silicon's gap is wide enough to stay off, and narrow enough to switch on",
+      "chapter": "The bandgap",
+      "say": "Remember the band picture from the last episode. The bandgap is the energy an electron needs to break free and carry current. This chart compares the bandgap in electron volts. Germanium, in red, has a small gap of about zero point six six. Silicon, in blue, sits at about one point one two. Gallium arsenide, silicon carbide and gallium nitride have wider gaps still. Silicon is in a sweet spot. Its gap is wide enough that heat alone frees very few electrons, but narrow enough to switch on easily."
+    },
+    {
+      "kind": "split",
+      "head": "Why a small gap leaks",
+      "points": [
+        "Heat frees electrons across the gap",
+        "Smaller gap: many more freed",
+        "Germanium: thousands of times more",
+        "Leakage wastes power, adds heat"
+      ],
+      "figure": "out/figs/day03_leakage.png",
+      "say": "Here's why that matters. Heat shakes the crystal, and every now and then an electron gets enough energy to jump across the gap, even when we don't want it to. This graph shows how many electrons are freed this way as temperature rises. Notice the scale goes up by factors of ten. The red germanium line sits far above the blue silicon line. At room temperature, germanium has thousands of times more of these unwanted electrons. In a switch that should be off, they cause leakage current, which wastes power and makes even more heat."
+    },
+    {
+      "kind": "quote",
+      "quote": "Silicon's secret weapon is its own oxide.",
+      "chapter": "The secret weapon",
+      "say": "But the bandgap alone doesn't explain silicon's win. Silicon carbide and gallium nitride have even wider gaps. The real secret weapon is something else entirely. It's what happens when you heat silicon in oxygen. Engineers often say that silicon's best feature is not silicon at all. It's silicon dioxide."
+    },
+    {
+      "kind": "split",
+      "head": "It grows its own insulator",
+      "points": [
+        "Heat silicon in oxygen",
+        "A layer of silicon dioxide grows",
+        "Excellent insulator, stable and tough",
+        "Clean interface with the silicon"
+      ],
+      "figure": "out/figs/day03_native_oxide.png",
+      "say": "Look at this diagram. On the left is plain silicon. On the right, we've heated it in oxygen, shown by the orange arrows, and a layer of silicon dioxide has grown on top, in green. This is essentially glass, and it's an excellent insulator. It grows evenly, it doesn't wash away, and it protects the silicon underneath. Even better, the boundary between the silicon and its oxide is very clean, with very few defects. That made it possible to build transistors controlled by a thin insulating layer, and to print many of them side by side."
+    },
+    {
+      "head": "Tough and practical",
+      "points": [
+        "Strong: wafers survive hundreds of steps",
+        "Melts at about 1,414 °C",
+        "Spreads heat well",
+        "Grows as huge single crystals"
+      ],
+      "chapter": "Built for factories",
+      "say": "Silicon is also a practical material for factories. It's strong and hard, so thin wafers survive hundreds of processing steps. It melts at about one thousand four hundred and fourteen degrees Celsius, so it handles the high temperatures used in chip making. It spreads heat well, which helps keep busy chips cool. And it can be grown as huge, nearly perfect single crystals, which are sliced into wafers three hundred millimetres across."
+    },
+    {
+      "kind": "stat",
+      "stat": "99.9999999%",
+      "caption": "Electronic-grade silicon purity: at least nine nines",
+      "chapter": "Pure on purpose",
+      "say": "And it can be made astonishingly pure. Silicon for chips is at least ninety nine point nine nine nine nine nine nine nine percent pure. People call that nine nines. That means no more than about one stray atom for every billion silicon atoms. This purity matters, because in the episode on doping, we'll see that adding just a few chosen atoms on purpose changes silicon completely. To control it, we first have to start clean."
+    },
+    {
+      "kind": "figure",
+      "head": "How silicon took over",
+      "figure": "out/figs/day03_timeline.png",
+      "caption": "From the first germanium transistor to billions of silicon ones",
+      "chapter": "How silicon won",
+      "say": "Let's follow the story along this timeline. In nineteen forty seven, the first transistor was made of germanium, shown in red. In nineteen fifty four, the first silicon transistors appeared, at Bell Labs and at Texas Instruments. In nineteen fifty nine, engineers used silicon's oxide to build flat, protected transistors, the planar process, and soon the first silicon integrated circuits. From then on, silicon was the clear winner. Today, a single chip can hold billions of silicon transistors. Silicon Valley got its name from this story."
+    },
+    {
+      "kind": "split",
+      "head": "Today's recap",
+      "points": [
+        "Plentiful: about 28% of Earth's crust",
+        "4 bonds: a perfect, regular crystal",
+        "Bandgap just right: low leakage",
+        "Grows its own oxide insulator",
+        "Strong, pure, and easy to make big"
+      ],
+      "figure": "out/figs/day03_bandgaps.png",
+      "chapter": "Recap",
+      "say": "Let's recap. Silicon is plentiful, about twenty eight percent of the Earth's crust. Its four outer electrons build a perfect, regular crystal. Its bandgap is just right, so it leaks little and works when hot. It grows its own excellent insulator, silicon dioxide. And it is strong, can be made extremely pure, and grows into large crystals. Silicon isn't the best at everything. But no other material offers this whole package at such low cost."
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 3",
+      "sub": "Energy bands and the bandgap, explained without heavy maths",
+      "say": "Today we used the word bandgap a lot. In the next episode, we'll open it up properly. What are energy bands, where do they come from, and why does the gap decide everything? No heavy maths, just clear pictures. If this helped, subscribe to Atoms to Chips and turn on notifications, so you don't miss tomorrow's lesson. See you then."
+    }
+  ]
+}
