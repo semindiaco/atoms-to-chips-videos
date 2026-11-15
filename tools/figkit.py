@@ -9,6 +9,9 @@ Use in lessons/dayNN_figs.py:
     ... draw with matplotlib ...
     save(fig, "out/figs/dayNN_bands.png")
 
+Pointer anchors: call anchor("gap", ax, x, y) before save(); the video pointer can then
+glide to that spot when a beat says {"point": "gap"}.
+
 Helpers:
     band_diagram(kind)            # "metal" | "semiconductor" | "insulator"
     lattice(dopant=None)          # silicon lattice, dopant "P" (n-type) or "B" (p-type)
@@ -45,9 +48,28 @@ def canvas(w=1000, h=800, axis=False):
     return fig, ax
 
 
+_ANCHORS = {}
+
+
+def anchor(name, ax, x, y, fig=None):
+    """Register a named point (in the axes' data coordinates) that the narration can point at.
+    In a lesson beat: {"say": "...", "point": "<name>", "label": "optional callout"}."""
+    fig = fig or ax.figure
+    _ANCHORS.setdefault(id(fig), {})[name] = (ax, x, y)
+
+
 def save(fig, path):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     fig.savefig(path, dpi=100, transparent=True)
+    pts = _ANCHORS.pop(id(fig), {})
+    if pts:
+        import json
+        W, H = fig.get_size_inches() * fig.dpi
+        out = {}
+        for name, (ax, x, y) in pts.items():
+            px, py = ax.transData.transform((x, y))
+            out[name] = [round(px / W, 4), round(1 - py / H, 4)]
+        json.dump(out, open(os.path.splitext(path)[0] + ".anchors.json", "w"), indent=1)
     plt.close(fig)
     return path
 

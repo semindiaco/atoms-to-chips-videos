@@ -190,24 +190,38 @@ def main():
         subprocess.run([sys.executable, os.path.abspath(figs_py)], check=True, cwd=root)
     os.makedirs(out, exist_ok=True)
     work = os.path.join(out, "work"); os.makedirs(work, exist_ok=True)
+    import animate, numpy as np, soundfile as sf
+    R = animate.Renderer(sys.modules[__name__], lesson, root)
     slides = lesson["slides"]; parts = []; chapters = []; t = 0.0
     for i, s in enumerate(slides):
-        png = f"{work}/s{i:02d}.png"; wav = f"{work}/s{i:02d}.wav"; mp4 = f"{work}/s{i:02d}.mp4"
-        slide_img(lesson, s, i, len(slides), png, root)
-        tts(s["say"], wav)
-        with wave.open(wav) as w:
-            dur = w.getnframes() / w.getframerate() + 0.8
-        chapters.append((t, s.get("head") or s.get("chapter") or s.get("stat") or "Key idea")); t += dur
-        frames = int(dur * 30) + 1
-        if s.get("figure"):  # slow push-in on diagram slides for a bit of motion
-            vf = (f"scale=3840:-1,zoompan=z='1+0.05*on/{frames}':d=1:x='iw/2-(iw/zoom/2)':"
-                  f"y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,fade=in:0:12,format=yuv420p")
-        else:
-            vf = "fade=in:0:12,format=yuv420p"
-        run(["ffmpeg", "-y", "-loop", "1", "-framerate", "30", "-i", png, "-i", wav, "-af", "apad=pad_dur=0.8",
-             "-t", f"{dur:.2f}", "-vf", vf, "-r", "30",
-             "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-crf", "20",
-             "-c:a", "aac", "-b:a", "160k", "-ar", "44100", mp4])
+        wav = f"{work}/s{i:02d}.wav"; mp4 = f"{work}/s{i:02d}.mp4"
+        png = f"{work}/s{i:02d}.png"
+        slide_img(lesson, s, i, len(slides), png, root)  # still frame, used for contact sheets
+        beats = animate.auto_assign(s, animate.beats_of(s))
+        # voice each beat separately so on-screen events land exactly on the words
+        chunks, starts, pos, sr = [], [], 0.0, 24000
+        for k, b in enumerate(beats):
+            bw = f"{work}/s{i:02d}_b{k:02d}.wav"
+            tts(b["say"], bw)
+            a, sr = sf.read(bw)
+            starts.append(pos)
+            chunks.append(a); pos += len(a) / sr
+            gap = animate.GAP if k < len(beats) - 1 else animate.TAIL
+            chunks.append(np.zeros(int(gap * sr))); pos += gap
+        audio = np.concatenate(chunks)
+        sf.write(wav, audio, sr, subtype="PCM_16")
+        dur = len(audio) / sr
+        chapters.append((t, s.get("chapter") or s.get("head") or s.get("stat") or "Key idea"))
+        p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                              "-s", f"{animate.W}x{animate.H}", "-r", str(animate.FPS), "-i", "-", "-i", wav,
+                              "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+                              "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-shortest", mp4],
+                             stdin=subprocess.PIPE)
+        R.render_slide(s, beats, starts, dur, i, len(slides), p.stdin, t)
+        p.stdin.close(); p.wait()
+        if p.returncode:
+            raise SystemExit(f"ffmpeg failed on slide {i}")
+        t += dur
         parts.append(mp4)
     lst = f"{work}/list.txt"
     open(lst, "w").write("".join(f"file '{os.path.abspath(p)}'\n" for p in parts))
