@@ -101,7 +101,9 @@ def slide_img(lesson, s, idx, total, path, root="."):
     """
     im, d = base(lesson, idx, total); A = accent(lesson)
     kind = s.get("kind", "points")
-    fig = os.path.join(root, s["figure"]) if s.get("figure") else None
+    fg = s.get("figure")
+    if isinstance(fg, list): fg = fg[-1]
+    fig = os.path.join(root, fg) if fg else None
     if kind in ("title", "outro"):
         d.text((W // 2, 360), lesson["series"].upper() if kind == "title" else "COMING UP", font=font("Bold", 34), fill=A, anchor="mm")
         y = 470
@@ -133,6 +135,16 @@ def slide_img(lesson, s, idx, total, path, root="."):
         y = 640
         for ln in wrap(d, s.get("caption", ""), font("SemiBold", 52), 1500):
             d.text((W // 2, y), ln, font=font("SemiBold", 52), fill=CREAM, anchor="mm"); y += 68
+    elif kind == "quiz":
+        d.text((W // 2, 210), "QUICK CHECK", font=font("Bold", 34), fill=A, anchor="mm")
+        y = 300
+        for ln in wrap(d, s["question"], font("Black", 64), 1600):
+            d.text((W // 2, y), ln, font=font("Black", 64), fill=CREAM, anchor="mm"); y += 78
+        oy = max(y + 50, 470)
+        for k, o in enumerate(s["options"]):
+            d.rounded_rectangle([360, oy, 1560, oy + 110], radius=24, outline=A if k == s.get("answer") else MUTED, width=3)
+            d.text((420, oy + 55), "ABCD"[k], font=font("Black", 44), fill=A, anchor="mm")
+            d.text((480, oy + 55), o, font=font("SemiBold", 44), fill=CREAM, anchor="lm"); oy += 135
     elif kind == "quote":
         d.text((160, 300), "\u201c", font=font("Black", 220), fill=A, anchor="lm")
         y = 430
@@ -199,25 +211,25 @@ def main():
         slide_img(lesson, s, i, len(slides), png, root)  # still frame, used for contact sheets
         beats = animate.auto_assign(s, animate.beats_of(s))
         # voice each beat separately so on-screen events land exactly on the words
-        chunks, starts, pos, sr = [], [], 0.0, 24000
+        chunks, starts, bdurs, pos, sr = [], [], [], 0.0, 24000
         for k, b in enumerate(beats):
             bw = f"{work}/s{i:02d}_b{k:02d}.wav"
             tts(b["say"], bw)
             a, sr = sf.read(bw)
-            starts.append(pos)
+            starts.append(pos); bdurs.append(len(a) / sr)
             chunks.append(a); pos += len(a) / sr
             gap = animate.GAP if k < len(beats) - 1 else animate.TAIL
             chunks.append(np.zeros(int(gap * sr))); pos += gap
         audio = np.concatenate(chunks)
         sf.write(wav, audio, sr, subtype="PCM_16")
         dur = len(audio) / sr
-        chapters.append((t, s.get("chapter") or s.get("head") or s.get("stat") or "Key idea"))
+        chapters.append((t, s.get("chapter") or s.get("head") or s.get("stat") or ("Quick check" if s.get("kind") == "quiz" else "Key idea")))
         p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                               "-s", f"{animate.W}x{animate.H}", "-r", str(animate.FPS), "-i", "-", "-i", wav,
                               "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
                               "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-shortest", mp4],
                              stdin=subprocess.PIPE)
-        R.render_slide(s, beats, starts, dur, i, len(slides), p.stdin, t)
+        R.render_slide(s, beats, starts, dur, i, len(slides), p.stdin, t, bdurs)
         p.stdin.close(); p.wait()
         if p.returncode:
             raise SystemExit(f"ffmpeg failed on slide {i}")

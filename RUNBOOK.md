@@ -26,15 +26,25 @@ Copy the structure of `lessons/day01_intro.json`:
   - Each video should have at least one diagram that's new, not reused from an earlier episode. Vary the opening: a question, a surprising fact (`stat`) or a short story.
   - Every slide's `say` must describe what the diagram shows ("look at the gap between these two bands…").
   - Look at a contact sheet of all slides before publishing. Fix overlaps or cut-off text, and redraw any diagram that's wrong or unclear.
-- **Animation synced to the narration (required for every video).** `tools/animate.py` voices each *beat* separately and makes things happen exactly when they are spoken, so the video never looks paused.
-  - On every `split` and `figure` slide, replace `say` with a `beats` list. Each beat is one or two sentences: `{"say": "...", "show": n, "point": "<anchor>", "label": "short callout"}`.
-    - `show`: how many bullets are visible from this beat. Reveal one bullet as it is talked about.
-    - `point`: an animated pointer glides to that spot on the diagram and pulses there. Use **at least 2–4 pointer beats per diagram**, moving point to point as the narration walks through it ("this orange band…", "now look at the gap…").
-    - `label`: optional callout of up to about 4 words shown next to the pointer.
-  - Define pointer targets in the figs script with `anchor("name", ax, x, y)` in data coordinates, before `save()`. This writes `<figure>.anchors.json` next to the PNG; commit those with the figures. You can also give `"point": [fx, fy]` as fractions of the figure image, but anchors are more precise.
-  - Other slide kinds animate automatically: bullets on `points` slides are spread across the sentences of `say`, `stat` numbers count up, `quote` text appears word by word, and on `compare` slides the right column appears halfway, or at the beat with `"right": true`. You can still use `beats` on these to control timing.
-  - Before publishing, check the motion: pull frames at several moments of 2–3 diagram slides with `ffmpeg -ss <sec> -i out/dayNN/work/sNN.mp4 -frames:v 1 frame.png` and confirm the pointer lands on the right spot and the labels don't hide anything important.
-- Content rules: beginner-friendly, accurate, textbook-level science and industry practice. Write numbers as words in `say` ("three hundred millimetres"). Check any current-affairs fact (company plans, fab projects, figures) with a web search that day, and say when it's from. Never mention Debye Labs or any proprietary chamber or process details. No copyrighted images or text.
+- **Animation synced to the narration (required for every video).** `tools/animate.py` voices each *beat* separately and makes things happen exactly when they are spoken. Read the docstring at the top of `tools/animate.py`: it lists every beat key. The video must feel alive all the time. Something should move or appear at least every 5–8 seconds.
+  - On every `split` and `figure` slide, replace `say` with a `beats` list. A beat is one or two short sentences: `{"say": "...", ...keys}`.
+  - **Build diagrams up step by step.** Draw each diagram in stages with `save_step()` in the figs script, and give the slide `"figure": [step0.png, step1.png, ...]`. Switch steps with `"step": k` as the narration introduces each part, so the viewer never sees a complex picture all at once. Use at least 3 multi-step diagrams per video.
+  - **Pointer:** `"point": "<anchor>"` plus a short `"label"`, used 2–4 times per diagram and moving as the narration walks through it. Define anchors in the figs script with `anchor("name", ax, x, y)` before `save_step()` or `save()`.
+  - **Camera zoom:** `"zoom": 1.6` (centred on the beat's point, or `"zoom_on"`) to push into a detail, then `"zoom": 1` to pull back. Use at least twice per video.
+  - **Draw-on circle:** `"circle": "<anchor>"` to ring the key spot.
+  - **Flow:** `"flow": ["a", "b", "c"]` streams glowing particles along a path through the anchors. Use it for anything that moves: electrons, current, gas into a chamber, a wafer going through steps. Use at least twice per video.
+  - **Jargon buster:** `"define": {"term": "...", "meaning": "..."}` the first time any technical word is used. The meaning must be under 12 everyday words.
+  - **Quiz:** add 1–2 `quiz` slides per video (`"question"`, 3 `"options"`, `"answer"` index). Beat 1 asks and says "pause and think", and the last beat has `"reveal": true` and explains the answer in one sentence.
+  - Captions, slide transitions, count-ups, word-by-word quotes and compare reveals happen automatically.
+  - Before publishing, check the motion: pull frames at several moments of 3–4 slides with `ffmpeg -ss <sec> -i out/dayNN/work/sNN.mp4 -frames:v 1 frame.png`. Confirm that the pointer, circles and flows land on the right spots, the zoom keeps the important part in view, and no card hides what is being explained.
+- **Make it easy for non-technical viewers (required).** Write for a curious 14-year-old, or a parent with no science background:
+  - **Start every new idea with an everyday analogy, then the real term.** For example: energy bands are floors of a building; doping is a pinch of salt in soup; a transistor is a tap for electricity; a cleanroom is a hospital operating theatre multiplied by a thousand; lithography is stencil spray-painting with light. Draw the analogy where possible.
+  - Use short sentences (mostly under 15 words) and plain words. Define any unit or symbol before using it, or leave it out. Prefer comparisons ("a thousand times thinner than a hair") to bare numbers.
+  - One idea per slide, and 3–4 bullets of at most 6 words each. The narration carries the detail; the screen shows the key words.
+  - Hook in the first 15 seconds with a question or surprise from daily life (your phone, your car, a solar panel). Give a one-line "why this matters to you" early on.
+  - About every 2 minutes, recap in one sentence ("So far: ..."). End with a three-point summary before the outro.
+  - Speak to the viewer: "you", "imagine", "look at this".
+- Content rules: accurate, textbook-level science and industry practice. Write numbers as words in `say` ("three hundred millimetres"). Check any current-affairs fact (company plans, fab projects, figures) with a web search that day, and say when it's from. Never mention Debye Labs or any proprietary chamber or process details. No copyrighted images or text.
 
 ## 4. Build
 ```bash

@@ -58,10 +58,8 @@ def anchor(name, ax, x, y, fig=None):
     _ANCHORS.setdefault(id(fig), {})[name] = (ax, x, y)
 
 
-def save(fig, path):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    fig.savefig(path, dpi=100, transparent=True)
-    pts = _ANCHORS.pop(id(fig), {})
+def _write_anchors(fig, path, pop):
+    pts = (_ANCHORS.pop if pop else _ANCHORS.get)(id(fig), {})
     if pts:
         import json
         W, H = fig.get_size_inches() * fig.dpi
@@ -70,6 +68,22 @@ def save(fig, path):
             px, py = ax.transData.transform((x, y))
             out[name] = [round(px / W, 4), round(1 - py / H, 4)]
         json.dump(out, open(os.path.splitext(path)[0] + ".anchors.json", "w"), indent=1)
+
+
+def save_step(fig, path):
+    """Save the figure as it looks right now (one build step) and keep drawing on it.
+    Typical use: draw part 1 -> save_step(fig, ".../x_0.png"); draw part 2 -> save_step(..._1.png);
+    ...; the slide uses "figure": [".../x_0.png", ".../x_1.png", ...] and beats switch with "step": k."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    fig.savefig(path, dpi=100, transparent=True)
+    _write_anchors(fig, path, pop=False)
+    return path
+
+
+def save(fig, path):
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    fig.savefig(path, dpi=100, transparent=True)
+    _write_anchors(fig, path, pop=True)
     plt.close(fig)
     return path
 
