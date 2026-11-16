@@ -1,0 +1,391 @@
+{
+  "day": 4,
+  "slug": "day04_energy_bands",
+  "label": "BASICS · EP 3",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 3",
+  "thumb_line1": "THE",
+  "thumb_line2": "BANDGAP",
+  "yt_title": "Energy Bands & Bandgap | Semiconductor Basics Ep 3 | Atoms to Chips",
+  "yt_description": "Why does copper carry current, glass block it, and silicon sit in between? The answer is energy bands. In this lesson we build the band picture from a single atom, meet the valence band, the conduction band and the gap between them, and see how the bandgap decides leakage, solar cells, camera sensors and even the colour of an LED. No heavy maths, just clear pictures.\n\nIn this lesson:\n\nNext video: Electrons and holes, and how current really flows in a semiconductor.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #Bandgap #EnergyBands #SemiconductorBasics #Physics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "energy bands",
+    "band gap",
+    "bandgap explained",
+    "valence band and conduction band",
+    "band theory of solids",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "electron volt",
+    "why silicon is used",
+    "LED colour bandgap",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Energy Bands and the Bandgap",
+      "sub": "Explained without heavy maths",
+      "say": "Copper carries electricity. Glass blocks it. Silicon sits somewhere in between, and we can control it. In the last two episodes, we kept saying one word to explain this: the bandgap. Today we finally open it up. Where do energy bands come from, what exactly is the gap, and why does it decide so much about a chip? Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "Electrons live on a ladder",
+      "figure": "out/figs/day04_atom_ladder.png",
+      "caption": "In a single atom, only certain energies are allowed",
+      "chapter": "Energy levels in one atom",
+      "beats": [
+        {
+          "say": "Let's start with a single atom, all on its own. Its electrons can't have just any energy."
+        },
+        {
+          "say": "They can only sit on certain allowed energy levels, like the rungs of a ladder. Each blue line here is one allowed level.",
+          "point": "levels",
+          "label": "allowed levels"
+        },
+        {
+          "say": "The orange dots are electrons. They fill the lowest levels first, a few on each rung.",
+          "point": "electrons",
+          "label": "electrons"
+        },
+        {
+          "say": "And the space between the lines is forbidden. An electron can never have an energy in there.",
+          "point": "forbidden",
+          "label": "forbidden"
+        },
+        {
+          "say": "Think of a staircase. You can stand on any step, but you can't float halfway between two steps.",
+          "point": "stairs",
+          "label": "on a step"
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Bring atoms together",
+      "points": [
+        "Far apart: each atom has the same levels",
+        "Close together: levels interact",
+        "Each level spreads into a band",
+        "A gap can remain between bands"
+      ],
+      "figure": "out/figs/day04_levels_to_bands.png",
+      "chapter": "From levels to bands",
+      "beats": [
+        {
+          "say": "Now imagine many silicon atoms. When they are far apart, on the right of this diagram, every atom has exactly the same levels, so each level is a single line.",
+          "show": 1,
+          "point": "far",
+          "label": "far apart"
+        },
+        {
+          "say": "As we push the atoms closer, moving to the left, their electrons start to feel each other. A basic rule of quantum physics says no two electrons can share exactly the same state.",
+          "show": 2,
+          "point": "fan",
+          "label": "levels split"
+        },
+        {
+          "say": "So each level splits into many, slightly different levels. In a real crystal there are trillions of atoms, so the levels pack so tightly that they merge into a smooth band of allowed energies.",
+          "show": 3,
+          "point": "band",
+          "label": "a band"
+        },
+        {
+          "say": "At silicon's actual spacing, the dashed line, look what's left between the two bands. A gap, with no allowed energies at all. That is the bandgap.",
+          "show": 4,
+          "point": "gap",
+          "label": "the bandgap"
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "In a crystal, electrons can only have energies inside the bands. The gap is off limits.",
+      "say": "So here's the big idea of today, in one line. In a crystal, electrons can only have energies inside the bands. The gap between them is off limits. Everything else in this episode follows from that.",
+      "chapter": "The big idea"
+    },
+    {
+      "kind": "figure",
+      "head": "Silicon's two important bands",
+      "figure": "out/figs/day04_si_bands.png",
+      "caption": "The valence band is full, the conduction band is empty, and 1.12 eV separates them",
+      "chapter": "Valence and conduction bands",
+      "beats": [
+        {
+          "say": "For electronics, we only care about two bands. Here they are for silicon."
+        },
+        {
+          "say": "The lower one, in orange, is the valence band. It holds the electrons that form the bonds between atoms, the four bonds per atom we met last episode. In pure silicon near absolute zero, it is completely full.",
+          "point": "valence",
+          "label": "valence band"
+        },
+        {
+          "say": "The upper one is the conduction band. It has plenty of free seats. An electron that gets up here is free to wander through the crystal and carry current.",
+          "point": "conduction",
+          "label": "conduction band"
+        },
+        {
+          "say": "And between them is the forbidden gap. In silicon it is about one point one two electron volts wide.",
+          "point": "gap",
+          "label": "1.12 eV"
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Why a full band can't carry current",
+      "chapter": "Full and empty bands",
+      "left": {
+        "title": "Full valence band",
+        "points": [
+          "Like a car park with every space taken",
+          "No car has an empty space to move into",
+          "So no overall flow of charge"
+        ]
+      },
+      "right": {
+        "title": "Empty conduction band",
+        "points": [
+          "Like an empty car park floor",
+          "Plenty of room to move",
+          "But no cars: nothing to carry current"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Here's a surprise. A completely full band cannot carry any current. Picture a car park where every single space is taken. No car can move, because there's nowhere to move into."
+        },
+        {
+          "say": "Now picture an empty floor of the car park. There's lots of room, but there are no cars, so again, nothing moves.",
+          "right": true
+        },
+        {
+          "say": "Pure silicon, when very cold, is exactly like this. The lower band is full, the upper band is empty, and no current flows. To get current, we need to move a car from the full floor to the empty one."
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Jumping the gap",
+      "points": [
+        "An electron gains enough energy",
+        "It jumps into the conduction band",
+        "It leaves a hole behind",
+        "Now both can carry current"
+      ],
+      "figure": "out/figs/day04_jump.png",
+      "chapter": "Jumping the gap",
+      "beats": [
+        {
+          "say": "That's what happens here. An electron in the valence band picks up energy, at least as much as the gap, from heat or from light.",
+          "show": 1,
+          "point": "energy",
+          "label": "energy ≥ gap"
+        },
+        {
+          "say": "It jumps up into the conduction band. Now it's a free electron, with room all around it to move.",
+          "show": 2,
+          "point": "electron",
+          "label": "free electron"
+        },
+        {
+          "say": "And look at what it left behind: an empty spot in the full band. We call it a hole. Neighbouring electrons can shuffle into it, so the hole moves too.",
+          "show": 3,
+          "point": "hole",
+          "label": "a hole"
+        },
+        {
+          "say": "So one jump creates two carriers of current, an electron and a hole. We'll look at holes properly in the next episode.",
+          "show": 4,
+          "point": "electron"
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1.12 eV",
+      "caption": "Silicon's bandgap at room temperature",
+      "chapter": "What is an electron volt?",
+      "say": "So what is an electron volt? It's a tiny unit of energy, the energy one electron gains when it moves through one volt. That's all. Silicon's gap is one point one two electron volts. For comparison, germanium's is about zero point six six, and the glass on a chip, silicon dioxide, has a gap of around nine. This one number shapes almost everything silicon does."
+    },
+    {
+      "kind": "split",
+      "head": "Three kinds of material",
+      "points": [
+        "Metal: bands overlap, no gap",
+        "Semiconductor: small gap, about 1 eV",
+        "Insulator: big gap, many eV"
+      ],
+      "figure": "out/figs/day04_three_materials.png",
+      "chapter": "Metal, semiconductor, insulator",
+      "beats": [
+        {
+          "say": "Now we can explain the three kinds of material from episode one using just the bands.",
+          "show": 0
+        },
+        {
+          "say": "In a metal like copper, the bands overlap, so there's no gap at all. Electrons always have empty seats right next to them, and current flows easily.",
+          "show": 1,
+          "point": "metal",
+          "label": "no gap"
+        },
+        {
+          "say": "In a semiconductor, there is a gap, but it's small, around one electron volt. A few electrons can cross it, and we can change how many.",
+          "show": 2,
+          "point": "semi",
+          "label": "small gap"
+        },
+        {
+          "say": "In an insulator like glass, the gap is huge, around nine electron volts. Almost no electron ever makes it across, so almost no current flows.",
+          "show": 3,
+          "point": "insulator",
+          "label": "huge gap"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Heat alone is rarely enough",
+      "figure": "out/figs/day04_heat.png",
+      "caption": "A wide enough gap keeps silicon quiet at room temperature",
+      "chapter": "Heat and the gap",
+      "beats": [
+        {
+          "say": "So how many electrons cross silicon's gap just from the warmth of a room?"
+        },
+        {
+          "say": "The atoms in a crystal are always jiggling. At room temperature, the typical energy of that jiggling is only about zero point zero two six electron volts. That's this tiny blue bar.",
+          "point": "heat",
+          "label": "heat energy"
+        },
+        {
+          "say": "The gap is this long red bar, about forty times bigger. Only a rare, lucky electron collects enough energy to jump.",
+          "point": "gap",
+          "label": "the gap"
+        },
+        {
+          "say": "In pure silicon at room temperature, that's roughly one free electron for every few trillion atoms. That's why pure silicon is a poor conductor, and why it doesn't leak much.",
+          "point": "note"
+        },
+        {
+          "say": "But heat it up, and the number of jumps climbs very quickly. A smaller gap, like germanium's, gives far more. That's the leakage we saw last episode."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Light can do the job too",
+      "figure": "out/figs/day04_light.png",
+      "caption": "Photons with more energy than the gap are absorbed and free electrons",
+      "chapter": "Light and the gap",
+      "beats": [
+        {
+          "say": "Light can also push electrons across the gap. Light comes in little packets of energy called photons, and shorter wavelengths carry more energy."
+        },
+        {
+          "say": "Every colour of visible light has more energy than silicon's gap. So silicon absorbs all of it. That's why a silicon wafer looks dark grey and shiny, not clear.",
+          "point": "visible",
+          "label": "absorbed"
+        },
+        {
+          "say": "The cut-off is near one thousand one hundred nanometres, in the near infrared. Here, a photon's energy just matches one point one two electron volts.",
+          "point": "cutoff",
+          "label": "≈ 1,100 nm"
+        },
+        {
+          "say": "Longer wavelengths don't have enough energy, so they pass straight through. To that light, silicon is transparent.",
+          "point": "ir",
+          "label": "passes through"
+        },
+        {
+          "say": "This is exactly how solar cells and the camera in your phone work. Light frees electrons in silicon, and the chip collects them as a current."
+        }
+      ]
+    },
+    {
+      "head": "Why silicon doesn't glow",
+      "chapter": "Why silicon doesn't glow",
+      "points": [
+        "Electrons fall back across the gap",
+        "In silicon, they need a nudge from the crystal",
+        "So the energy mostly becomes heat",
+        "LEDs use other materials"
+      ],
+      "say": "The reverse can happen too. A free electron can fall back across the gap into a hole, and give out its energy. In some materials, that energy comes out as a flash of light. But silicon is awkward. Its electrons can't drop straight down. Each one also needs a nudge from the vibrating crystal, so the energy mostly ends up as heat. That's why LEDs and lasers are made from other semiconductors, like gallium arsenide and gallium nitride, where electrons can fall straight across."
+    },
+    {
+      "kind": "figure",
+      "head": "The gap sets the colour",
+      "figure": "out/figs/day04_led_colours.png",
+      "caption": "Bigger gap, more energetic photons, bluer light",
+      "chapter": "LED colours",
+      "beats": [
+        {
+          "say": "And here's a lovely result. When an electron falls across the gap and gives out light, the photon's energy matches the gap. So the bandgap picks the colour."
+        },
+        {
+          "say": "Visible light needs gaps of roughly one point seven to three point one electron volts, the rainbow strip here.",
+          "point": "window",
+          "label": "visible window"
+        },
+        {
+          "say": "Silicon's gap is down in the infrared, so even if it did glow, we couldn't see it.",
+          "point": "si",
+          "label": "silicon"
+        },
+        {
+          "say": "Red LEDs use materials with gaps near one point nine electron volts.",
+          "point": "red",
+          "label": "red"
+        },
+        {
+          "say": "Blue LEDs need a much wider gap, around two point seven, which came from indium gallium nitride. That's why bright blue LEDs, and white LED lights, arrived so much later.",
+          "point": "blue",
+          "label": "blue"
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Today's recap",
+      "points": [
+        "One atom: a ladder of allowed levels",
+        "A crystal: levels merge into bands",
+        "Full valence band, empty conduction band",
+        "Bandgap: silicon about 1.12 eV",
+        "Gap sets leakage, light and colour"
+      ],
+      "figure": "out/figs/day04_si_bands.png",
+      "chapter": "Recap",
+      "beats": [
+        {
+          "say": "Let's recap. A single atom has a ladder of allowed energy levels. In a crystal, those levels spread out and merge into bands.",
+          "show": 2
+        },
+        {
+          "say": "In silicon, the valence band is full of bonding electrons, and the conduction band above it is nearly empty.",
+          "show": 3,
+          "point": "valence",
+          "label": "full"
+        },
+        {
+          "say": "Between them sits the bandgap, about one point one two electron volts.",
+          "show": 4,
+          "point": "gap",
+          "label": "1.12 eV"
+        },
+        {
+          "say": "That one number decides how much silicon leaks, which light it absorbs, and why it can't make a good LED.",
+          "show": 5,
+          "point": "conduction"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 4",
+      "sub": "Electrons and holes: how current flows in a semiconductor",
+      "say": "Today we met a strange new thing: the hole, an empty spot that moves around like a positive charge. In the next episode, we'll see how electrons and holes actually carry current, and why holes behave like real particles. If this helped, subscribe to Atoms to Chips and turn on notifications, so you don't miss tomorrow's lesson. See you then."
+    }
+  ]
+}
