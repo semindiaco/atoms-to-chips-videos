@@ -1,0 +1,577 @@
+{
+  "day": 5,
+  "slug": "day05_electrons_holes",
+  "label": "BASICS · EP 4",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 4",
+  "thumb_line1": "ELECTRONS",
+  "thumb_line2": "& HOLES",
+  "yt_title": "Electrons & Holes | Semiconductor Basics Ep 4 | Atoms to Chips",
+  "yt_description": "Half the story of a semiconductor is carried by something that isn't there at all: a hole, the empty spot an electron leaves behind. In this lesson we see how one jump across the bandgap makes two carriers, why a missing electron moves like a positive charge, and the three things carriers do: drift when a battery pushes them, diffuse from crowded places to empty ones, and recombine when an electron meets a hole. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: Doping, and how a pinch of another element turns pure silicon into n-type and p-type.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #ElectronsAndHoles #SemiconductorBasics #Physics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "electrons and holes",
+    "what is a hole in a semiconductor",
+    "holes explained",
+    "drift and diffusion",
+    "recombination",
+    "charge carriers",
+    "how current flows in a semiconductor",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "intrinsic silicon",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Electrons and Holes",
+      "sub": "How current really flows in a semiconductor",
+      "chapter": "Intro",
+      "say": "Here's something strange about the chip in your phone. About half of its tiny switches work by moving things that aren't really there. Empty spaces. Gaps where an electron should be. We call them holes. Today you'll see what a hole is, why it moves, and the three ways electrons and holes carry current. Every switch in your phone, every LED and every solar panel works by moving these two carriers around. Once you get this, every chip makes much more sense. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "The empty seat that moves",
+      "figure": [
+        "out/figs/day05_seats_0.png",
+        "out/figs/day05_seats_1.png",
+        "out/figs/day05_seats_2.png",
+        "out/figs/day05_seats_3.png"
+      ],
+      "caption": "Nothing travels right, yet the gap does",
+      "chapter": "A hole, explained with seats",
+      "beats": [
+        {
+          "say": "Let's start in a cinema. Imagine a row of seats. Every seat is taken, except one.",
+          "step": 0
+        },
+        {
+          "say": "Here is the empty seat, third from the left.",
+          "point": "gap_a",
+          "label": "empty seat",
+          "circle": "gap_a"
+        },
+        {
+          "say": "Now the person next to it shuffles over, one seat to the left.",
+          "step": 1,
+          "point": "mover",
+          "label": "moves left"
+        },
+        {
+          "say": "Look what happened. The person moved left, but the empty seat moved right.",
+          "point": "gap_b",
+          "label": "gap moved right",
+          "define": {
+            "term": "Hole",
+            "meaning": "an empty spot where an electron is missing"
+          }
+        },
+        {
+          "say": "Keep doing that, one person at a time. The people creep left, and the empty seat glides all the way to the right.",
+          "step": 2,
+          "flow": [
+            "path_a",
+            "path_c"
+          ],
+          "point": "gap_c",
+          "label": "the gap travels"
+        },
+        {
+          "say": "That is exactly what a hole is. The people are electrons. The empty seat is a hole, a missing electron that moves around.",
+          "step": 3,
+          "point": "legend"
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "One jump, two carriers",
+      "points": [
+        "Heat or light gives energy",
+        "An electron jumps up",
+        "It leaves a hole behind",
+        "Both can carry current"
+      ],
+      "figure": [
+        "out/figs/day05_jump_0.png",
+        "out/figs/day05_jump_1.png",
+        "out/figs/day05_jump_2.png",
+        "out/figs/day05_jump_3.png"
+      ],
+      "chapter": "Where holes come from",
+      "beats": [
+        {
+          "say": "Last episode, we met two energy bands. Think of them as two floors of a car park.",
+          "step": 0,
+          "show": 0
+        },
+        {
+          "say": "The lower floor, the valence band, is packed full of electrons. Nobody can move.",
+          "point": "valence",
+          "label": "full floor"
+        },
+        {
+          "say": "The upper floor, the conduction band, is empty.",
+          "point": "conduction",
+          "label": "empty floor"
+        },
+        {
+          "say": "Now a little heat or light gives one electron enough energy to jump the gap.",
+          "step": 1,
+          "show": 2,
+          "flow": [
+            "from",
+            "mid",
+            "to"
+          ],
+          "point": "mid",
+          "label": "the jump"
+        },
+        {
+          "say": "Up top, it is now a free electron. It has room to roam.",
+          "point": "electron",
+          "label": "free electron",
+          "define": {
+            "term": "Free electron",
+            "meaning": "an electron loose to wander and carry current"
+          }
+        },
+        {
+          "say": "Down below, it left an empty spot. That's our hole. And because an electron is missing, the hole acts like a positive charge.",
+          "step": 2,
+          "show": 3,
+          "point": "hole",
+          "label": "hole: acts +",
+          "zoom": 1.7,
+          "circle": "hole"
+        },
+        {
+          "say": "So one jump makes two carriers: an electron and a hole. Always in pairs.",
+          "step": 3,
+          "show": 4,
+          "zoom": 1,
+          "point": "two",
+          "define": {
+            "term": "Carrier",
+            "meaning": "anything that carries electric charge along"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Inside the crystal",
+      "figure": [
+        "out/figs/day05_lattice_0.png",
+        "out/figs/day05_lattice_1.png",
+        "out/figs/day05_lattice_2.png"
+      ],
+      "caption": "A hole is a broken bond that hops from atom to atom",
+      "chapter": "Holes in the crystal",
+      "beats": [
+        {
+          "say": "Let's see the same thing with real atoms. Here is silicon, drawn flat.",
+          "step": 0
+        },
+        {
+          "say": "Each line is a bond between two atoms. Each bond is held by two shared electrons, these small orange dots.",
+          "point": "bond",
+          "label": "two electrons",
+          "define": {
+            "term": "Bond",
+            "meaning": "two shared electrons holding atoms together"
+          }
+        },
+        {
+          "say": "Now heat shakes one electron loose. It breaks out of its bond and is free.",
+          "step": 1,
+          "point": "free",
+          "label": "now free",
+          "zoom": 1.8,
+          "zoom_on": "hole1"
+        },
+        {
+          "say": "And the bond it left has a missing electron. That's the hole.",
+          "point": "hole1",
+          "label": "hole",
+          "circle": "hole1"
+        },
+        {
+          "say": "Next, an electron from a neighbouring bond hops into the gap. It fixes that bond, but breaks its own.",
+          "step": 2,
+          "point": "hop",
+          "label": "a neighbour hops in"
+        },
+        {
+          "say": "So the hole has moved one bond to the right. Just like the empty cinema seat.",
+          "point": "hole2",
+          "label": "hole moved",
+          "circle": "hole2"
+        },
+        {
+          "say": "Here's another way to picture it. Think of a bubble in a bottle of water. The water moves down, but our eyes follow the bubble going up.",
+          "point": "hole2",
+          "label": "like a bubble"
+        },
+        {
+          "say": "Physicists do the same with holes. A hole is not a real particle, it's a missing electron. But it's far easier to follow one hole than billions of electrons, so we treat it like a particle with a positive charge.",
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1 in 5 trillion",
+      "caption": "Silicon atoms with a free electron, at room temperature",
+      "chapter": "How many carriers?",
+      "say": "So how many of these pairs are there in pure silicon at room temperature? Very few. Roughly one free electron for every five trillion silicon atoms. Five trillion is more than six hundred times the number of people on Earth. Copper, by comparison, has about one free electron for every atom. That's why pure silicon is such a poor conductor."
+    },
+    {
+      "kind": "quote",
+      "quote": "A hole is a missing electron that moves like a positive charge.",
+      "chapter": "So far",
+      "say": "So far: when an electron jumps the gap, it leaves a hole behind. A hole is a missing electron, and it moves like a positive charge. Now let's see how these carriers actually make a current. There are three things they can do: drift, diffuse and recombine."
+    },
+    {
+      "kind": "figure",
+      "head": "Drift: a battery gives a push",
+      "figure": [
+        "out/figs/day05_drift_0.png",
+        "out/figs/day05_drift_1.png",
+        "out/figs/day05_drift_2.png",
+        "out/figs/day05_drift_3.png"
+      ],
+      "caption": "Electrons and holes move opposite ways, but both make the same current",
+      "chapter": "Drift",
+      "beats": [
+        {
+          "say": "First, drift. Think of marbles on a table. Tilt the table, and they all roll the same way.",
+          "step": 0
+        },
+        {
+          "say": "For carriers, a battery does the tilting. Here's a bar of silicon with a battery across it.",
+          "point": "bar",
+          "label": "silicon bar",
+          "define": {
+            "term": "Drift",
+            "meaning": "carriers moving because a voltage pushes them"
+          }
+        },
+        {
+          "say": "The left end is positive. The right end is negative.",
+          "point": "plus",
+          "label": "positive end"
+        },
+        {
+          "say": "Electrons are negative, so they are pulled toward the positive end. They drift to the left.",
+          "step": 1,
+          "flow": [
+            "e_r",
+            "e_l"
+          ],
+          "point": "e_l",
+          "label": "electrons ←"
+        },
+        {
+          "say": "Holes act positive, so they drift the other way, toward the negative end.",
+          "step": 2,
+          "flow": [
+            "h_l",
+            "h_r"
+          ],
+          "point": "h_r",
+          "label": "holes →"
+        },
+        {
+          "say": "Here's the neat part. Negative charge moving left and positive charge moving right make current in the same direction. So the two currents add together.",
+          "step": 3,
+          "flow": [
+            "e_r",
+            "e_l"
+          ],
+          "point": "current",
+          "label": "one current"
+        },
+        {
+          "say": "And the stronger the push, the faster they drift. Double the voltage, and in a simple bar like this, the current roughly doubles.",
+          "flow": [
+            "h_l",
+            "h_r"
+          ],
+          "point": "bar",
+          "label": "more push, more current"
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Electrons are quicker than holes",
+      "chapter": "Electrons vs holes",
+      "left": {
+        "title": "Electrons",
+        "points": [
+          "Negative charge",
+          "Roam the upper floor",
+          "About 3× quicker"
+        ]
+      },
+      "right": {
+        "title": "Holes",
+        "points": [
+          "Act positive",
+          "Move in the lower floor",
+          "Slower: bond-by-bond hops"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Electrons and holes don't move equally fast. A free electron is like a car on an empty motorway. It has the whole upper floor to itself."
+        },
+        {
+          "say": "A hole is more like a gap in a traffic jam. It only moves when electrons around it shuffle over, one bond at a time.",
+          "right": true
+        },
+        {
+          "say": "In silicon, electrons move roughly three times more easily than holes. Chip designers care a lot about this. Switches that use holes are often made wider, to keep up."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "In the cinema row, people shuffle to the left. Which way does the empty seat travel?",
+      "options": [
+        "To the left",
+        "To the right",
+        "It stays put"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. In the cinema row, people shuffle one by one to the left. Which way does the empty seat travel? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "To the right. The gap always moves opposite to the people, just as holes move opposite to electrons.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Diffusion: spreading out",
+      "figure": [
+        "out/figs/day05_diffusion_0.png",
+        "out/figs/day05_diffusion_1.png",
+        "out/figs/day05_diffusion_2.png"
+      ],
+      "caption": "Carriers move from crowded places to empty ones, all on their own",
+      "chapter": "Diffusion",
+      "beats": [
+        {
+          "say": "So far, carriers drift when a battery pushes them. The second way they move needs no battery at all. Think of spraying perfume in one corner of a room. Soon, you can smell it everywhere.",
+          "step": 0
+        },
+        {
+          "say": "Here we've packed lots of carriers into one side of a piece of silicon.",
+          "point": "crowd",
+          "label": "crowded",
+          "define": {
+            "term": "Diffusion",
+            "meaning": "spreading out from crowded places to empty ones"
+          }
+        },
+        {
+          "say": "They jiggle around at random. More of them wander out of the crowd than into it.",
+          "step": 1,
+          "flow": [
+            "crowd",
+            "empty0"
+          ],
+          "point": "front",
+          "label": "spreading"
+        },
+        {
+          "say": "So the crowd spreads out, until they're evenly mixed. The more crowded one side is, the faster they spread.",
+          "step": 2,
+          "point": "p2",
+          "label": "even"
+        },
+        {
+          "say": "And carriers moving are a current, even with no battery. Solar cells and many transistors depend on this kind of flow."
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Recombination: the pair vanishes",
+      "points": [
+        "A free electron meets a hole",
+        "It drops back into the bond",
+        "Both carriers disappear",
+        "In silicon, energy becomes heat"
+      ],
+      "figure": [
+        "out/figs/day05_recombine_0.png",
+        "out/figs/day05_recombine_1.png",
+        "out/figs/day05_recombine_2.png"
+      ],
+      "chapter": "Recombination",
+      "beats": [
+        {
+          "say": "The third thing carriers do is recombine. Back to the cinema: someone wandering the aisle finds the empty seat, and sits down.",
+          "step": 0,
+          "show": 1
+        },
+        {
+          "say": "Here's our free electron, up on the top floor. And here's a hole, down below.",
+          "point": "e",
+          "label": "electron"
+        },
+        {
+          "say": "The electron falls back across the gap, into the hole.",
+          "step": 1,
+          "show": 2,
+          "flow": [
+            "e",
+            "mid",
+            "h"
+          ],
+          "point": "h",
+          "label": "falls in",
+          "define": {
+            "term": "Recombination",
+            "meaning": "a free electron fills a hole, and both vanish"
+          }
+        },
+        {
+          "say": "Now the bond is whole again. The free electron and the hole are both gone.",
+          "step": 2,
+          "show": 3,
+          "point": "pair",
+          "label": "pair gone"
+        },
+        {
+          "say": "The energy has to go somewhere. In silicon, it mostly turns into a little heat.",
+          "show": 4,
+          "point": "heat",
+          "label": "heat",
+          "circle": "heat"
+        },
+        {
+          "say": "How long does a free electron last before this happens? In very clean silicon, up to around a thousandth of a second. Dirt and defects in the crystal make that much shorter. That's one reason chip makers need such pure silicon.",
+          "point": "pair",
+          "label": "lifetime"
+        },
+        {
+          "say": "In a steady piece of silicon, pairs are made and lost at the same rate, so the number stays about the same."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "A free electron meets a hole. What happens?",
+      "options": [
+        "Both disappear",
+        "They make two more",
+        "They push each other away"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. A free electron meets a hole. What happens? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Both disappear. The electron fills the hole, the bond is fixed, and the energy is released.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Pure silicon has too few",
+      "points": [
+        "Copper: carriers everywhere",
+        "Pure silicon: almost none",
+        "We need to add more",
+        "Next: doping"
+      ],
+      "figure": [
+        "out/figs/day05_carriers_0.png",
+        "out/figs/day05_carriers_1.png",
+        "out/figs/day05_carriers_2.png"
+      ],
+      "chapter": "Why we need more carriers",
+      "beats": [
+        {
+          "say": "So why does this matter for real chips? Look at copper. It's crowded with free electrons, so current flows easily.",
+          "step": 0,
+          "show": 1,
+          "point": "copper",
+          "label": "copper"
+        },
+        {
+          "say": "Pure silicon has almost none. That one lonely dot stands for about one carrier per five trillion atoms.",
+          "step": 1,
+          "show": 2,
+          "point": "silicon",
+          "label": "pure silicon",
+          "zoom": 1.6
+        },
+        {
+          "say": "Too few to build anything useful. And heat alone decides how many there are. Warm the chip up a little, and the number shoots up. We can't build reliable switches like that.",
+          "zoom": 1,
+          "circle": "silicon"
+        },
+        {
+          "say": "But add a tiny pinch of another element, and we can choose exactly how many carriers there are. And whether they are mostly electrons, or mostly holes.",
+          "step": 2,
+          "show": 4,
+          "point": "doped",
+          "label": "doped silicon",
+          "define": {
+            "term": "Doping",
+            "meaning": "adding a tiny amount of another element on purpose"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "A hole: a missing electron",
+        "One jump makes a pair",
+        "Drift, diffuse, recombine"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: a hole is a missing electron, and it moves like a positive charge, just like the empty seat in a cinema row.",
+          "show": 1
+        },
+        {
+          "say": "Two: when an electron jumps the gap, it makes a pair, a free electron and a hole. Both carry current.",
+          "show": 2
+        },
+        {
+          "say": "Three: carriers drift when a battery pushes them, diffuse from crowded places to empty ones, and recombine when an electron meets a hole.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 5",
+      "sub": "Doping: turning pure silicon into n-type and p-type",
+      "chapter": "Coming up",
+      "say": "Pure silicon has far too few carriers to be useful. Tomorrow, we fix that. We'll add a pinch of phosphorus or boron, like a pinch of salt in soup, and turn silicon into n-type and p-type. That's the first real step towards a transistor. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
