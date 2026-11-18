@@ -150,7 +150,7 @@
         {"say": "One dopant in five million gives about a million times more carriers than pure silicon.", "step": 1, "point": "bar1", "label": "a million times"},
         {"say": "Turn the knob up to one in five hundred, and it's about ten billion times more. Chips use this heavy doping where wires connect.", "step": 2, "point": "bar2", "label": "heavy doping"},
         {"say": "Copper is still ahead, but heavily doped silicon is getting close to behaving like a metal.", "step": 3, "point": "bar3", "label": "copper"},
-        {"say": "There's a bonus. In pure silicon, heat decides the number of carriers. In doped silicon, the dopant does, so the chip behaves the same on a cool morning or a hot afternoon.", "point": "bar1", "circle": "bar1", "label": "set by us"}
+        {"say": "There's a bonus. In pure silicon, heat decides the number of carriers. In doped silicon, the dopant does, so the chip behaves the same on a cool morning or a hot afternoon.", "point": "bar1", "spot": 190}
       ]
     },
     {

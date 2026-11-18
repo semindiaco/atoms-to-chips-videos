@@ -214,7 +214,9 @@ def main():
         chunks, starts, bdurs, pos, sr = [], [], [], 0.0, 24000
         for k, b in enumerate(beats):
             bw = f"{work}/s{i:02d}_b{k:02d}.wav"
-            tts(b["say"], bw)
+            if not (os.path.exists(bw) and os.path.exists(bw + ".txt") and open(bw + ".txt").read() == b["say"]):
+                tts(b["say"], bw)  # re-voice only when the text changed (makes re-renders fast)
+                open(bw + ".txt", "w").write(b["say"])
             a, sr = sf.read(bw)
             starts.append(pos); bdurs.append(len(a) / sr)
             chunks.append(a); pos += len(a) / sr

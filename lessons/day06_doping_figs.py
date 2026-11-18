@@ -238,7 +238,7 @@ for i, (name, lg, txt, col) in enumerate(rows):
     ax.text(4.6, y, name, ha="right", va="center", fontsize=18, color=WHITE)
     ax.add_patch(P.FancyBboxPatch((4.9, y - 0.33), 0.12 + lg * 0.45, 0.66, boxstyle="round,pad=0.02", color=col))
     ax.text(4.9 + 0.12 + lg * 0.45 + 0.2, y, txt, va="center", fontsize=19, color=col, weight="bold")
-    anchor(f"bar{i}", ax, 4.9 + 0.12 + lg * 0.45, y)
+    anchor(f"bar{i}", ax, 4.9 + 0.12 + lg * 0.45 + 0.9, y)  # bar end + its label
     save_step(fig, OUT + f"day06_dial_{i}.png") if i < 3 else save(fig, OUT + f"day06_dial_{i}.png")
 
 

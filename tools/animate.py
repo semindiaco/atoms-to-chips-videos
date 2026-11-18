@@ -7,9 +7,12 @@ words. Beat keys (all optional):
     "show": n            bullets visible from this beat (points / split slides)
     "step": k            switch a multi-step diagram to step k (0-based), cross-fading: the diagram
                          builds up piece by piece. Slide "figure" is then a list of PNG paths.
-    "point": "<anchor>"  an arrow pointer glides to that spot on the diagram and pulses there
-                         (or [fx, fy] as fractions of the figure image)
-    "label": "text"      short callout next to the pointer
+    "point": "<anchor>"  a soft spotlight glides to that spot: the rest of the diagram dims a little
+                         and the spot gently breathes, so the eye goes there with nothing drawn on
+                         top of the diagram (or [fx, fy] as fractions of the figure image).
+                         Add "spot": radius in px (default 150) for a bigger or smaller spotlight.
+    "label": "text"      ignored (kept so older lessons still build; no callout boxes are drawn,
+                         since they covered the diagram text)
     "circle": "<anchor>" a ring is drawn around that spot (add "r": radius in px, default 70)
     "zoom": 1.8          camera pushes into the diagram, centred on this beat's "point" or
                          "zoom_on" anchor. It stays zoomed until a later beat sets "zoom": 1.
@@ -258,32 +261,41 @@ class Renderer:
         canvas.paste(img, (int(x0 - F["box"][0]), int(y0 - F["box"][1])), img)
         frame.alpha_composite(canvas, (F["box"][0], F["box"][1]))
 
-    def draw_pointer(self, frame, pos, t, label=None, label_a=1.0):
-        B = self.B
-        d = ImageDraw.Draw(frame)
-        x, y = pos
-        ph = (t * 1.6) % 1.0
-        r1 = 26 + 34 * ph; a1 = int(200 * (1 - ph))
-        ring = layer(); rd = ImageDraw.Draw(ring)
-        rd.ellipse([x - r1, y - r1, x + r1, y + r1], outline=self.A + (a1,), width=5)
-        rd.ellipse([x - 22, y - 22, x + 22, y + 22], outline=self.A + (255,), width=5)
-        frame.alpha_composite(ring)
-        tip = (x + 16, y + 16)
-        pts = [(0, 0), (0, 44), (11, 34), (19, 52), (27, 48), (19, 31), (34, 31)]
-        poly = [(tip[0] + px, tip[1] + py) for px, py in pts]
-        d.polygon([(px + 3, py + 4) for px, py in poly], fill=(0, 0, 0))
-        d.polygon(poly, fill=B.CREAM, outline=(20, 20, 20))
-        if label and label_a > 0.01:
-            f = B.font("Bold", 34)
-            tw = d.textlength(label, font=f)
-            lx = x + 70; ly = y + 40
-            if lx + tw + 40 > W - 40:
-                lx = W - 40 - tw - 40; ly = y + 90
-            if ly + 60 > 960: ly = y - 120
-            box = layer(); bd = ImageDraw.Draw(box)
-            bd.rounded_rectangle([lx, ly, lx + tw + 40, ly + 60], radius=14, fill=self.A + (int(235 * label_a),))
-            bd.text((lx + 20, ly + 30), label, font=f, fill=tuple(B.NAVY) + (int(255 * label_a),), anchor="lm")
-            frame.alpha_composite(box)
+    _spot_mask = None
+
+    def draw_spotlight(self, frame, F, pos, r, a, t):
+        """Dim the diagram outside a soft circle around pos, and let the lit spot breathe.
+        Nothing is drawn over the spot itself, so labels in the diagram stay readable."""
+        if a <= 0.01 or pos is None:
+            return
+        if Renderer._spot_mask is None:
+            import numpy as np
+            n = 400
+            yy, xx = np.mgrid[0:n, 0:n]
+            d = np.hypot(xx - n / 2 + 0.5, yy - n / 2 + 0.5) / (n / 2)
+            m = np.clip((d - 0.55) / 0.45, 0, 1)
+            m = m * m * (3 - 2 * m)
+            Renderer._spot_mask = Image.fromarray((m * 255).astype("uint8"), "L")
+        x0, y0, x1, y1 = F["box"]
+        bw, bh = x1 - x0, y1 - y0
+        rr = r * (1.0 + 0.05 * math.sin(t * 2 * math.pi * 0.8))  # gentle breathing
+        dark = int(150 * a)
+        mask = Image.new("L", (bw, bh), 255)
+        side = max(2, int(rr * 2))
+        hole = Renderer._spot_mask.resize((side, side), Image.BILINEAR)
+        cx, cy = int(pos[0] - x0 - side / 2), int(pos[1] - y0 - side / 2)
+        mask.paste(hole, (cx, cy))
+        mask = mask.point(lambda v: v * dark // 255)
+        shade = Image.new("RGBA", (bw, bh), tuple(self.B.NAVY) + (0,))
+        shade.putalpha(mask)
+        # a faint warm glow inside the lit spot
+        gs = max(2, int(rr * 1.6))
+        gm = Renderer._spot_mask.resize((gs, gs), Image.BILINEAR).point(lambda v: int((255 - v) * 0.10 * a))
+        g = Image.new("RGBA", (gs, gs), self.A + (0,)); g.putalpha(gm)
+        glow = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
+        glow.paste(g, (int(pos[0] - x0 - gs / 2), int(pos[1] - y0 - gs / 2)), g)
+        frame.alpha_composite(shade, (x0, y0))
+        frame.alpha_composite(glow, (x0, y0))
 
     def draw_circle(self, frame, pos, r, p):
         """Ring that draws itself on (p from 0 to 1)."""
@@ -580,19 +592,26 @@ class Renderer:
                     c = self.local(F, b["circle"])
                     if c:
                         self.draw_circle(frame, to(c), b.get("r", 70) * z, ease_out(tb / 0.7))
-                if ready and b.get("point") is not None:
-                    tgt = self.local(F, b["point"])
-                    if tgt:
-                        prev = None
-                        for j in range(bi - 1, -1, -1):
-                            if beats[j].get("point") is not None:
-                                prev = self.local(F, beats[j]["point"]); break
-                        tgt_s = to(tgt)
-                        prev_s = to(prev) if prev else (tgt_s[0] + 220, tgt_s[1] + 160)
-                        tb2 = t - max(starts[bi], t0 + 0.9)
-                        g2 = ease(tb2 / 0.7)
-                        pos = (prev_s[0] + (tgt_s[0] - prev_s[0]) * g2, prev_s[1] + (tgt_s[1] - prev_s[1]) * g2)
-                        self.draw_pointer(frame, pos, t, b.get("label"), ease((tb2 - 0.5) / 0.4))
+                # spotlight: glides from the previous spot, fades in/out when pointing starts/stops
+                prev_b = None
+                for j in range(bi - 1, -1, -1):
+                    if beats[j].get("point") is not None:
+                        prev_b = beats[j]; break
+                if ready:
+                    tb2 = t - max(starts[bi], t0 + 0.9)
+                    cur = self.local(F, b.get("point")) if b.get("point") is not None else None
+                    prv = self.local(F, prev_b["point"]) if prev_b is not None else None
+                    prev_here = bi > 0 and beats[bi - 1].get("point") is not None
+                    if cur:
+                        g2 = ease(tb2 / 0.8)
+                        if prv and prev_here:
+                            p = (prv[0] + (cur[0] - prv[0]) * g2, prv[1] + (cur[1] - prv[1]) * g2); al = 1.0
+                        else:
+                            p = cur; al = ease(tb2 / 0.5)
+                        r = b.get("spot", 150)
+                        self.draw_spotlight(frame, F, to(p), r * z, al, t)
+                    elif prev_here and prv:
+                        self.draw_spotlight(frame, F, to(prv), beats[bi - 1].get("spot", 150) * z, 1 - ease(tb / 0.5), t)
 
             # jargon buster
             if b.get("define"):
