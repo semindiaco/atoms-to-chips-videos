@@ -15,7 +15,7 @@ Status key: [ ] planned · [x] posted
 3. [x] Why silicon? The element that runs the modern world
 4. [x] Energy bands and the bandgap — explained without heavy maths
 5. [x] Electrons and holes: how current flows in a semiconductor
-6. [ ] Doping: turning pure silicon into n-type and p-type
+6. [x] Doping: turning pure silicon into n-type and p-type
 7. [ ] The p–n junction and the diode
 8. [ ] The transistor: the switch that changed everything
 9. [ ] How a MOSFET works

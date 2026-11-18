@@ -1,0 +1,214 @@
+{
+  "day": 6,
+  "slug": "day06_doping",
+  "label": "BASICS · EP 5",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 5",
+  "thumb_line1": "DOPING",
+  "thumb_line2": "N & P TYPE",
+  "yt_title": "Doping: n-type & p-type | Semiconductor Basics Ep 5 | Atoms to Chips",
+  "yt_description": "Pure silicon has almost no free carriers, so on its own it is nearly useless for electronics. In this lesson we add a tiny pinch of another element, like salt in soup: phosphorus gives silicon spare electrons and makes n-type, boron leaves holes and makes p-type. We see why one atom in millions changes everything, what majority and minority carriers are, why doped silicon is still electrically neutral, and the three ways chip makers add the pinch. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: The p–n junction and the diode, what happens when p-type meets n-type.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #Doping #SemiconductorBasics #Physics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "doping",
+    "semiconductor doping",
+    "n-type and p-type",
+    "n-type semiconductor",
+    "p-type semiconductor",
+    "donor and acceptor",
+    "majority and minority carriers",
+    "phosphorus boron silicon",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Doping",
+      "sub": "Turning pure silicon into n-type and p-type",
+      "chapter": "Intro",
+      "say": "What if I told you the chip in your phone only works because it's slightly impure? Pure silicon is almost useless for electronics. But add one foreign atom for every few million silicon atoms, and it conducts about a million times better. That trick is called doping. Every chip, every LED and every solar panel is built on it. Today you'll see how it works, with no heavy maths. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "A pinch changes everything",
+      "figure": ["out/figs/day06_pinch_0.png", "out/figs/day06_pinch_1.png", "out/figs/day06_pinch_2.png", "out/figs/day06_pinch_3.png"],
+      "caption": "A tiny amount, added on purpose, changes how it behaves",
+      "chapter": "The pinch of salt",
+      "beats": [
+        {"say": "Think about cooking. Here is a big pot of soup.", "step": 0, "point": "soup", "label": "a big pot"},
+        {"say": "You add just a pinch of salt. It's tiny compared with the pot, but you can taste it in every spoonful.", "step": 1, "point": "salt", "label": "a tiny pinch", "circle": "salt"},
+        {"say": "Now look at pure silicon. Millions and millions of identical atoms, neatly lined up.", "step": 2, "point": "field", "label": "all silicon"},
+        {"say": "We swap in one different atom. That's our pinch of salt.", "step": 3, "point": "dopant", "label": "one new atom", "zoom": 1.8, "circle": "dopant", "define": {"term": "Doping", "meaning": "adding a tiny amount of another element on purpose"}},
+        {"say": "The atom we add is called a dopant. Just one in millions is enough to change how the whole crystal behaves.", "zoom": 1, "point": "dopant", "define": {"term": "Dopant", "meaning": "the foreign atom we add to the silicon"}}
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Silicon holds four hands",
+      "points": ["4 outer electrons each", "Each bond: two shared", "All bonds full", "So, no free electrons"],
+      "figure": ["out/figs/day06_hands_0.png", "out/figs/day06_hands_1.png", "out/figs/day06_hands_2.png"],
+      "chapter": "Silicon's four hands",
+      "beats": [
+        {"say": "To see why this works, picture each silicon atom as a person with four hands.", "step": 0, "show": 0, "point": "atom", "label": "one silicon atom"},
+        {"say": "The four hands are its four outer electrons. They're the ones that join it to other atoms.", "show": 1, "point": "hand", "label": "one \"hand\"", "define": {"term": "Outer electrons", "meaning": "the electrons an atom uses to link up"}},
+        {"say": "In the crystal, every atom holds hands with four neighbours. Each handshake is a bond, made of two shared electrons.", "step": 1, "show": 2, "point": "bond", "label": "a bond", "circle": "bond"},
+        {"say": "Every hand is held. No electron is left over to wander. That's why pure silicon barely conducts.", "step": 2, "show": 4, "point": "full", "label": "all held"}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "n-type: one electron too many",
+      "figure": ["out/figs/day06_ntype_0.png", "out/figs/day06_ntype_1.png", "out/figs/day06_ntype_2.png", "out/figs/day06_ntype_3.png"],
+      "caption": "Phosphorus gives away its fifth electron",
+      "chapter": "n-type: phosphorus",
+      "beats": [
+        {"say": "Here's a patch of pure silicon. Every bond is full.", "step": 0, "point": "centre", "label": "all bonds full"},
+        {"say": "Now we swap one silicon atom for phosphorus. Phosphorus has five hands, not four.", "step": 1, "point": "P", "label": "phosphorus", "zoom": 1.7, "zoom_on": "P"},
+        {"say": "Four hands hold on to the neighbours, just like silicon did. But the fifth electron has no one to hold.", "point": "extra", "label": "the spare", "circle": "extra"},
+        {"say": "It's like a guest arriving at a full dinner table. There's no seat, so they wander around the room.", "zoom": 1, "point": "extra", "label": "no seat"},
+        {"say": "Even at room temperature, that spare electron breaks away and roams the crystal, free to carry current.", "step": 2, "flow": ["extra", "mid", "free"], "point": "free", "label": "free electron"},
+        {"say": "The phosphorus atom itself stays locked in place. Having lost an electron, it's left with a small positive charge.", "point": "plus", "label": "fixed, +"},
+        {"say": "Because phosphorus donates an electron, we call it a donor. Silicon full of donors is called n-type, n for negative, because its extra carriers are negative electrons.", "step": 3, "point": "donor", "define": {"term": "Donor", "meaning": "an atom that gives away a spare electron"}}
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1 in 5 million",
+      "caption": "Phosphorus atoms in lightly doped silicon: about a million times more free electrons",
+      "chapter": "How much is a pinch?",
+      "say": "How much phosphorus do we need? Very little. In lightly doped silicon, there's about one phosphorus atom for every five million silicon atoms. That's about as rare as one drop of ink in a full bathtub. Yet it gives about a million times more free electrons than pure silicon has on its own."
+    },
+    {
+      "kind": "quote",
+      "quote": "Phosphorus has one electron too many. That spare electron is free to move.",
+      "chapter": "So far",
+      "say": "So far: silicon atoms hold hands with four neighbours, so pure silicon has almost no free electrons. Swap in phosphorus, with five hands, and the spare electron is free to move. That's n-type. Now, what if we do the opposite, and add an atom with too few hands?"
+    },
+    {
+      "kind": "figure",
+      "head": "p-type: one electron too few",
+      "figure": ["out/figs/day06_ptype_0.png", "out/figs/day06_ptype_1.png", "out/figs/day06_ptype_2.png", "out/figs/day06_ptype_3.png"],
+      "caption": "Boron leaves a hole that wanders through the crystal",
+      "chapter": "p-type: boron",
+      "beats": [
+        {"say": "This time we swap in boron. Boron has only three hands.", "step": 0, "point": "B", "label": "boron"},
+        {"say": "It holds three neighbours fine. But the fourth bond is missing an electron.", "point": "gap", "label": "one short", "zoom": 1.7, "zoom_on": "gap"},
+        {"say": "Remember last episode? A missing electron is a hole, and it acts like a positive charge.", "step": 1, "point": "hole1", "label": "a hole", "circle": "hole1"},
+        {"say": "Now an electron from a nearby bond hops in to fill the gap. That fixes one bond, but empties another.", "step": 2, "zoom": 1, "point": "hop", "label": "a neighbour hops in", "flow": ["hole2", "hop", "hole1"]},
+        {"say": "So the hole has moved on, like the empty seat in a cinema row. And it can keep moving, carrying current.", "point": "hole2", "label": "hole moves on", "flow": ["hole1", "hop", "hole2"]},
+        {"say": "Boron, now holding an extra electron, stays put with a small negative charge.", "point": "minus", "label": "fixed, −"},
+        {"say": "Boron accepts an electron, so we call it an acceptor. Silicon full of acceptors is p-type, p for positive, because its extra carriers are positive holes.", "step": 3, "point": "acceptor", "define": {"term": "Acceptor", "meaning": "an atom that grabs an electron, leaving a hole"}}
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "n-type vs p-type",
+      "chapter": "n-type vs p-type",
+      "left": {"title": "n-type", "points": ["Add phosphorus (5 hands)", "Spare electrons roam", "Carriers: mostly electrons"]},
+      "right": {"title": "p-type", "points": ["Add boron (3 hands)", "Holes roam", "Carriers: mostly holes"]},
+      "beats": [
+        {"say": "Let's put them side by side. In n-type, we add an atom with five hands, like phosphorus. The spare electrons roam free."},
+        {"say": "In p-type, we add an atom with three hands, like boron. The missing electrons make holes that roam free.", "right": true},
+        {"say": "Here's a handy trick to remember: n is for negative electrons, p is for positive holes."}
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Silicon doped with phosphorus is which type?",
+      "options": ["n-type", "p-type", "Neither"],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {"say": "Quick check, and it's a sneaky one. Silicon doped with phosphorus. Is it n-type or p-type? Pause and think."},
+        {"say": "Three, two, one."},
+        {"say": "It's n-type. Don't let the letter P fool you. Phosphorus has five hands, so it gives away spare negative electrons.", "reveal": true}
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Majority and minority",
+      "points": ["n-type: mostly electrons", "A few holes remain", "p-type: mostly holes", "A few electrons remain"],
+      "figure": ["out/figs/day06_majority_0.png", "out/figs/day06_majority_1.png", "out/figs/day06_majority_2.png"],
+      "chapter": "Majority and minority carriers",
+      "beats": [
+        {"say": "Doped silicon still has both kinds of carrier. One kind just outnumbers the other, like a crowd of home fans with a few away fans mixed in.", "step": 0, "show": 1, "point": "ntype", "label": "n-type"},
+        {"say": "In n-type, electrons are the big crowd. We call them the majority carriers.", "step": 1, "point": "ntype", "label": "majority: electrons", "define": {"term": "Majority carrier", "meaning": "the kind of carrier there is far more of"}},
+        {"say": "Heat still makes a few holes. They're the minority carriers. And the extra electrons fill most of them, so there are even fewer than in pure silicon.", "show": 2, "point": "nfew", "label": "minority: holes", "circle": "nfew", "r": 50, "define": {"term": "Minority carrier", "meaning": "the rarer kind, outnumbered by the other"}},
+        {"say": "In p-type, it flips. Holes are the majority, and a few electrons are the minority.", "step": 2, "show": 4, "point": "pfew", "label": "minority: electrons"},
+        {"say": "Look at the small plus and minus signs in the middle. Those are the dopant atoms, fixed in place. Each one balances a carrier, so the silicon as a whole stays neutral.", "point": "ptype", "label": "fixed dopant atoms", "zoom": 1.5}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Turn the dial",
+      "figure": ["out/figs/day06_dial_0.png", "out/figs/day06_dial_1.png", "out/figs/day06_dial_2.png", "out/figs/day06_dial_3.png"],
+      "caption": "Engineers choose the amount, like turning a volume knob",
+      "chapter": "Choosing how much",
+      "beats": [
+        {"say": "The best part is that we can choose the amount, like turning a volume knob. Each step on this scale means ten times more carriers.", "step": 0, "point": "bar0", "label": "pure silicon"},
+        {"say": "One dopant in five million gives about a million times more carriers than pure silicon.", "step": 1, "point": "bar1", "label": "a million times"},
+        {"say": "Turn the knob up to one in five hundred, and it's about ten billion times more. Chips use this heavy doping where wires connect.", "step": 2, "point": "bar2", "label": "heavy doping"},
+        {"say": "Copper is still ahead, but heavily doped silicon is getting close to behaving like a metal.", "step": 3, "point": "bar3", "label": "copper"},
+        {"say": "There's a bonus. In pure silicon, heat decides the number of carriers. In doped silicon, the dopant does, so the chip behaves the same on a cool morning or a hot afternoon.", "point": "bar1", "circle": "bar1", "label": "set by us"}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "How do the atoms get in?",
+      "figure": ["out/figs/day06_howin_0.png", "out/figs/day06_howin_1.png", "out/figs/day06_howin_2.png"],
+      "caption": "We'll look at each method in detail later in the series",
+      "chapter": "How doping is done",
+      "beats": [
+        {"say": "So far: we can add a pinch, and we can choose how much. But how do you get single atoms into solid silicon? There are three main ways.", "step": 0},
+        {"say": "One. Mix the dopant into the molten silicon before the crystal is grown. The whole crystal comes out lightly doped.", "point": "melt", "label": "melted silicon + dopant", "flow": ["melt", "crystal"]},
+        {"say": "Two. Shoot the dopant atoms in. They're given an electric charge, sped up, and fired into the surface, like tiny bullets.", "step": 1, "point": "beam_mid", "label": "fast ions", "flow": ["beam_top", "beam_mid", "wafer2"], "define": {"term": "Ion", "meaning": "an atom with an electric charge"}},
+        {"say": "Three. Bake it. Heat the wafer in a furnace with dopant atoms around it, and they slowly creep into the surface.", "step": 2, "point": "wafer3", "label": "seeping in", "flow": ["gas", "wafer3"]},
+        {"say": "Modern chips mostly use the second way, because it puts exactly the right amount in exactly the right place."}
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Is a piece of n-type silicon negatively charged?",
+      "options": ["Yes, strongly", "No, it's neutral overall", "Only when it's hot"],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {"say": "One more. n-type silicon is full of free negative electrons. So is the whole piece negatively charged? Pause and think."},
+        {"say": "Three, two, one."},
+        {"say": "No, it's neutral overall. Every free electron came from a phosphorus atom, which stays behind with a matching positive charge.", "reveal": true}
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Why we need both",
+      "points": ["p-type: holes", "n-type: electrons", "Put them together…", "…and you get a junction"],
+      "figure": ["out/figs/day06_junction_0.png", "out/figs/day06_junction_1.png", "out/figs/day06_junction_2.png"],
+      "chapter": "Why both types matter",
+      "beats": [
+        {"say": "Why make two types? Because the real magic happens where they meet.", "step": 0, "show": 1, "point": "p", "label": "p-type"},
+        {"say": "On one side, p-type, full of holes. On the other, n-type, full of electrons.", "step": 1, "show": 2, "point": "n", "label": "n-type"},
+        {"say": "Place them side by side in one crystal, and the boundary between them is called a p–n junction.", "step": 2, "show": 4, "point": "junction", "label": "the junction", "circle": "junction", "define": {"term": "p–n junction", "meaning": "the border where p-type meets n-type"}},
+        {"say": "Electrons and holes rush toward each other at that border. What happens there gives us diodes, solar cells, LEDs and transistors.", "flow": ["n_side", "junction"], "point": "junction", "label": "they meet"}
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": ["Doping: a pinch of atoms", "Phosphorus → n-type", "Boron → p-type"],
+      "beats": [
+        {"say": "Let's recap in three points. One: doping means adding a tiny pinch of another element on purpose, about one atom in millions, to control how many carriers silicon has.", "show": 1},
+        {"say": "Two: phosphorus has five hands. Its spare electron roams free, making n-type silicon, with electrons as the majority.", "show": 2},
+        {"say": "Three: boron has three hands. Its missing electron makes a hole, giving p-type silicon, with holes as the majority. And both types stay neutral overall.", "show": 3}
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 6",
+      "sub": "The p–n junction and the diode",
+      "chapter": "Coming up",
+      "say": "Tomorrow, we put p-type and n-type together and see what happens at the border. You'll meet the diode, a one-way street for electricity, and the first real building block of every chip. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
