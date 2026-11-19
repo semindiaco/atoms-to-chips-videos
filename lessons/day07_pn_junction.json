@@ -1,0 +1,620 @@
+{
+  "day": 7,
+  "slug": "day07_pn_junction",
+  "label": "BASICS · EP 6",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 6",
+  "thumb_line1": "P–N JUNCTION",
+  "thumb_line2": "THE DIODE",
+  "yt_title": "The p–n Junction & the Diode | Semiconductor Basics Ep 6 | Atoms to Chips",
+  "yt_description": "What happens when p-type silicon meets n-type silicon? Electrons and holes cross the border and cancel out, leaving an empty depletion zone and a small hill that stops further crossing. In this lesson we see how a battery shrinks or widens that zone, why a silicon diode switches on near 0.7 volts, how to read the diode symbol, and how diodes inside your phone charger turn back-and-forth current into one-way current. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: The transistor, the switch that changed everything.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #Diode #PNJunction #SemiconductorBasics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "p-n junction",
+    "pn junction",
+    "diode",
+    "how a diode works",
+    "depletion region",
+    "forward bias",
+    "reverse bias",
+    "diode IV curve",
+    "rectifier",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "The p–n Junction & the Diode",
+      "sub": "A one-way street for electricity",
+      "chapter": "Intro",
+      "say": "The socket in your wall gives electricity that swings back and forth, fifty times every second. But your phone battery needs it to flow one way only. So who sorts it out? A tiny part called a diode. And a diode is nothing more than p-type silicon touching n-type silicon. Today you'll see what happens at that border, with no heavy maths. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "A one-way door",
+      "figure": [
+        "out/figs/day07_valve_0.png",
+        "out/figs/day07_valve_1.png",
+        "out/figs/day07_valve_2.png"
+      ],
+      "caption": "A diode does for electricity what this valve does for water",
+      "chapter": "The one-way valve",
+      "beats": [
+        {
+          "say": "Let's start with water. Here is a pipe with a little flap inside.",
+          "step": 0,
+          "point": "valve"
+        },
+        {
+          "say": "The flap hangs from the top, and a small ledge stops it swinging to the left. So it can only swing one way.",
+          "point": "valve",
+          "zoom": 1.7,
+          "zoom_on": "valve",
+          "circle": "valve"
+        },
+        {
+          "say": "Push water forward, and the flap swings open. Water flows straight through.",
+          "step": 1,
+          "zoom": 1,
+          "point": "mid_top",
+          "flow": [
+            "in_top",
+            "mid_top",
+            "out_top"
+          ]
+        },
+        {
+          "say": "Now push from the other side. The flap slams against its ledge, and nothing gets through.",
+          "step": 2,
+          "point": "valve_bot",
+          "spot": 190
+        },
+        {
+          "say": "A diode is exactly this, but for electricity. Current can go one way, and not the other.",
+          "point": "valve_bot",
+          "define": {
+            "term": "Diode",
+            "meaning": "a part that lets current flow only one way"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Where p meets n",
+      "figure": [
+        "out/figs/day07_cross_0.png",
+        "out/figs/day07_cross_1.png",
+        "out/figs/day07_cross_1b.png",
+        "out/figs/day07_cross_2.png",
+        "out/figs/day07_cross_3.png"
+      ],
+      "caption": "Carriers cross the border, cancel out, and leave an empty zone",
+      "chapter": "Crossing the border",
+      "beats": [
+        {
+          "say": "So how do we build that flap from silicon? Remember last episode. On the left, p-type, full of holes. On the right, n-type, full of free electrons.",
+          "step": 0,
+          "point": "p"
+        },
+        {
+          "say": "The small squares are the dopant atoms. They're locked in place, and each one balances a carrier.",
+          "point": "n"
+        },
+        {
+          "say": "Now we make them in one single crystal, side by side. The border is called a p–n junction.",
+          "step": 1,
+          "point": "border",
+          "circle": "border",
+          "define": {
+            "term": "p–n junction",
+            "meaning": "the border where p-type meets n-type silicon"
+          }
+        },
+        {
+          "say": "Think of two crowded rooms with the door between them flung open. People spread into the other room. Carriers do the same.",
+          "step": 2,
+          "point": "e_to",
+          "flow": [
+            "n",
+            "border",
+            "p"
+          ]
+        },
+        {
+          "say": "Electrons wander left into the p side. Holes wander right into the n side.",
+          "point": "h_to",
+          "flow": [
+            "p",
+            "border",
+            "n"
+          ]
+        },
+        {
+          "say": "When an electron meets a hole, it drops in and fills it. Both disappear. We say they recombine.",
+          "step": 3,
+          "point": "zone",
+          "zoom": 1.6,
+          "define": {
+            "term": "Recombine",
+            "meaning": "an electron fills a hole, and both vanish"
+          }
+        },
+        {
+          "say": "That leaves a thin strip near the border with no free carriers at all. Only the fixed dopant atoms remain.",
+          "step": 4,
+          "zoom": 1,
+          "point": "zone",
+          "spot": 190
+        },
+        {
+          "say": "This strip is called the depletion zone. Depleted simply means emptied out.",
+          "point": "zlabel",
+          "define": {
+            "term": "Depletion zone",
+            "meaning": "a strip near the border with no free carriers"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "A hill builds up",
+      "figure": [
+        "out/figs/day07_hill_0.png",
+        "out/figs/day07_hill_1.png",
+        "out/figs/day07_hill_2.png",
+        "out/figs/day07_hill_3.png"
+      ],
+      "caption": "The fixed charges make a barrier that stops the crossing",
+      "chapter": "The hill",
+      "beats": [
+        {
+          "say": "Let's zoom in on that empty strip. Look at what's left behind.",
+          "step": 0,
+          "point": "ions",
+          "zoom": 1.5,
+          "zoom_on": "ions"
+        },
+        {
+          "say": "On the p side, boron atoms that grabbed an electron. They're negative.",
+          "point": "minus",
+          "circle": "minus",
+          "r": 55
+        },
+        {
+          "say": "On the n side, phosphorus atoms that lost an electron. They're positive.",
+          "point": "plus"
+        },
+        {
+          "say": "A row of plus facing a row of minus creates an invisible push between them, called an electric field.",
+          "step": 1,
+          "zoom": 1,
+          "point": "field",
+          "define": {
+            "term": "Electric field",
+            "meaning": "an invisible push on charged things"
+          }
+        },
+        {
+          "say": "That push shoves electrons back toward the n side. So the more carriers cross, the harder it gets for the next ones.",
+          "point": "e_side",
+          "flow": [
+            "ions",
+            "e_side"
+          ]
+        },
+        {
+          "say": "Picture it as a hill. Electrons sit at the bottom on the n side, and the p side is up at the top.",
+          "step": 2,
+          "point": "hill",
+          "spot": 200
+        },
+        {
+          "say": "Soon the hill is too steep to climb. The crossing stops, and everything settles.",
+          "step": 3,
+          "point": "ball"
+        },
+        {
+          "say": "In silicon, this hill is worth about seven tenths of a volt. A volt measures electrical push.",
+          "point": "height",
+          "define": {
+            "term": "Volt",
+            "meaning": "the unit for how hard electricity is pushed"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "Where p meets n, carriers cancel out. What's left is an empty zone, and a hill.",
+      "chapter": "So far",
+      "say": "So far: when p-type meets n-type, electrons and holes cross the border and cancel out. They leave an empty zone, and the fixed charges in it build a hill that stops any more crossing. Now here's the fun part. What happens if we connect a battery?"
+    },
+    {
+      "kind": "figure",
+      "head": "Forward: push them together",
+      "figure": [
+        "out/figs/day07_fwd_0.png",
+        "out/figs/day07_fwd_1.png",
+        "out/figs/day07_fwd_2.png",
+        "out/figs/day07_fwd_3.png"
+      ],
+      "caption": "Plus to p, minus to n: the zone shrinks and current flows",
+      "chapter": "Forward bias",
+      "beats": [
+        {
+          "say": "Connect the battery's plus side to p, and its minus side to n. We call this forward bias.",
+          "step": 0,
+          "point": "bat",
+          "define": {
+            "term": "Forward bias",
+            "meaning": "connecting the battery the way that opens the diode"
+          }
+        },
+        {
+          "say": "The minus side pushes electrons toward the border. The plus side pushes holes toward it too.",
+          "step": 1,
+          "point": "zone",
+          "zoom": 1.6,
+          "zoom_on": "zone"
+        },
+        {
+          "say": "Both crowds squeeze into the empty zone. It gets thinner, and the hill gets lower.",
+          "step": 2,
+          "point": "zone",
+          "circle": "zone"
+        },
+        {
+          "say": "Once the push beats the hill, electrons pour across. They stream around the whole circuit, and the lamp lights up.",
+          "step": 3,
+          "zoom": 1,
+          "point": "lamp",
+          "flow": [
+            "bat_r",
+            "br",
+            "tr",
+            "n_end",
+            "junction",
+            "p_end",
+            "tl",
+            "bl",
+            "bat_l"
+          ]
+        },
+        {
+          "say": "That's the flap swinging open. Current flows easily.",
+          "point": "junction",
+          "flow": [
+            "n_end",
+            "junction",
+            "p_end"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "0.7 V",
+      "caption": "Push past about this much, and a silicon diode switches on",
+      "chapter": "The magic number",
+      "say": "How hard do you need to push? For a silicon diode, about point seven volts. That's less than half of a single AA battery. Below that, only a little current sneaks through. Above it, the current shoots up fast. Engineers remember this number all the time when they design circuits."
+    },
+    {
+      "kind": "figure",
+      "head": "Reverse: pull them apart",
+      "figure": [
+        "out/figs/day07_rev_0.png",
+        "out/figs/day07_rev_1.png",
+        "out/figs/day07_rev_2.png",
+        "out/figs/day07_rev_3.png"
+      ],
+      "caption": "Minus to p, plus to n: the zone widens and current stops",
+      "chapter": "Reverse bias",
+      "beats": [
+        {
+          "say": "Now flip the battery around. Minus goes to p, and plus goes to n. This is called reverse bias.",
+          "step": 0,
+          "point": "bat",
+          "define": {
+            "term": "Reverse bias",
+            "meaning": "connecting the battery the way that blocks the diode"
+          }
+        },
+        {
+          "say": "Opposites attract. So the plus side pulls electrons away from the border, and the minus side pulls holes away.",
+          "step": 1,
+          "point": "n",
+          "flow": [
+            "junction",
+            "n_end"
+          ]
+        },
+        {
+          "say": "The empty zone gets wider, and the hill gets taller. The lamp stays dark.",
+          "step": 2,
+          "point": "zone",
+          "spot": 220,
+          "zoom": 1.5,
+          "zoom_on": "zone"
+        },
+        {
+          "say": "Only a tiny trickle gets through, often a few billionths of an amp. We call it leakage.",
+          "step": 3,
+          "zoom": 1,
+          "point": "leak",
+          "define": {
+            "term": "Leakage",
+            "meaning": "a tiny unwanted current that still sneaks through"
+          }
+        },
+        {
+          "say": "That's the flap slammed shut. And push extremely hard in reverse, and the barrier finally breaks down. Some special diodes are built to use that on purpose."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Which way round lets current flow through a diode?",
+      "options": [
+        "Plus to p, minus to n",
+        "Minus to p, plus to n",
+        "Both ways equally"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. Which way round does a diode let current flow? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Plus to p, minus to n. That's forward bias, which shrinks the empty zone and lowers the hill.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "The diode's fingerprint",
+      "points": [
+        "Reverse: almost nothing",
+        "Forward: off, then on",
+        "Switch-on near 0.7 V"
+      ],
+      "figure": [
+        "out/figs/day07_curve_0.png",
+        "out/figs/day07_curve_1.png",
+        "out/figs/day07_curve_2.png",
+        "out/figs/day07_curve_3.png"
+      ],
+      "chapter": "The diode curve",
+      "beats": [
+        {
+          "say": "Engineers sum up a diode with one simple graph. Going right means more push forward. Going up means more current.",
+          "step": 0,
+          "show": 0,
+          "point": "origin"
+        },
+        {
+          "say": "On the left, reverse push. No matter how hard you push, the current stays almost zero.",
+          "step": 1,
+          "show": 1,
+          "point": "reverse",
+          "spot": 200
+        },
+        {
+          "say": "On the right, forward push. At first, still very little current.",
+          "step": 2,
+          "show": 2,
+          "point": "flat"
+        },
+        {
+          "say": "Then, around point seven volts, the line bends sharply and shoots up. That bend is where the hill is beaten.",
+          "point": "knee",
+          "zoom": 1.6,
+          "zoom_on": "knee"
+        },
+        {
+          "say": "Off, then suddenly on. That shape is the diode's fingerprint.",
+          "step": 3,
+          "show": 3,
+          "zoom": 1,
+          "point": "steep"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Meet the diode",
+      "figure": [
+        "out/figs/day07_symbol_0.png",
+        "out/figs/day07_symbol_1.png",
+        "out/figs/day07_symbol_2.png",
+        "out/figs/day07_symbol_3.png"
+      ],
+      "caption": "The symbol's arrow points the way current is allowed to go",
+      "chapter": "The diode symbol",
+      "beats": [
+        {
+          "say": "Here's how a diode looks on paper. Start with our p–n junction.",
+          "step": 0,
+          "point": "block"
+        },
+        {
+          "say": "In circuit drawings, it becomes a triangle and a bar. The p side is called the anode. The n side is called the cathode.",
+          "step": 1,
+          "point": "triangle",
+          "define": {
+            "term": "Anode and cathode",
+            "meaning": "the diode's two ends: the p end and n end"
+          }
+        },
+        {
+          "say": "The triangle points like an arrow, the way current is allowed to go. The bar is the wall it can't pass back through.",
+          "step": 2,
+          "point": "dir",
+          "flow": [
+            "triangle",
+            "bar"
+          ]
+        },
+        {
+          "say": "A real diode is a small part with a painted stripe. The stripe marks the cathode end, just like the bar.",
+          "step": 3,
+          "point": "stripe",
+          "zoom": 1.7,
+          "zoom_on": "stripe",
+          "circle": "stripe",
+          "r": 55
+        },
+        {
+          "say": "Put it in backwards, and your circuit won't work. Every electronics student learns that the hard way.",
+          "zoom": 1,
+          "point": "real"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Inside your phone charger",
+      "figure": [
+        "out/figs/day07_rect_0.png",
+        "out/figs/day07_rect_1.png",
+        "out/figs/day07_rect_2.png",
+        "out/figs/day07_rect_3.png"
+      ],
+      "caption": "Turning back-and-forth current into one-way current",
+      "chapter": "Diodes in your charger",
+      "beats": [
+        {
+          "say": "Remember the wall socket? Its current swings back and forth, like this wave.",
+          "step": 0,
+          "point": "ac",
+          "flow": [
+            "ac_start",
+            "ac",
+            "ac_end"
+          ]
+        },
+        {
+          "say": "Send it through a diode. The diode is the one-way flap.",
+          "step": 1,
+          "point": "diode",
+          "circle": "diode"
+        },
+        {
+          "say": "Forward swings pass through. Backward swings are blocked. Out comes current that only goes one way.",
+          "step": 2,
+          "point": "out",
+          "flow": [
+            "ac_end",
+            "diode",
+            "out_start",
+            "out"
+          ]
+        },
+        {
+          "say": "But half the power is wasted in those gaps. So chargers use four diodes working as a team, called a bridge. It flips the backward half the right way up.",
+          "step": 3,
+          "point": "out",
+          "spot": 220,
+          "define": {
+            "term": "Rectifier",
+            "meaning": "a circuit that turns back-and-forth current into one-way"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "The same junction, two superpowers",
+      "chapter": "LEDs and solar cells",
+      "left": {
+        "title": "LED",
+        "points": [
+          "Electricity in",
+          "Electrons fill holes",
+          "Light out"
+        ]
+      },
+      "right": {
+        "title": "Solar cell",
+        "points": [
+          "Light in",
+          "Makes electrons and holes",
+          "Electricity out"
+        ]
+      },
+      "beats": [
+        {
+          "say": "The p–n junction does even more. In an LED, forward current pushes electrons across. When they fill holes, their spare energy comes out as light."
+        },
+        {
+          "say": "A solar cell runs it in reverse. Sunlight knocks electrons free, making new electron and hole pairs.",
+          "right": true
+        },
+        {
+          "say": "The hill at the junction sends electrons one way and holes the other. That separation is electric current, straight from sunlight."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "In reverse bias, what happens to the empty zone?",
+      "options": [
+        "It gets wider",
+        "It disappears",
+        "It fills with metal"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. When you connect a diode in reverse, what happens to the empty zone? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "It gets wider. The battery pulls carriers away from the border, so the hill grows and current stops.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "p meets n: empty zone",
+        "Forward: zone shrinks, flows",
+        "Reverse: zone grows, blocks"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: where p-type meets n-type, electrons and holes cross and cancel out. That leaves an empty zone, and a hill of about point seven volts.",
+          "show": 1
+        },
+        {
+          "say": "Two: forward bias, plus to p and minus to n, shrinks the zone. Current flows easily.",
+          "show": 2
+        },
+        {
+          "say": "Three: reverse bias pulls carriers away and widens the zone, so almost nothing flows. That's a diode, a one-way street for electricity.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 7",
+      "sub": "The transistor: the switch that changed everything",
+      "chapter": "Coming up",
+      "say": "Tomorrow, we add one more layer and build a switch that electricity can turn on and off by itself. It's the transistor, the invention that changed everything. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
