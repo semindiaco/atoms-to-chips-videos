@@ -17,7 +17,7 @@ Status key: [ ] planned · [x] posted
 5. [x] Electrons and holes: how current flows in a semiconductor
 6. [x] Doping: turning pure silicon into n-type and p-type
 7. [x] The p–n junction and the diode
-8. [ ] The transistor: the switch that changed everything
+8. [x] The transistor: the switch that changed everything
 9. [ ] How a MOSFET works
 10. [ ] What is a chip (integrated circuit)? From one transistor to billions
 

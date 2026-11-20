@@ -1,0 +1,200 @@
+{
+  "day": 8,
+  "slug": "day08_transistor",
+  "label": "BASICS · EP 7",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 7",
+  "thumb_line1": "TRANSISTOR",
+  "thumb_line2": "TINY SWITCH",
+  "yt_title": "The Transistor: The Switch That Changed Everything | Basics Ep 7",
+  "yt_description": "Every app, photo and message on your phone runs on billions of tiny switches called transistors. In this lesson we build one from an n-p-n sandwich of silicon, see why it stays off, how a tiny push on the base turns it on, and how the same part can amplify a sound or store a letter as ones and zeros. We finish by wiring two transistors into a simple AND gate, the first step toward a computer. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: How a MOSFET works, the transistor inside every modern chip.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #Transistor #BJT #SemiconductorBasics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": ["transistor", "how a transistor works", "transistor explained", "bipolar junction transistor", "npn transistor", "transistor as a switch", "transistor amplifier", "logic gates", "binary", "semiconductor basics", "semiconductor physics for beginners", "atoms to chips"],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "The Transistor",
+      "sub": "The switch that changed everything",
+      "chapter": "Intro",
+      "say": "Every time you tap your phone, billions of tiny switches flip on and off. Billions of times every second. Each one is a transistor. Without them, there would be no phones, no laptops and no internet. Even your car and your washing machine depend on them. Today you'll see how one works, using the p–n junction from last time. No heavy maths. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "A tap for electricity",
+      "figure": ["out/figs/day08_tap_0.png", "out/figs/day08_tap_1.png", "out/figs/day08_tap_2.png"],
+      "caption": "A small control decides a big flow",
+      "chapter": "A tap for electricity",
+      "beats": [
+        {"say": "Let's start in the kitchen. Here is a water pipe with a tap.", "step": 0, "point": "tap"},
+        {"say": "The tap is closed. Water waits on the left, and nothing gets through.", "point": "water"},
+        {"say": "Now give the knob a small twist. It takes almost no effort.", "step": 1, "point": "knob", "zoom": 1.6, "zoom_on": "knob", "circle": "knob"},
+        {"say": "And a big flow of water rushes through the pipe.", "zoom": 1, "point": "flowlbl", "flow": ["pipe_in", "tap", "pipe_out"]},
+        {"say": "A transistor is the same idea for electricity. A tiny control signal decides whether a big current flows.", "step": 2, "point": "tr", "flow": ["big_in", "tr", "big_out"], "define": {"term": "Transistor", "meaning": "a switch for electricity, worked by electricity"}},
+        {"say": "No hand needed. Electricity itself turns the tap. That's what makes it so powerful.", "point": "ctrl", "flow": ["ctrl", "tr"]}
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1947",
+      "caption": "The first transistor worked at Bell Labs, USA",
+      "chapter": "Born in 1947",
+      "say": "The first transistor was made in December nineteen forty seven, at Bell Labs in America. John Bardeen, Walter Brattain and William Shockley later shared the Nobel Prize for it. Why did it matter so much? Within a few years, transistors were replacing bulky parts in radios, and later in computers. Let's compare it with what came before."
+    },
+    {
+      "kind": "compare",
+      "head": "Before and after",
+      "chapter": "Vacuum tubes vs transistors",
+      "left": {"title": "Vacuum tube", "points": ["Hot glass bulb", "Size of a thumb", "Burns out often"]},
+      "right": {"title": "Transistor", "points": ["Cool solid crystal", "Smaller than a virus", "Lasts for decades"]},
+      "beats": [
+        {"say": "Before transistors, switches were vacuum tubes. Glass bulbs that glowed hot, like old light bulbs. They used lots of power, and they burned out often."},
+        {"say": "One early computer, ENIAC, used about eighteen thousand of them. It filled a big room and weighed around thirty tonnes."},
+        {"say": "A transistor is a solid piece of crystal. It runs cool, lasts for decades, and today it is smaller than a virus. That's why a computer that once filled a room now fits in your pocket.", "right": true}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "An n–p–n sandwich",
+      "figure": ["out/figs/day08_npn_0.png", "out/figs/day08_npn_1.png", "out/figs/day08_npn_2.png", "out/figs/day08_npn_3.png"],
+      "caption": "Three layers, two junctions",
+      "chapter": "Building one",
+      "beats": [
+        {"say": "So how do we build one? Think of a sandwich with three layers. First, a slice of n-type silicon, full of free electrons.", "step": 0, "point": "emitter", "define": {"term": "Emitter", "meaning": "the layer that sends electrons out"}},
+        {"say": "It's called the emitter, because it sends electrons out.", "point": "emitter", "spot": 190},
+        {"say": "In a real transistor, the emitter is packed with far more electrons than the base has holes. Next, a very thin slice of p-type, with only a few holes. This is the base.", "step": 1, "point": "base", "zoom": 1.7, "zoom_on": "base", "define": {"term": "Base", "meaning": "the thin middle layer that controls the switch"}},
+        {"say": "Remember the word thin. It's the secret of the whole trick.", "point": "thin"},
+        {"say": "Last, another slice of n-type, called the collector. It collects the electrons.", "step": 2, "zoom": 1, "point": "collector", "define": {"term": "Collector", "meaning": "the layer that gathers the electrons"}},
+        {"say": "Look closely. We now have two p–n junctions, back to back. That's two diodes facing opposite ways.", "step": 3, "point": "diodes", "spot": 200},
+        {"say": "One points left, one points right. So whichever way you connect a battery, one of them blocks.", "point": "j2", "circle": "j2"}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Off: a wall in the way",
+      "figure": ["out/figs/day08_off_0.png", "out/figs/day08_off_1.png", "out/figs/day08_off_2.png"],
+      "caption": "Without a push on the base, junction 2 blocks everything",
+      "chapter": "Switched off",
+      "beats": [
+        {"say": "Let's wire it up. A big battery connects the emitter to the collector, with a lamp in the loop.", "step": 0, "point": "bat", "flow": ["bat_l", "bl", "tl", "e_end"]},
+        {"say": "The base has its own small battery, but for now its switch is open.", "point": "sw", "circle": "sw", "r": 55},
+        {"say": "The big battery pulls the collector positive. That puts junction two in reverse, just like last episode.", "step": 1, "point": "wall", "zoom": 1.6, "zoom_on": "wall"},
+        {"say": "Reverse bias means a wide empty zone. A wall. Electrons in the emitter can't get past it. And junction one has no push either, so it stays closed too.", "point": "wall", "spot": 170},
+        {"say": "So no current flows. The lamp stays dark. The switch is off. Think of the tap, firmly closed.", "step": 2, "zoom": 1, "point": "lamp"}
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "A transistor is a tap for electricity: three layers, two junctions, one tiny control.",
+      "chapter": "So far",
+      "say": "So far: a transistor is a tap for electricity. It's an n–p–n sandwich with two junctions back to back. With no push on the base, one junction blocks, and the switch is off. Next, let's see how a tiny push on the base turns it on."
+    },
+    {
+      "kind": "figure",
+      "head": "On: a small push opens the way",
+      "figure": ["out/figs/day08_on_0.png", "out/figs/day08_on_1.png", "out/figs/day08_on_2.png", "out/figs/day08_on_3.png"],
+      "caption": "A small base current lets a big current flow",
+      "chapter": "Switched on",
+      "beats": [
+        {"say": "Close the base switch. The small battery gives the base a gentle push, about point seven volts. Remember that number from the diode?", "step": 0, "point": "small", "circle": "sw", "r": 55, "flow": ["small", "sw", "b_top", "b_mid"]},
+        {"say": "That push puts junction one in forward bias. Its empty zone vanishes.", "step": 1, "point": "j1", "zoom": 1.7, "zoom_on": "base"},
+        {"say": "Electrons pour out of the emitter, into the base.", "point": "base", "flow": ["emitter", "j1", "base"]},
+        {"say": "Here's the trick. The base is so thin that the electrons zoom straight across it, before they can find a hole.", "step": 2, "point": "base", "flow": ["j1", "base", "j2", "collector"]},
+        {"say": "On the far side, the wall's own push sweeps them into the collector. About ninety nine out of every hundred make it.", "zoom": 1, "point": "collector", "flow": ["emitter", "base", "collector", "c_end"]},
+        {"say": "Only about one in a hundred leaves through the base wire. That's the small control current. Small current in, big current through. That is the whole idea.", "point": "b_mid", "flow": ["base", "b_mid", "b_top"]},
+        {"say": "And the big current flows all around the loop. The lamp lights up. The switch is on.", "step": 3, "point": "lamp", "flow": ["bat_l", "bl", "tl", "e_end", "base", "c_end", "tr", "lamp", "br", "bat_r"]}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Job two: the amplifier",
+      "figure": ["out/figs/day08_amp_0.png", "out/figs/day08_amp_1.png", "out/figs/day08_amp_2.png"],
+      "caption": "A tiny signal steers a big current with the same shape",
+      "chapter": "The amplifier",
+      "beats": [
+        {"say": "A transistor has a second job. Imagine the tiny signal from a microphone. A small wiggle of current.", "step": 0, "point": "in", "flow": ["in_start", "in", "in_end"]},
+        {"say": "Feed that wiggle into the base of a transistor, powered by a battery.", "step": 1, "point": "tr", "flow": ["in_end", "tr_in", "tr"], "define": {"term": "Amplifier", "meaning": "something that makes a signal bigger"}},
+        {"say": "Since a small base current controls a big current, the big current wiggles in exactly the same way. Often about a hundred times bigger.", "step": 2, "point": "out", "flow": ["tr", "tr_out", "out", "out_end"]},
+        {"say": "Same shape, much stronger. Now it can drive a speaker, loud and clear. That's how early radios and hearing aids worked.", "point": "peak", "zoom": 1.5, "zoom_on": "out"},
+        {"say": "But for computers, the first job matters most. Simply on, or off.", "zoom": 1, "point": "tr"}
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What turns an n–p–n transistor on?",
+      "options": ["A small push on the base", "Turning the battery around", "Heating the collector"],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {"say": "Quick check. What turns an n–p–n transistor on? Pause and think."},
+        {"say": "Three, two, one."},
+        {"say": "A small push on the base. It opens junction one, and electrons rush through the thin base to the collector.", "reveal": true}
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Switches speak in 1s and 0s",
+      "points": ["Off means 0", "On means 1", "8 switches: one letter"],
+      "figure": ["out/figs/day08_bits_0.png", "out/figs/day08_bits_1.png", "out/figs/day08_bits_2.png"],
+      "chapter": "Ones and zeros",
+      "beats": [
+        {"say": "How can on and off become your photos and messages? Think of a light that is either off or on.", "step": 0, "show": 0, "point": "off"},
+        {"say": "Call off zero, and on one. Each switch holds one tiny yes or no, called a bit.", "show": 2, "point": "on", "define": {"term": "Bit", "meaning": "a single one or zero, the smallest piece of data"}},
+        {"say": "Now line up eight switches. Each different pattern can stand for a different thing.", "step": 1, "point": "row", "spot": 220},
+        {"say": "This pattern, zero one zero zero zero zero zero one, is the code computers use for the capital letter A. A group of eight bits like this is called a byte.", "step": 2, "show": 3, "point": "letter", "zoom": 1.5, "zoom_on": "row"},
+        {"say": "Every photo, song and video is just a very long row of these switches. A single photo can need millions of them.", "zoom": 1, "point": "row"}
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Switches that decide",
+      "figure": ["out/figs/day08_and_0.png", "out/figs/day08_and_1.png", "out/figs/day08_and_2.png", "out/figs/day08_and_3.png"],
+      "caption": "Two transistors in a row make a simple AND gate",
+      "chapter": "Your first logic gate",
+      "beats": [
+        {"say": "Switches can also make decisions. Put two transistor switches in a row, A and B, with a lamp.", "step": 0, "point": "mid"},
+        {"say": "Both off. The path is broken, so the lamp is dark.", "point": "note"},
+        {"say": "Turn on A only. Current gets through A, but B still blocks the way.", "step": 1, "point": "B", "flow": ["bat_l", "bl", "tl", "A"]},
+        {"say": "Now turn on both. The path is complete, and the lamp lights up.", "step": 2, "point": "lamp", "flow": ["bat_l", "bl", "tl", "A", "B", "tr", "lamp", "br", "bat_r"]},
+        {"say": "The lamp is on only if A and B are both on. Engineers call this an AND gate. Put the two switches side by side instead, and the lamp lights if A or B is on. That's an OR gate.", "step": 3, "point": "A", "spot": 200, "define": {"term": "Logic gate", "meaning": "a few switches that make a yes or no decision"}},
+        {"say": "Join millions of gates like this, and you can add numbers, compare them, and run a whole computer.", "point": "note", "zoom": 1.4, "zoom_on": "note"},
+        {"say": "That's the real magic of the transistor. Not just a switch, but a switch that other switches can flip.", "zoom": 1, "point": "mid"}
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "20 billion+",
+      "caption": "Transistors in a top phone chip today",
+      "chapter": "Billions in your pocket",
+      "say": "How many are in your pocket? Apple said its A seventeen Pro chip from twenty twenty three holds nineteen billion transistors. MediaTek's top chip from the same year holds about twenty two billion. That's more than two transistors for every person on Earth, in one chip smaller than a fingernail. And every one of them is the same simple idea you just learned."
+    },
+    {
+      "kind": "quiz",
+      "question": "Why is the base made so thin?",
+      "options": ["To save silicon", "So electrons zoom across it", "To make it glow"],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {"say": "One more. Why is the base layer made so thin? Pause and think."},
+        {"say": "Three, two, one."},
+        {"say": "So electrons zoom across it to the collector, before they can fall into a hole. That's how a small base current controls a big one.", "reveal": true}
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": ["A tap for electricity", "Small push, big current", "On and off: 1 and 0"],
+      "beats": [
+        {"say": "Let's recap in three points. One: a transistor is a tap for electricity, an n–p–n sandwich with two junctions back to back.", "show": 1},
+        {"say": "Two: a small push on the thin base lets a big current flow from emitter to collector. That makes it a switch, and an amplifier.", "show": 2},
+        {"say": "Three: on and off become ones and zeros. Wire switches together into gates, and you get a computer.", "show": 3}
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 8",
+      "sub": "How a MOSFET works",
+      "chapter": "Coming up",
+      "say": "Today's transistor is called a bipolar transistor. But the chips in your phone use a different kind, controlled by a gate that needs almost no current at all. Tomorrow, we meet the MOSFET. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
