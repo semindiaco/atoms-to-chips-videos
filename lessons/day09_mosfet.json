@@ -1,0 +1,587 @@
+{
+  "day": 9,
+  "slug": "day09_mosfet",
+  "label": "BASICS · EP 8",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 8",
+  "thumb_line1": "THE MOSFET",
+  "thumb_line2": "NO-TOUCH TAP",
+  "yt_title": "How a MOSFET Works | Semiconductor Basics Ep 8 | Atoms to Chips",
+  "yt_description": "The chip in your phone holds billions of MOSFETs, the most-made object in human history. In this lesson we build one layer by layer, metal, oxide and silicon, see why it stays off, and watch a voltage on the gate pull a thin channel of electrons into place without touching it, just like a charged balloon lifting paper. We finish with how the gate's grip went from flat, to fins, to gate-all-around in today's newest chips. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: What is a chip? From one transistor to billions.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #MOSFET #Transistor #SemiconductorBasics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "mosfet",
+    "how a mosfet works",
+    "mosfet explained",
+    "field effect transistor",
+    "nmos",
+    "transistor",
+    "gate oxide",
+    "finfet",
+    "gate all around",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "How a MOSFET Works",
+      "sub": "The switch inside every modern chip",
+      "chapter": "Intro",
+      "say": "Here's a strange fact. The most-made object in human history is not a brick, or a bolt, or a grain of rice. It's a tiny switch called the MOSFET. Your phone alone holds billions of them. Last time we met the first kind of transistor. Today you'll see the kind that runs every modern chip, and the clever trick that makes it work. Understand this one switch, and you understand the heart of every chip you own. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "A drawbridge for electrons",
+      "figure": [
+        "out/figs/day09_bridge_0.png",
+        "out/figs/day09_bridge_1.png",
+        "out/figs/day09_bridge_2.png",
+        "out/figs/day09_bridge_3.png"
+      ],
+      "caption": "A keeper decides when traffic can cross",
+      "chapter": "A drawbridge",
+      "beats": [
+        {
+          "say": "Let's start with a picture. Two towns, with a river between them.",
+          "step": 0,
+          "point": "river"
+        },
+        {
+          "say": "Town A is full of cars, all wanting to cross.",
+          "point": "carsA"
+        },
+        {
+          "say": "Now add a drawbridge, and a keeper who controls it. The bridge is up, so no traffic can pass.",
+          "step": 1,
+          "point": "keeper",
+          "circle": "keeper",
+          "r": 60
+        },
+        {
+          "say": "The keeper lowers the bridge. A road appears, and cars stream across.",
+          "step": 2,
+          "point": "deck",
+          "zoom": 1.5,
+          "zoom_on": "deck",
+          "flow": [
+            "a",
+            "a_out",
+            "deck",
+            "b_in",
+            "b"
+          ]
+        },
+        {
+          "say": "Notice the keeper never pushes a single car. He only builds the road.",
+          "zoom": 1,
+          "point": "keeper"
+        },
+        {
+          "say": "A MOSFET works just like this. Town A is called the source. Town B is the drain. And the keeper is the gate.",
+          "step": 3,
+          "point": "names",
+          "spot": 200,
+          "define": {
+            "term": "MOSFET",
+            "meaning": "the tiny switch used in almost every chip"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Two kinds of transistor",
+      "chapter": "Why a new kind?",
+      "left": {
+        "title": "Last episode's kind",
+        "points": [
+          "Worked by a current",
+          "Base always sips power",
+          "Hard to pack tightly"
+        ]
+      },
+      "right": {
+        "title": "MOSFET",
+        "points": [
+          "Worked by a voltage",
+          "Gate takes almost nothing",
+          "Easy to make tiny"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Why do we need a new kind? Remember last episode's transistor. To keep it on, a small current must keep flowing into the base."
+        },
+        {
+          "say": "That's like paying a toll every second the tap stays open. Fine for one switch. But for billions, it adds up to a lot of heat."
+        },
+        {
+          "say": "A MOSFET is controlled by a voltage instead. Its gate takes almost no current at all. And its simple, flat shape is easy to shrink. That's why it won.",
+          "right": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "The name, layer by layer",
+      "figure": [
+        "out/figs/day09_mos_0.png",
+        "out/figs/day09_mos_1.png",
+        "out/figs/day09_mos_2.png",
+        "out/figs/day09_mos_3.png"
+      ],
+      "caption": "Metal, oxide, semiconductor",
+      "chapter": "M, O, S",
+      "beats": [
+        {
+          "say": "The name sounds scary, but it simply lists the layers, from the top down. Let's build it from the bottom up.",
+          "step": 0,
+          "point": "si"
+        },
+        {
+          "say": "S is for semiconductor. Here, a block of p-type silicon, full of holes.",
+          "point": "S"
+        },
+        {
+          "say": "O is for oxide. A very thin layer of glass on top. In modern chips, it's just a few atoms thick.",
+          "step": 1,
+          "point": "ox",
+          "zoom": 1.7,
+          "zoom_on": "ox",
+          "define": {
+            "term": "Oxide",
+            "meaning": "a thin layer of glass that blocks current"
+          }
+        },
+        {
+          "say": "M is for metal. A small plate on top of the glass. This is the gate.",
+          "step": 2,
+          "zoom": 1,
+          "point": "metal",
+          "define": {
+            "term": "Gate",
+            "meaning": "the control plate that turns the switch on"
+          }
+        },
+        {
+          "say": "Think of a sandwich. Metal, glass, silicon.",
+          "point": "M",
+          "spot": 180
+        },
+        {
+          "say": "A wire connects to the gate. But here's the key. Glass doesn't conduct, so no current can flow down through it.",
+          "step": 3,
+          "point": "block",
+          "flow": [
+            "wire",
+            "metal"
+          ]
+        },
+        {
+          "say": "So how can the gate control anything? Hold that thought.",
+          "point": "ox"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Source and drain",
+      "figure": [
+        "out/figs/day09_sd_0.png",
+        "out/figs/day09_sd_1.png",
+        "out/figs/day09_sd_2.png",
+        "out/figs/day09_sd_3.png"
+      ],
+      "caption": "Two n-type islands in a p-type body",
+      "chapter": "Source, drain, off",
+      "beats": [
+        {
+          "say": "First, let's finish building. Here's our sandwich again, with p-type silicon underneath.",
+          "step": 0,
+          "point": "body"
+        },
+        {
+          "say": "Now we add two small islands of n-type silicon, one on each side of the gate. They're packed with free electrons.",
+          "step": 1,
+          "point": "source",
+          "define": {
+            "term": "Source",
+            "meaning": "the island where electrons start"
+          }
+        },
+        {
+          "say": "The left island is the source. The right one is the drain, where electrons drain away.",
+          "point": "drain",
+          "define": {
+            "term": "Drain",
+            "meaning": "the island where electrons leave"
+          }
+        },
+        {
+          "say": "Connect a battery between them. The drain is pulled positive, so electrons would love to cross.",
+          "step": 2,
+          "point": "bat",
+          "flow": [
+            "s_in",
+            "s_top",
+            "bat"
+          ]
+        },
+        {
+          "say": "But look at the gap. It's p-type silicon, full of holes. That makes two p–n junctions, back to back.",
+          "point": "gap",
+          "zoom": 1.6,
+          "zoom_on": "gap"
+        },
+        {
+          "say": "Just like the river. One junction always blocks. So with zero volts on the gate, no current flows. The switch is off.",
+          "step": 3,
+          "zoom": 1,
+          "point": "tag",
+          "circle": "gap",
+          "r": 80
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "Metal on glass on silicon: a gate that can't touch the electrons it controls.",
+      "chapter": "So far",
+      "say": "So far: a MOSFET is a sandwich of metal, glass and silicon. Two islands, called the source and the drain, sit on either side. With nothing on the gate, the path between them is blocked. And the glass means the gate can't touch the electrons at all. So how does it switch on?"
+    },
+    {
+      "kind": "figure",
+      "head": "Pulling without touching",
+      "figure": [
+        "out/figs/day09_balloon_0.png",
+        "out/figs/day09_balloon_1.png",
+        "out/figs/day09_balloon_2.png"
+      ],
+      "caption": "An electric field reaches across a gap",
+      "chapter": "The field effect",
+      "beats": [
+        {
+          "say": "Try this at home. Hold a balloon over some tiny bits of paper. Nothing happens.",
+          "step": 0,
+          "point": "b1"
+        },
+        {
+          "say": "Now rub the balloon on your hair. It picks up extra electric charge.",
+          "step": 1,
+          "point": "b2",
+          "flow": [
+            "rub",
+            "b2"
+          ]
+        },
+        {
+          "say": "Bring it close, and the paper jumps up to meet it. The balloon never touched the paper.",
+          "step": 2,
+          "point": "paper2",
+          "zoom": 1.5,
+          "zoom_on": "paper2",
+          "flow": [
+            "paper2",
+            "b2"
+          ]
+        },
+        {
+          "say": "Its charge reaches across the gap with an invisible pull. That pull is called an electric field.",
+          "zoom": 1,
+          "point": "field",
+          "define": {
+            "term": "Electric field",
+            "meaning": "an invisible push or pull from electric charge"
+          }
+        },
+        {
+          "say": "That's the F and E in MOSFET. Field effect. The gate is our charged balloon.",
+          "point": "b2",
+          "spot": 200
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Switching on: a channel appears",
+      "figure": [
+        "out/figs/day09_on_0.png",
+        "out/figs/day09_on_1.png",
+        "out/figs/day09_on_2.png",
+        "out/figs/day09_on_3.png"
+      ],
+      "caption": "The gate's field builds a road of electrons",
+      "chapter": "Switching on",
+      "beats": [
+        {
+          "say": "Now put a positive voltage on the gate. The gate fills up with positive charge.",
+          "step": 0,
+          "point": "gplus"
+        },
+        {
+          "say": "Its field reaches down through the glass. Holes are positive too, and like charges push apart. So the holes are pushed away from the surface.",
+          "step": 1,
+          "point": "holes",
+          "spot": 190
+        },
+        {
+          "say": "At the same time, the field pulls electrons up, right under the glass.",
+          "step": 2,
+          "point": "channel",
+          "zoom": 1.7,
+          "zoom_on": "channel"
+        },
+        {
+          "say": "They form a very thin layer, joining source to drain. This is the channel. The bridge has come down.",
+          "point": "channel",
+          "circle": "channel",
+          "r": 90,
+          "define": {
+            "term": "Channel",
+            "meaning": "a thin road of electrons under the gate"
+          }
+        },
+        {
+          "say": "Electrons now stream from the source, through the channel, into the drain. The switch is on.",
+          "step": 3,
+          "zoom": 1,
+          "point": "channel",
+          "flow": [
+            "s_in",
+            "ch_l",
+            "channel",
+            "ch_r",
+            "d_out",
+            "d_up"
+          ]
+        },
+        {
+          "say": "And the gate current? Almost zero. The glass blocks it. The gate just holds its charge, like the balloon.",
+          "point": "gatei"
+        },
+        {
+          "say": "Take the voltage away, and the channel disappears. The switch is off again.",
+          "point": "gate"
+        },
+        {
+          "say": "Because the channel is made of electrons, this is called an n-channel MOSFET. Swap every n for p, and every p for n, and you get a p-channel MOSFET. It turns on with a negative voltage instead.",
+          "point": "channel",
+          "spot": 190
+        },
+        {
+          "say": "Chips use both kinds side by side, as partners. We'll see why in a later episode.",
+          "point": "gate"
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What flows through the gate's glass layer when a MOSFET is on?",
+      "options": [
+        "Almost nothing",
+        "A big current",
+        "All the electrons"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. When a MOSFET is on, how much current flows through the gate's glass layer? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Almost nothing. The gate works by its electric field alone, which is why MOSFETs use so little power to control.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Not just on and off",
+      "points": [
+        "Below threshold: off",
+        "Above it: channel forms",
+        "More voltage, more current"
+      ],
+      "figure": [
+        "out/figs/day09_knob_0.png",
+        "out/figs/day09_knob_1.png",
+        "out/figs/day09_knob_2.png"
+      ],
+      "chapter": "The threshold",
+      "beats": [
+        {
+          "say": "Think of a dimmer switch on a wall light. A MOSFET can work a bit like that.",
+          "step": 0,
+          "show": 0,
+          "point": "flat"
+        },
+        {
+          "say": "At first, a small gate voltage does almost nothing. Too few electrons gather to make a road.",
+          "show": 1,
+          "point": "flat"
+        },
+        {
+          "say": "Then, at a certain voltage, the channel suddenly forms. This is called the threshold. In modern chips, it's often less than half a volt.",
+          "step": 1,
+          "show": 2,
+          "point": "thr",
+          "define": {
+            "term": "Threshold voltage",
+            "meaning": "the gate voltage where the switch starts to turn on"
+          }
+        },
+        {
+          "say": "Go higher, and more electrons gather. The channel gets stronger, and more current flows.",
+          "step": 2,
+          "show": 3,
+          "point": "low",
+          "flow": [
+            "low",
+            "mid",
+            "high"
+          ]
+        },
+        {
+          "say": "In a computer, we use just two settings. Well below the threshold for off, and well above it for on.",
+          "point": "high",
+          "zoom": 1.4,
+          "zoom_on": "rise"
+        },
+        {
+          "say": "Zero, or one. Clean and simple.",
+          "zoom": 1,
+          "point": "thr"
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1959",
+      "caption": "The MOSFET was invented at Bell Labs",
+      "chapter": "Born in 1959",
+      "say": "The MOSFET was invented in nineteen fifty nine at Bell Labs, by Mohamed Atalla and Dawon Kahng. At first, few people saw its value. It was slower than the transistors of its day. But it was flat, simple and frugal with power. As engineers learned to shrink it, it took over. Today, almost every transistor ever made is a MOSFET. You'll find them in phones, laptops, cars, televisions, washing machines and even electric toothbrushes. Each chip packs millions or billions of them, so the total runs into numbers too big to picture."
+    },
+    {
+      "kind": "figure",
+      "head": "A tighter grip",
+      "figure": [
+        "out/figs/day09_grip_0.png",
+        "out/figs/day09_grip_1.png",
+        "out/figs/day09_grip_2.png",
+        "out/figs/day09_grip_3.png"
+      ],
+      "caption": "Wrapping the gate around the channel gives better control",
+      "chapter": "Fins and gate-all-around",
+      "beats": [
+        {
+          "say": "As MOSFETs shrank, a problem appeared. Imagine squeezing a garden hose shut with one finger. Some water still leaks past.",
+          "step": 0,
+          "point": "planar"
+        },
+        {
+          "say": "A flat gate is just like that. It only grips the channel from the top. In tiny transistors, current leaks even when it should be off.",
+          "point": "planar",
+          "zoom": 1.6,
+          "zoom_on": "planar"
+        },
+        {
+          "say": "The fix? Grip harder. From around twenty eleven, chipmakers raised the channel into a thin fin, with the gate on three sides. Like pinching with three fingers.",
+          "step": 1,
+          "zoom": 1,
+          "point": "fin",
+          "define": {
+            "term": "FinFET",
+            "meaning": "a MOSFET whose channel stands up like a fin"
+          }
+        },
+        {
+          "say": "The newest step wraps the gate all the way around thin sheets of silicon. Your whole fist around the hose.",
+          "step": 2,
+          "point": "gaa",
+          "circle": "gaa",
+          "r": 95
+        },
+        {
+          "say": "This is called gate-all-around. In late twenty twenty five, TSMC began volume production of its two nanometre chips using this design.",
+          "step": 3,
+          "point": "yr_gaa",
+          "flow": [
+            "planar",
+            "fin",
+            "gaa"
+          ]
+        },
+        {
+          "say": "So far today: the gate's field builds a channel, the threshold decides when, and a tighter grip keeps tiny switches from leaking.",
+          "point": "gaa",
+          "zoom": 1.4,
+          "zoom_on": "gaa"
+        },
+        {
+          "say": "The shape keeps changing. But the idea is still the same one you just learned: a gate's field opens a channel.",
+          "point": "years",
+          "spot": 220,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What forms the channel in an n-type MOSFET?",
+      "options": [
+        "Holes from the gate",
+        "Electrons pulled under the glass",
+        "Light from the oxide"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. When the switch turns on, what forms the channel? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Electrons, pulled up under the glass by the gate's positive charge. They build the road from source to drain.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Metal, glass, silicon",
+        "Gate's field builds a channel",
+        "Almost no gate current"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: a MOSFET is a sandwich of metal, glass and silicon, with a source and a drain on either side.",
+          "show": 1
+        },
+        {
+          "say": "Two: a positive voltage on the gate pulls electrons under the glass. They form a channel, and current flows. Like a drawbridge coming down.",
+          "show": 2
+        },
+        {
+          "say": "Three: the gate works by its field alone and takes almost no current. That's why we can pack billions onto one chip.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Basics, Episode 9",
+      "sub": "What is a chip?",
+      "chapter": "Coming up",
+      "say": "So we have our perfect switch. But how do billions of them end up on one tiny slice of silicon, all wired together? Tomorrow: what is a chip, from one transistor to billions. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}

@@ -18,7 +18,7 @@ Status key: [ ] planned · [x] posted
 6. [x] Doping: turning pure silicon into n-type and p-type
 7. [x] The p–n junction and the diode
 8. [x] The transistor: the switch that changed everything
-9. [ ] How a MOSFET works
+9. [x] How a MOSFET works
 10. [ ] What is a chip (integrated circuit)? From one transistor to billions
 
 ## Standalone — Day 11
