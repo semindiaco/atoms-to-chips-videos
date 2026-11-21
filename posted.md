@@ -6,3 +6,4 @@
 2026-11-18 13:00 | day06 | Doping: n-type & p-type | Semiconductor Basics Ep 5 | Atoms to Chips | metricool 432436611 (approved by owner, scheduled 13:00; was draft 432246823; re-rendered with spotlight instead of pointer)
 2026-11-20 00:20 | day07 | The p–n Junction & the Diode | Semiconductor Basics Ep 6 | Atoms to Chips | metricool 434611543 (approved by owner, scheduled 2026-11-20 00:20 IST; was draft 433638295 for 2026-11-19 13:00, approved after that time had passed)
 2026-11-20 13:00 | day08 | The Transistor: The Switch That Changed Everything | Basics Ep 7 | metricool 435156947 (approved by owner, scheduled 13:00; was draft 434998203)
+2026-11-21 13:00 | day09 | How a MOSFET Works | Semiconductor Basics Ep 8 | Atoms to Chips | metricool 436278894 (draft, awaiting owner approval)
