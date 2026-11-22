@@ -19,7 +19,7 @@ Status key: [ ] planned · [x] posted
 7. [x] The p–n junction and the diode
 8. [x] The transistor: the switch that changed everything
 9. [x] How a MOSFET works
-10. [ ] What is a chip (integrated circuit)? From one transistor to billions
+10. [x] What is a chip (integrated circuit)? From one transistor to billions
 
 ## Standalone — Day 11
 11. [ ] Moore's Law: what it really says, and is it dead?

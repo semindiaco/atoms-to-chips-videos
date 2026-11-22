@@ -1,0 +1,560 @@
+{
+  "day": 10,
+  "slug": "day10_chip",
+  "label": "BASICS · EP 9",
+  "series": "Semiconductor Basics",
+  "thumb_tag": "BASICS · EP 9",
+  "thumb_line1": "WHAT IS",
+  "thumb_line2": "A CHIP?",
+  "yt_title": "What Is a Chip? | Semiconductor Basics Ep 9 | Atoms to Chips",
+  "yt_description": "A chip smaller than your fingernail can hold billions of tiny switches. In this lesson you'll see why early electronics were a tangle of hand-soldered parts, the big idea of making every part and wire together in one piece of silicon, and what a chip looks like inside: a city of transistors with streets and highways of copper. We follow it from one transistor in 1958 to over two hundred billion today. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: Moore's Law, what it really says, and is it dead?\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Semiconductors #IntegratedCircuit #Microchip #SemiconductorBasics #Electronics #VLSI #AtomsToChips",
+  "yt_tags": [
+    "what is a chip",
+    "integrated circuit",
+    "microchip explained",
+    "how chips work",
+    "what is an integrated circuit",
+    "jack kilby",
+    "robert noyce",
+    "wafer and die",
+    "transistor count",
+    "semiconductor basics",
+    "semiconductor physics for beginners",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "What Is a Chip?",
+      "sub": "From one transistor to billions",
+      "chapter": "Intro",
+      "say": "Pick up your phone. Somewhere inside is a chip smaller than your fingernail. Yet it holds tens of billions of tiny switches, all working together. How is that even possible? Last time, we met the MOSFET, the switch inside every modern chip. Today you'll see how billions of them end up on one tiny slice of silicon. By the end, you'll know what's really inside that little black square. And once you get this, every gadget you own will make a lot more sense. Welcome back to Semiconductor Basics on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "Before chips: a tangle of wires",
+      "figure": [
+        "out/figs/day10_tangle_0.png",
+        "out/figs/day10_tangle_1.png",
+        "out/figs/day10_tangle_2.png"
+      ],
+      "caption": "Every part made separately, every wire joined by hand",
+      "chapter": "Before chips",
+      "beats": [
+        {
+          "say": "Let's go back to the nineteen fifties. Electronics were built from separate parts.",
+          "step": 0,
+          "point": "parts",
+          "spot": 200
+        },
+        {
+          "say": "A transistor here. A resistor there, to hold back current. A capacitor, to store a little charge.",
+          "point": "trans",
+          "define": {
+            "term": "Component",
+            "meaning": "one separate part in an electric circuit"
+          }
+        },
+        {
+          "say": "To build a circuit, workers placed every part on a board. Then they joined them with wires, one by one.",
+          "step": 1,
+          "point": "board",
+          "spot": 260
+        },
+        {
+          "say": "Current had to travel through all those wires and joints.",
+          "point": "w2",
+          "flow": [
+            "w0",
+            "w1",
+            "w2",
+            "w3",
+            "w4"
+          ]
+        },
+        {
+          "say": "Imagine building a city by carrying each brick by hand, and tying them together with string.",
+          "point": "board",
+          "zoom": 1.4,
+          "zoom_on": "board"
+        },
+        {
+          "say": "Now the problem. Each joint is a chance for failure. One bad joint, and the whole circuit stops.",
+          "step": 2,
+          "zoom": 1,
+          "point": "joint",
+          "circle": "joint",
+          "r": 60
+        },
+        {
+          "say": "Engineers called this the tyranny of numbers. More parts meant more joints, and more ways to fail.",
+          "point": "fail",
+          "spot": 200
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "The big idea: make it all at once",
+      "figure": [
+        "out/figs/day10_print_0.png",
+        "out/figs/day10_print_1.png",
+        "out/figs/day10_print_2.png"
+      ],
+      "caption": "Print the whole circuit, don't build it piece by piece",
+      "chapter": "The big idea",
+      "beats": [
+        {
+          "say": "Here's an everyday picture. Imagine copying a book by hand, one letter at a time. Slow, and easy to make mistakes.",
+          "step": 0,
+          "point": "pen"
+        },
+        {
+          "say": "Then came the printing press. It prints the whole page in one go.",
+          "step": 1,
+          "point": "press",
+          "zoom": 1.4,
+          "zoom_on": "press"
+        },
+        {
+          "say": "Engineers had the same idea for circuits. Why make each part separately?",
+          "zoom": 1
+        },
+        {
+          "say": "Instead, make every part, and every wire between them, together, in one single piece of silicon.",
+          "step": 2,
+          "point": "chip",
+          "circle": "chip",
+          "r": 110
+        },
+        {
+          "say": "That's a chip. Its proper name is the integrated circuit. Integrated just means joined into one.",
+          "point": "chip",
+          "define": {
+            "term": "Integrated circuit",
+            "meaning": "a whole circuit built in one piece of silicon"
+          }
+        },
+        {
+          "say": "No hand-soldered joints. And you can make thousands at a time, just like printing pages.",
+          "point": "chip",
+          "flow": [
+            "pen",
+            "press",
+            "chip"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "1958",
+      "caption": "The first integrated circuit was demonstrated",
+      "chapter": "Born in 1958",
+      "say": "This idea came to life in nineteen fifty eight. Jack Kilby, at Texas Instruments, built the first working integrated circuit. It was tiny and rough, with just one transistor and a few other parts, on a sliver of germanium. A few months later, Robert Noyce at Fairchild Semiconductor found a better way. He used flat silicon, with metal wires laid on top. That flat design is still how chips are made today. Kilby later won a Nobel Prize for this work. His flat design let wires be printed on, not soldered. That is what made mass production possible."
+    },
+    {
+      "kind": "figure",
+      "head": "Inside a chip: a city in layers",
+      "figure": [
+        "out/figs/day10_layers_0.png",
+        "out/figs/day10_layers_1.png",
+        "out/figs/day10_layers_2.png",
+        "out/figs/day10_layers_3.png"
+      ],
+      "caption": "Transistors at the bottom, wiring stacked above",
+      "chapter": "Inside a chip",
+      "beats": [
+        {
+          "say": "So what's inside a chip? Let's slice one open and look from the side. Think of it as a city.",
+          "step": 0,
+          "point": "tr",
+          "spot": 220
+        },
+        {
+          "say": "At the very bottom, built into the silicon, are the transistors. These are the houses of our city.",
+          "point": "trlab",
+          "zoom": 1.5,
+          "zoom_on": "tr"
+        },
+        {
+          "say": "Above them sit layers of very thin copper wires. These are the streets, linking neighbours together.",
+          "step": 1,
+          "zoom": 1,
+          "point": "local",
+          "define": {
+            "term": "Interconnect",
+            "meaning": "the tiny wires that link parts on a chip"
+          }
+        },
+        {
+          "say": "Higher up, the wires get thicker and longer. Like highways, they carry signals and power across the whole city.",
+          "step": 2,
+          "point": "global"
+        },
+        {
+          "say": "A modern chip can stack more than ten of these wiring layers.",
+          "point": "glolab"
+        },
+        {
+          "say": "At the very top are contacts, the doors to the outside world. Signals travel up from the transistors, through every layer, to the top.",
+          "step": 3,
+          "point": "pad",
+          "flow": [
+            "v0",
+            "v1",
+            "v2",
+            "v3",
+            "v4",
+            "v5",
+            "v6"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Hand-wired vs integrated",
+      "chapter": "Why chips won",
+      "left": {
+        "title": "Hand-wired",
+        "points": [
+          "Parts made one by one",
+          "Joints soldered by hand",
+          "Big, slow, fails often"
+        ]
+      },
+      "right": {
+        "title": "Integrated",
+        "points": [
+          "Made all together",
+          "Wires printed in place",
+          "Tiny, fast, reliable"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Let's compare. A hand-wired circuit has parts made one by one, and a joint for every wire."
+        },
+        {
+          "say": "That makes it big, slow and costly. And every joint can fail."
+        },
+        {
+          "say": "A chip makes everything together, in place. Short wires mean signals travel quickly. Fewer joints mean far fewer failures.",
+          "right": true
+        },
+        {
+          "say": "And because thousands are made at once, each chip is very cheap. Some simple chips cost less than a cup of tea, yet do more than the room-sized computers of the nineteen fifties."
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "A chip is a whole circuit, printed in one piece of silicon.",
+      "chapter": "So far",
+      "say": "So far: before chips, circuits were separate parts joined by hand. A chip builds every part and every wire together, in one piece of silicon. Inside, it's a city, with transistor houses and copper roads stacked above. But how do simple switches add up to something smart? Let's find out."
+    },
+    {
+      "kind": "figure",
+      "head": "Small blocks build big ones",
+      "figure": [
+        "out/figs/day10_build_0.png",
+        "out/figs/day10_build_1.png",
+        "out/figs/day10_build_2.png",
+        "out/figs/day10_build_3.png"
+      ],
+      "caption": "Like toy bricks: bricks make walls, walls make houses",
+      "chapter": "Building blocks",
+      "beats": [
+        {
+          "say": "Think of toy building bricks. One brick does very little. But bricks make walls, walls make houses, and houses make a city.",
+          "step": 0,
+          "point": "b0"
+        },
+        {
+          "say": "Chips work the same way. Our brick is the transistor. A single on-off switch.",
+          "point": "b0",
+          "circle": "b0",
+          "r": 90
+        },
+        {
+          "say": "Join a few transistors, and you get a logic gate. It makes a tiny decision, like: are both inputs on?",
+          "step": 1,
+          "point": "b1",
+          "define": {
+            "term": "Logic gate",
+            "meaning": "a few switches that make a simple yes or no decision"
+          }
+        },
+        {
+          "say": "Join dozens of gates, and you can add numbers. One plus one equals two.",
+          "step": 2,
+          "point": "b2",
+          "zoom": 1.5,
+          "zoom_on": "b2"
+        },
+        {
+          "say": "Keep joining blocks, millions, then billions of switches, and you get a processor. The brain of your phone or laptop.",
+          "step": 3,
+          "zoom": 1,
+          "point": "b3",
+          "define": {
+            "term": "Processor",
+            "meaning": "the chip that follows instructions and does the thinking"
+          }
+        },
+        {
+          "say": "Each level is built from the one before. That's how simple switches become something smart.",
+          "point": "b3",
+          "flow": [
+            "f0",
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What does \"integrated\" mean in integrated circuit?",
+      "options": [
+        "All parts built in one piece",
+        "Made by hand",
+        "Uses just one transistor"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. What does integrated mean, in the words integrated circuit? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "All the parts and wires are built together, in one piece of silicon. Joined into one.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Hundreds of chips on one wafer",
+      "figure": [
+        "out/figs/day10_wafer_0.png",
+        "out/figs/day10_wafer_1.png",
+        "out/figs/day10_wafer_2.png"
+      ],
+      "caption": "Many chips are made side by side, then cut apart",
+      "chapter": "Wafer to chip",
+      "beats": [
+        {
+          "say": "Chips aren't made one at a time. They start on a wafer. A thin, shiny disc of pure silicon, about the size of a dinner plate.",
+          "step": 0,
+          "point": "wafer",
+          "spot": 240,
+          "define": {
+            "term": "Wafer",
+            "meaning": "a thin, round slice of pure silicon"
+          }
+        },
+        {
+          "say": "Think of a baking tray of biscuits. Each little square is one chip, all baked together. A typical wafer today is three hundred millimetres across, and can hold hundreds of chips.",
+          "point": "wafer"
+        },
+        {
+          "say": "Zoom in on one square. This is called a die. One die becomes one chip.",
+          "step": 1,
+          "point": "die",
+          "circle": "die",
+          "r": 40,
+          "define": {
+            "term": "Die",
+            "meaning": "one chip-sized square cut from a wafer"
+          }
+        },
+        {
+          "say": "Inside it are different neighbourhoods. One area does maths, another stores data, another talks to the outside.",
+          "point": "dieZ",
+          "zoom": 1.4,
+          "zoom_on": "dieZ"
+        },
+        {
+          "say": "At the end, the wafer is cut apart. Each die goes into a protective case with metal legs or tiny balls. That's the packaged chip you see on a circuit board.",
+          "step": 2,
+          "zoom": 1,
+          "point": "pkg",
+          "flow": [
+            "die",
+            "dieZ",
+            "pkg"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "From one to billions",
+      "figure": [
+        "out/figs/day10_count_0.png",
+        "out/figs/day10_count_1.png",
+        "out/figs/day10_count_2.png",
+        "out/figs/day10_count_3.png"
+      ],
+      "caption": "Each line up means a thousand times more",
+      "chapter": "One to billions",
+      "beats": [
+        {
+          "say": "Now let's count. Look at the scale on the left. Each line up means a thousand times more.",
+          "step": 0,
+          "point": "c0"
+        },
+        {
+          "say": "Kilby's first chip, in nineteen fifty eight, had just one transistor.",
+          "point": "c0",
+          "circle": "c0",
+          "r": 70
+        },
+        {
+          "say": "In nineteen seventy one, Intel's four zero zero four put a whole computer brain on one chip, with about two thousand three hundred transistors. It was the first microprocessor.",
+          "step": 1,
+          "point": "c1",
+          "define": {
+            "term": "Microprocessor",
+            "meaning": "a complete processor on a single chip"
+          }
+        },
+        {
+          "say": "By nineteen ninety three, a desktop PC chip held about three million.",
+          "step": 2,
+          "point": "c2"
+        },
+        {
+          "say": "And in twenty twenty four, Nvidia announced its Blackwell AI chip, with two hundred and eight billion transistors.",
+          "step": 3,
+          "point": "c3",
+          "zoom": 1.4,
+          "zoom_on": "c3"
+        },
+        {
+          "say": "From one, to hundreds of billions, in about sixty five years. And the phone in your pocket holds tens of billions.",
+          "zoom": 1,
+          "point": "c3",
+          "flow": [
+            "c0",
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Chips for every job",
+      "points": [
+        "Processors think",
+        "Memory remembers",
+        "Sensors sense",
+        "Power chips control energy"
+      ],
+      "figure": [
+        "out/figs/day10_kinds_0.png",
+        "out/figs/day10_kinds_1.png",
+        "out/figs/day10_kinds_2.png",
+        "out/figs/day10_kinds_3.png"
+      ],
+      "chapter": "Kinds of chips",
+      "beats": [
+        {
+          "say": "Not all chips are brains. Think of a team, where each player has a job.",
+          "step": 0,
+          "show": 1,
+          "point": "k0"
+        },
+        {
+          "say": "Processors think. They follow instructions and do the maths.",
+          "point": "k0"
+        },
+        {
+          "say": "Memory chips remember. They store your photos, apps and messages.",
+          "step": 1,
+          "show": 2,
+          "point": "k1"
+        },
+        {
+          "say": "Sensor chips sense the world. The camera in your phone is a chip that turns light into data.",
+          "step": 2,
+          "show": 3,
+          "point": "k2"
+        },
+        {
+          "say": "And power chips control energy. They charge your battery and run electric car motors.",
+          "step": 3,
+          "show": 4,
+          "point": "k3"
+        },
+        {
+          "say": "A single phone holds dozens of chips, all working as one team.",
+          "point": "k1",
+          "spot": 300
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "About how many transistors were on the first microprocessor, in 1971?",
+      "options": [
+        "About two thousand",
+        "About two million",
+        "About two billion"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. How many transistors were on the first microprocessor, back in nineteen seventy one? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "About two thousand. Today's biggest chips hold around a hundred million times more.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Whole circuit, one piece",
+        "A city in layers",
+        "One to billions"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: a chip, or integrated circuit, builds every part and wire together, in one piece of silicon. No hand-soldered joints.",
+          "show": 1
+        },
+        {
+          "say": "Two: inside, it's a city in layers. Transistors at the bottom, and copper roads stacked above, from streets to highways.",
+          "show": 2
+        },
+        {
+          "say": "Three: from one transistor in nineteen fifty eight, to hundreds of billions today. Made by the hundreds on each wafer.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · Special",
+      "sub": "Moore's Law: is it dead?",
+      "chapter": "Coming up",
+      "say": "From one to billions in a lifetime. But why did chips keep doubling, again and again? And can it go on? Tomorrow: Moore's Law, what it really says, and is it dead. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
