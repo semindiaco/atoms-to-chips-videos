@@ -7,4 +7,4 @@
 2026-11-20 00:20 | day07 | The p–n Junction & the Diode | Semiconductor Basics Ep 6 | Atoms to Chips | metricool 434611543 (approved by owner, scheduled 2026-11-20 00:20 IST; was draft 433638295 for 2026-11-19 13:00, approved after that time had passed)
 2026-11-20 13:00 | day08 | The Transistor: The Switch That Changed Everything | Basics Ep 7 | metricool 435156947 (approved by owner, scheduled 13:00; was draft 434998203)
 2026-11-21 13:00 | day09 | How a MOSFET Works | Semiconductor Basics Ep 8 | Atoms to Chips | metricool 436279231 (approved by owner, scheduled 13:00; was draft 436278894)
-2026-11-22 13:00 | day10 | What Is a Chip? | Semiconductor Basics Ep 9 | Atoms to Chips | metricool 437177446 (draft, awaiting owner approval)
+2026-11-22 13:00 | day10 | What Is a Chip? | Semiconductor Basics Ep 9 | Atoms to Chips | metricool 437275387 (approved by owner, scheduled 13:00; was draft 437177446)
