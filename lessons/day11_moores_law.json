@@ -1,0 +1,634 @@
+{
+  "day": 11,
+  "slug": "day11_moores_law",
+  "label": "SPECIAL",
+  "series": "Special",
+  "thumb_tag": "SPECIAL",
+  "thumb_line1": "MOORE'S LAW",
+  "thumb_line2": "IS IT DEAD?",
+  "yt_title": "Moore's Law: What It Really Says, and Is It Dead? | Atoms to Chips",
+  "yt_description": "In 1965, Gordon Moore predicted that the number of parts on a chip would keep doubling. That simple guess became the heartbeat of the whole chip industry. In this lesson you'll see what Moore's Law really says (and what it doesn't), how shrinking transistors kept it going for sixty years, why chip speeds hit a heat wall around 2005, and how 3D transistors, chiplets and stacking keep transistor counts climbing today. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 1, what is a wafer?\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#MooresLaw #Semiconductors #Transistors #Chiplets #GateAllAround #Electronics #AtomsToChips",
+  "yt_tags": [
+    "moore's law",
+    "is moore's law dead",
+    "moore's law explained",
+    "gordon moore",
+    "transistor count",
+    "dennard scaling",
+    "clock speed",
+    "finfet",
+    "gate all around",
+    "chiplets",
+    "2nm chips",
+    "semiconductor basics",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Moore's Law",
+      "sub": "What it really says, and is it dead?",
+      "chapter": "Intro",
+      "say": "In nineteen sixty five, a magazine asked a young chemist a simple question. What will happen to chips in the next ten years? His answer became the most famous prediction in technology. It's a big reason your phone is more powerful than a room-sized computer from your grandparents' time. His name was Gordon Moore. Today you'll learn what Moore's Law really says, how chipmakers kept it going for sixty years, and whether it's finally dead. Welcome to a special episode of Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "The 1965 prediction",
+      "figure": [
+        "out/figs/day11_paper_0.png",
+        "out/figs/day11_paper_1.png",
+        "out/figs/day11_paper_2.png"
+      ],
+      "caption": "Parts per chip were doubling every year",
+      "chapter": "The prediction",
+      "beats": [
+        {
+          "say": "Here's what Moore noticed. Look at this chart. Along the bottom are the years.",
+          "step": 0,
+          "point": "axes",
+          "spot": 260
+        },
+        {
+          "say": "Going up is the number of parts on one chip. Each line up means sixteen times more.",
+          "point": "yaxis"
+        },
+        {
+          "say": "In nineteen fifty nine, a chip held just one part.",
+          "step": 1,
+          "point": "p59",
+          "circle": "p59",
+          "r": 50
+        },
+        {
+          "say": "By nineteen sixty five, about sixty four. Every year, the number had roughly doubled.",
+          "point": "p65",
+          "flow": [
+            "p59",
+            "p62",
+            "p64",
+            "p65"
+          ]
+        },
+        {
+          "say": "So Moore extended the line, ten more years. If it kept going, by nineteen seventy five a chip would hold about sixty five thousand parts.",
+          "step": 2,
+          "point": "p75",
+          "zoom": 1.5,
+          "zoom_on": "p70"
+        },
+        {
+          "say": "It sounded wild at the time. But he turned out to be right.",
+          "zoom": 1,
+          "point": "p75",
+          "circle": "p75",
+          "r": 60
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Why doubling is so powerful",
+      "figure": [
+        "out/figs/day11_double_0.png",
+        "out/figs/day11_double_1.png",
+        "out/figs/day11_double_2.png"
+      ],
+      "caption": "Small, steady doubling grows into something enormous",
+      "chapter": "The power of doubling",
+      "beats": [
+        {
+          "say": "Why does doubling matter so much? Imagine a magic jar. Every day, the coins inside double.",
+          "step": 0,
+          "point": "j0"
+        },
+        {
+          "say": "One coin, then two, then four. Not very exciting yet.",
+          "point": "j2"
+        },
+        {
+          "say": "But keep going. Eight, sixteen, thirty two, sixty four.",
+          "step": 1,
+          "point": "j6",
+          "flow": [
+            "j0",
+            "j1",
+            "j2",
+            "j3",
+            "j4",
+            "j5",
+            "j6"
+          ]
+        },
+        {
+          "say": "After just thirty doublings, you'd have over a billion coins.",
+          "step": 2,
+          "point": "big",
+          "spot": 260,
+          "zoom": 1.3,
+          "zoom_on": "big"
+        },
+        {
+          "say": "That's the secret of Moore's Law. A small, steady doubling grows into something enormous.",
+          "zoom": 1,
+          "point": "j6"
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "2 years",
+      "caption": "Moore's 1975 update: transistors double about every two years",
+      "chapter": "Every two years",
+      "beats": [
+        {
+          "say": "In nineteen seventy five, Moore updated his guess. Cramming in more was getting harder."
+        },
+        {
+          "say": "So he said the number of transistors on a chip would double about every two years.",
+          "define": {
+            "term": "Moore's Law",
+            "meaning": "transistors on a chip double about every two years"
+          }
+        },
+        {
+          "say": "That's the version people call Moore's Law today. You may hear eighteen months too. That figure came from a colleague at Intel, and it was about performance, not transistor count."
+        },
+        {
+          "say": "Moore co-founded Intel in nineteen sixty eight. He passed away in twenty twenty three, aged ninety four."
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Not a law of nature",
+      "points": [
+        "An observation",
+        "Then a target",
+        "Industry kept the pace"
+      ],
+      "figure": [
+        "out/figs/day11_loop_0.png",
+        "out/figs/day11_loop_1.png",
+        "out/figs/day11_loop_2.png",
+        "out/figs/day11_loop_3.png"
+      ],
+      "chapter": "Not a law of nature",
+      "beats": [
+        {
+          "say": "Here's the surprise. Moore's Law is not a law of physics, like gravity. Nothing in nature forces chips to double.",
+          "step": 0,
+          "show": 1,
+          "point": "pred"
+        },
+        {
+          "say": "It started as an observation. A pattern Moore spotted in the numbers.",
+          "define": {
+            "term": "Observation",
+            "meaning": "a pattern noticed by watching, not a rule of nature"
+          }
+        },
+        {
+          "say": "Then it became a target. Think of an exam date. Everyone knows when it is, so everyone prepares.",
+          "step": 1,
+          "show": 2,
+          "point": "plan"
+        },
+        {
+          "say": "Chipmakers, toolmakers and designers all planned around the two-year beat. They spent billions to stay on time.",
+          "step": 2,
+          "show": 3,
+          "point": "invest"
+        },
+        {
+          "say": "And so the prediction came true, again and again. In a way, it made itself happen.",
+          "step": 3,
+          "point": "real",
+          "flow": [
+            "pred",
+            "plan",
+            "invest",
+            "real",
+            "pred"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Fifty years on one line",
+      "figure": [
+        "out/figs/day11_trend_0.png",
+        "out/figs/day11_trend_1.png",
+        "out/figs/day11_trend_2.png",
+        "out/figs/day11_trend_3.png"
+      ],
+      "caption": "Real chips, 1971 to 2024",
+      "chapter": "Did it work?",
+      "beats": [
+        {
+          "say": "Did it really work? Here are real chips. On this scale, each line up means ten times more transistors.",
+          "step": 0,
+          "point": "axis"
+        },
+        {
+          "say": "Intel's first microprocessor, in nineteen seventy one, had about two thousand three hundred.",
+          "point": "c71",
+          "circle": "c71",
+          "r": 50
+        },
+        {
+          "say": "By the nineteen nineties, chips held millions.",
+          "step": 1,
+          "point": "c93"
+        },
+        {
+          "say": "By the twenty tens, billions.",
+          "step": 2,
+          "point": "c11"
+        },
+        {
+          "say": "In twenty twenty four, Nvidia's Blackwell AI chip reached two hundred and eight billion.",
+          "point": "c24",
+          "zoom": 1.5,
+          "zoom_on": "c20"
+        },
+        {
+          "say": "Look how the dots follow a nearly straight line, for over fifty years. That's a doubling about every two years.",
+          "step": 3,
+          "zoom": 1,
+          "point": "trend",
+          "spot": 220,
+          "flow": [
+            "c71",
+            "c85",
+            "c00",
+            "c11",
+            "c24"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "Not a law of nature. A target the whole industry chased.",
+      "chapter": "So far",
+      "say": "So far: in nineteen sixty five, Gordon Moore spotted a pattern. The number of transistors on a chip kept doubling. In nineteen seventy five, he settled on about every two years. It's not a law of nature. It's a target the whole industry chased. But how did they actually do it?"
+    },
+    {
+      "kind": "figure",
+      "head": "The trick: shrink everything",
+      "figure": [
+        "out/figs/day11_shrink_0.png",
+        "out/figs/day11_shrink_1.png",
+        "out/figs/day11_shrink_2.png"
+      ],
+      "caption": "Smaller parts, more of them in the same space",
+      "chapter": "How: shrinking",
+      "beats": [
+        {
+          "say": "Imagine writing a note on a small card. With big handwriting, only a few words fit.",
+          "step": 0,
+          "point": "card1"
+        },
+        {
+          "say": "Write smaller, and the same card holds twice as many words.",
+          "step": 1,
+          "point": "card2"
+        },
+        {
+          "say": "Chipmakers did exactly this. Every couple of years, they shrank each transistor and wire.",
+          "step": 2,
+          "point": "big",
+          "spot": 170
+        },
+        {
+          "say": "Make each side about seven tenths as long, and each part takes only half the space.",
+          "point": "small",
+          "zoom": 1.5,
+          "zoom_on": "pair"
+        },
+        {
+          "say": "Half the space means twice as many transistors on the same size chip.",
+          "zoom": 1,
+          "point": "pair",
+          "circle": "pair",
+          "r": 110
+        },
+        {
+          "say": "Each new shrink is called a process node.",
+          "point": "tag",
+          "define": {
+            "term": "Process node",
+            "meaning": "one generation of chip-making, with smaller parts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "The free lunch ends",
+      "figure": [
+        "out/figs/day11_heat_0.png",
+        "out/figs/day11_heat_1.png",
+        "out/figs/day11_heat_2.png"
+      ],
+      "caption": "Around 2005, heat stopped the speed race",
+      "chapter": "The heat wall",
+      "beats": [
+        {
+          "say": "For decades, shrinking came with a bonus. Smaller transistors switched faster, and each used less power.",
+          "step": 0,
+          "point": "rise"
+        },
+        {
+          "say": "So chips got faster every year. Their clock speed shot up, from millions to billions of ticks a second.",
+          "point": "r3",
+          "flow": [
+            "r0",
+            "r1",
+            "r2",
+            "r3"
+          ],
+          "define": {
+            "term": "Clock speed",
+            "meaning": "how many steps a chip takes each second"
+          }
+        },
+        {
+          "say": "But around two thousand five, they hit a wall. Heat.",
+          "step": 1,
+          "point": "wall",
+          "circle": "wall",
+          "r": 80
+        },
+        {
+          "say": "Think of running. Run faster and faster, and you overheat. Push chips harder, and they got hotter than a kitchen hotplate.",
+          "point": "wall"
+        },
+        {
+          "say": "So clock speeds almost stopped climbing. Today's fastest chips are only a little quicker than in two thousand four.",
+          "point": "flat",
+          "zoom": 1.4,
+          "zoom_on": "flat"
+        },
+        {
+          "say": "Instead, chipmakers used the extra transistors for more cores. Several brains, working side by side.",
+          "step": 2,
+          "zoom": 1,
+          "point": "cores",
+          "define": {
+            "term": "Core",
+            "meaning": "one complete thinking unit inside a processor"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What did Moore's Law say would double?",
+      "options": [
+        "Parts on a chip",
+        "Chip speed",
+        "Chip price"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. What did Moore's Law say would double? The parts on a chip, the chip's speed, or its price? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "The number of parts, or transistors, on a chip. Speed came along as a bonus, until heat got in the way.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "So, is it dead?",
+      "chapter": "Is it dead?",
+      "left": {
+        "title": "Slowing down",
+        "points": [
+          "Shrinking is much harder",
+          "New fabs cost billions",
+          "Cheaper per transistor? Barely"
+        ]
+      },
+      "right": {
+        "title": "Still going",
+        "points": [
+          "Counts keep rising",
+          "Transistors go 3D",
+          "Chips team up and stack"
+        ]
+      },
+      "beats": [
+        {
+          "say": "So, is Moore's Law dead? It depends who you ask. Here's the case for slowing down."
+        },
+        {
+          "say": "Some parts are now just a few dozen atoms thick. Each shrink takes longer, and a new leading factory can cost twenty billion dollars or more. Transistors are no longer getting cheaper as fast as they used to."
+        },
+        {
+          "say": "But here's the other side. The biggest chips still pack in more transistors every few years.",
+          "right": true
+        },
+        {
+          "say": "Engineers found new ways to keep going. Let's look at two of them."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Build up, not out",
+      "figure": [
+        "out/figs/day11_3d_0.png",
+        "out/figs/day11_3d_1.png",
+        "out/figs/day11_3d_2.png",
+        "out/figs/day11_3d_3.png"
+      ],
+      "caption": "Transistors seen end-on: from flat to fully wrapped",
+      "chapter": "Trick 1: go 3D",
+      "beats": [
+        {
+          "say": "When a city runs out of land, what does it do? It builds upward.",
+          "step": 0,
+          "point": "city"
+        },
+        {
+          "say": "Transistors did the same. For decades they were flat. The gate sat only on top of the channel, where current flows.",
+          "step": 1,
+          "point": "g0",
+          "define": {
+            "term": "Channel",
+            "meaning": "the path where current flows inside a transistor"
+          }
+        },
+        {
+          "say": "From about twenty eleven, the channel stood up like a fin. The gate wraps three sides, for a much better grip.",
+          "step": 2,
+          "point": "g1",
+          "zoom": 1.5,
+          "zoom_on": "g1",
+          "define": {
+            "term": "FinFET",
+            "meaning": "a transistor whose channel stands up like a fin"
+          }
+        },
+        {
+          "say": "The newest chips stack thin sheets of silicon, with the gate wrapped all the way around each one.",
+          "step": 3,
+          "zoom": 1,
+          "point": "g2",
+          "circle": "g2",
+          "r": 120,
+          "define": {
+            "term": "Gate-all-around",
+            "meaning": "the gate wraps every side of the channel"
+          }
+        },
+        {
+          "say": "TSMC began mass producing chips like this at the end of twenty twenty five, in what it calls its two nanometre process.",
+          "point": "g2",
+          "flow": [
+            "city",
+            "g0",
+            "g1",
+            "g2"
+          ]
+        },
+        {
+          "say": "But two nanometres is just a name now. No part is really that small. It's a label for a new generation.",
+          "point": "g2",
+          "spot": 200
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Team up and stack",
+      "points": [
+        "One giant chip is risky",
+        "Split into chiplets",
+        "Join side by side",
+        "Stack upward"
+      ],
+      "figure": [
+        "out/figs/day11_chiplets_0.png",
+        "out/figs/day11_chiplets_1.png",
+        "out/figs/day11_chiplets_2.png",
+        "out/figs/day11_chiplets_3.png"
+      ],
+      "chapter": "Trick 2: chiplets",
+      "beats": [
+        {
+          "say": "Here's the second trick. Imagine baking one giant pizza. If one spot burns, the whole thing is ruined.",
+          "step": 0,
+          "show": 1,
+          "point": "big",
+          "spot": 220
+        },
+        {
+          "say": "Huge chips are the same. One tiny flaw, and the whole chip can be wasted.",
+          "point": "flaw",
+          "circle": "flaw",
+          "r": 50
+        },
+        {
+          "say": "So engineers make several smaller chips instead, called chiplets.",
+          "step": 1,
+          "show": 2,
+          "point": "c2",
+          "define": {
+            "term": "Chiplet",
+            "meaning": "a small chip made to team up with others"
+          }
+        },
+        {
+          "say": "Then they join them side by side on one base, with very short links. Together, they work like one big chip.",
+          "step": 2,
+          "show": 3,
+          "point": "base",
+          "flow": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ]
+        },
+        {
+          "say": "They can even stack chips on top of each other, like floors of a building.",
+          "step": 3,
+          "show": 4,
+          "point": "stack",
+          "zoom": 1.5,
+          "zoom_on": "stack"
+        },
+        {
+          "say": "So the number of transistors in one package keeps climbing, even as shrinking slows.",
+          "zoom": 1,
+          "point": "base",
+          "spot": 300
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why did chip speeds stop climbing around 2005?",
+      "options": [
+        "Too much heat",
+        "Ran out of silicon",
+        "Nobody wanted speed"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. Why did chip speeds stop climbing around two thousand five? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Too much heat. Faster switching made chips too hot, so engineers added more cores instead.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Doubling every two years",
+        "A target, not a law",
+        "Slower, but changing shape"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: Moore's Law says the number of transistors on a chip doubles about every two years. From thousands to hundreds of billions.",
+          "show": 1
+        },
+        {
+          "say": "Two: it's not a law of nature. It's a pattern that became a target, and the industry chased it by shrinking.",
+          "show": 2
+        },
+        {
+          "say": "Three: shrinking is slower and costlier now. Many experts say the classic version has faded. But with 3D transistors, chiplets and stacking, chips keep growing. So Moore's Law isn't quite dead. It's changing shape.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 1: What is a wafer?",
+      "chapter": "Coming up",
+      "say": "Every chip we talked about today starts life on a thin, shiny disc of silicon. Tomorrow we begin a new playlist, From Sand to Wafer, with episode one: what is a wafer? If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}

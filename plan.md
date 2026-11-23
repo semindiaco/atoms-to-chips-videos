@@ -22,7 +22,7 @@ Status key: [ ] planned · [x] posted
 10. [x] What is a chip (integrated circuit)? From one transistor to billions
 
 ## Standalone — Day 11
-11. [ ] Moore's Law: what it really says, and is it dead?
+11. [x] Moore's Law: what it really says, and is it dead?
 
 ## Playlist 2 — From Sand to Wafer (Days 12–18)
 12. [ ] What is a wafer?
