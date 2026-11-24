@@ -25,7 +25,7 @@ Status key: [ ] planned · [x] posted
 11. [x] Moore's Law: what it really says, and is it dead?
 
 ## Playlist 2 — From Sand to Wafer (Days 12–18)
-12. [ ] What is a wafer?
+12. [x] What is a wafer?
 13. [ ] From quartz sand to electronic-grade polysilicon
 14. [ ] Growing a single crystal: the Czochralski process
 15. [ ] Slicing, lapping and polishing wafers

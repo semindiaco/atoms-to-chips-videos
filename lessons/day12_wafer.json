@@ -1,0 +1,633 @@
+{
+  "day": 12,
+  "slug": "day12_wafer",
+  "label": "SAND TO WAFER · EP 1",
+  "series": "From Sand to Wafer",
+  "thumb_tag": "SAND TO WAFER · EP 1",
+  "thumb_line1": "WHAT IS A",
+  "thumb_line2": "WAFER?",
+  "yt_title": "What Is a Wafer? | From Sand to Wafer Ep 1 | Atoms to Chips",
+  "yt_description": "Every chip in your phone was born on a thin, shiny disc of silicon called a wafer. In this lesson you'll see what a wafer really is: one perfect crystal, at least 99.9999999% pure, about as thick as a credit card and polished flatter than a mirror. You'll learn how hundreds of chips are built on one wafer at once, why that makes chips cheap, how many chips fit on a wafer, and where wafers come from. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 2, from quartz sand to electronic-grade polysilicon.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#SiliconWafer #Semiconductors #ChipMaking #Wafer #SemiconductorIndia #Electronics #AtomsToChips",
+  "yt_tags": [
+    "silicon wafer",
+    "what is a wafer",
+    "semiconductor wafer",
+    "wafer explained",
+    "300mm wafer",
+    "die vs wafer",
+    "how chips are made",
+    "single crystal silicon",
+    "chips per wafer",
+    "yield",
+    "dholera fab",
+    "india semiconductor",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "What Is a Wafer?",
+      "sub": "The shiny disc every chip is born on",
+      "chapter": "Intro",
+      "say": "Pick up your phone. Inside it are chips with billions of tiny switches. But where were those chips made? Every single one started life on a thin, round disc of silicon, shinier than any mirror in your home. That disc is called a wafer. Today you'll learn what a wafer is, why it's so thin, so pure and so flat, and why chips are made hundreds at a time. Welcome to the first episode of From Sand to Wafer, on Atoms to Chips."
+    },
+    {
+      "kind": "figure",
+      "head": "Think of cookie dough",
+      "figure": [
+        "out/figs/day12_cookie_0.png",
+        "out/figs/day12_cookie_1.png",
+        "out/figs/day12_cookie_2.png",
+        "out/figs/day12_cookie_3.png"
+      ],
+      "caption": "Many chips are made together on one wafer, then cut apart",
+      "chapter": "The cookie analogy",
+      "beats": [
+        {
+          "say": "Let's start in the kitchen. Imagine one big, round sheet of cookie dough.",
+          "step": 0,
+          "point": "dough",
+          "spot": 230
+        },
+        {
+          "say": "You don't bake one cookie at a time. You press out lots of square cookies from the same sheet, all at once.",
+          "step": 1,
+          "point": "grid",
+          "spot": 220
+        },
+        {
+          "say": "When they're done, you lift each cookie out on its own.",
+          "step": 2,
+          "point": "hole",
+          "flow": [
+            "hole",
+            "one"
+          ]
+        },
+        {
+          "say": "A wafer works the same way. The round sheet is the wafer.",
+          "step": 3,
+          "point": "lab_w",
+          "define": {
+            "term": "Wafer",
+            "meaning": "a thin, round slice of pure silicon crystal"
+          }
+        },
+        {
+          "say": "And each little square is one chip. Engineers call it a die. Hundreds of them are built side by side, then cut apart.",
+          "point": "one",
+          "circle": "one",
+          "r": 90,
+          "define": {
+            "term": "Die",
+            "meaning": "one chip, before it's put in its package"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "stat",
+      "stat": "0.775 mm",
+      "caption": "A 300 mm wafer is about as thick as a credit card",
+      "chapter": "How thin?",
+      "beats": [
+        {
+          "say": "So how big is a wafer? Today's most common size is three hundred millimetres across. That's thirty centimetres, about the size of a dinner plate."
+        },
+        {
+          "say": "But it's only point seven seven five millimetres thick. That's almost exactly the thickness of a credit card.",
+          "define": {
+            "term": "Millimetre",
+            "meaning": "a thousandth of a metre, about a dozen hairs wide"
+          }
+        },
+        {
+          "say": "Why not thinner? A thinner disc this wide would bend and crack as machines move it around. Why not thicker? Extra silicon costs money, and the chip only needs the very top."
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "One perfect crystal",
+      "points": [
+        "Atoms in perfect rows",
+        "No borders inside",
+        "Extremely pure"
+      ],
+      "figure": [
+        "out/figs/day12_crystal_0.png",
+        "out/figs/day12_crystal_1.png"
+      ],
+      "chapter": "One perfect crystal",
+      "beats": [
+        {
+          "say": "A wafer isn't just any silicon. Look at the top picture. This is ordinary silicon, made of many tiny crystals stuck together.",
+          "step": 0,
+          "show": 1,
+          "point": "poly",
+          "spot": 230
+        },
+        {
+          "say": "Each patch has its atoms facing a different way, like groups of people in a crowd, all facing different directions.",
+          "point": "p_m"
+        },
+        {
+          "say": "Where two patches meet, there's a messy border. Electrons trip over these borders, like runners over a kerb.",
+          "point": "bound",
+          "circle": "bound",
+          "r": 80,
+          "flow": [
+            "p_l",
+            "p_x",
+            "p_m"
+          ]
+        },
+        {
+          "say": "Now look at the bottom. A wafer is one single crystal. Every atom sits in perfect rows, like a marching band in step, from one edge to the other.",
+          "step": 1,
+          "show": 2,
+          "point": "single",
+          "spot": 230,
+          "define": {
+            "term": "Single crystal",
+            "meaning": "one unbroken pattern of atoms, edge to edge"
+          }
+        },
+        {
+          "say": "With no borders in the way, electrons can glide smoothly across.",
+          "point": "s_m",
+          "flow": [
+            "s_l",
+            "s_m",
+            "s_r"
+          ]
+        },
+        {
+          "say": "It's also incredibly pure. At least ninety nine point nine nine nine nine nine nine nine percent silicon. That's nine nines.",
+          "show": 3,
+          "point": "single",
+          "zoom": 1.4,
+          "zoom_on": "single"
+        },
+        {
+          "say": "Roughly one stray atom in every billion, or even fewer.",
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Anatomy of a wafer",
+      "figure": [
+        "out/figs/day12_anatomy_0.png",
+        "out/figs/day12_anatomy_1.png",
+        "out/figs/day12_anatomy_2.png",
+        "out/figs/day12_anatomy_3.png"
+      ],
+      "caption": "A 300 mm wafer seen from above",
+      "chapter": "Anatomy of a wafer",
+      "beats": [
+        {
+          "say": "Let's look at a real wafer from above. Here's a three hundred millimetre disc.",
+          "step": 0,
+          "point": "disc",
+          "spot": 260
+        },
+        {
+          "say": "See this small cut at the bottom? It's called the notch. It tells machines which way the wafer is facing, like the dot on a jigsaw box that shows which side is up.",
+          "step": 1,
+          "point": "notch",
+          "circle": "notch",
+          "r": 60,
+          "zoom": 1.45,
+          "zoom_on": "notch"
+        },
+        {
+          "say": "After many steps in a factory, the wafer fills up with a grid of squares.",
+          "step": 2,
+          "zoom": 1,
+          "point": "disc",
+          "spot": 260
+        },
+        {
+          "say": "Each square is one die, one future chip.",
+          "point": "die"
+        },
+        {
+          "say": "Around the round edge, some squares are cut off. They're incomplete chips, so they're thrown away. That's why round wafers waste a little at the rim.",
+          "step": 3,
+          "point": "edge",
+          "circle": "edge",
+          "r": 80
+        },
+        {
+          "say": "And the thin gaps between the dies? Those are saw lanes. Later, a fine saw or laser cuts along them to free each chip.",
+          "point": "lane",
+          "spot": 110,
+          "zoom": 1.35,
+          "zoom_on": "die",
+          "define": {
+            "term": "Saw lane",
+            "meaning": "the thin gap where chips are cut apart"
+          }
+        },
+        {
+          "say": "Like the lines between squares on a chocolate bar.",
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What is a die?",
+      "options": [
+        "One chip cut from a wafer",
+        "A type of sand",
+        "The wafer's notch"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. What is a die? One chip cut from a wafer, a type of sand, or the wafer's notch? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "A die is one chip cut from the wafer. Like one cookie from the sheet.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Flatter than a mirror",
+      "figure": [
+        "out/figs/day12_flat_0.png",
+        "out/figs/day12_flat_1.png",
+        "out/figs/day12_flat_2.png"
+      ],
+      "caption": "Polished until almost perfectly smooth",
+      "chapter": "Mirror-flat",
+      "beats": [
+        {
+          "say": "Now, flatness. Here's a wafer seen from the side. Wide, and very thin.",
+          "step": 0,
+          "point": "side",
+          "spot": 260
+        },
+        {
+          "say": "Its top surface is polished until it shines like a mirror. Why? Because chips are printed onto it with light, and the print must be perfectly in focus.",
+          "point": "spot"
+        },
+        {
+          "say": "Zoom right into the surface. The bumps are less than one nanometre high. That's only a few atoms tall.",
+          "step": 1,
+          "point": "bumps",
+          "spot": 200,
+          "zoom": 1.5,
+          "zoom_on": "bumps",
+          "define": {
+            "term": "Nanometre",
+            "meaning": "a billionth of a metre, a few atoms wide"
+          }
+        },
+        {
+          "say": "Here's a way to picture it. Blow the wafer up until it's thirty kilometres wide, as big as a city.",
+          "step": 2,
+          "zoom": 1,
+          "point": "city",
+          "spot": 200
+        },
+        {
+          "say": "Even then, the typical bumps would be only about as wide as a human hair. A whole city, smoother than a table top.",
+          "point": "city",
+          "spot": 260
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "A wafer: a thin, pure, mirror-flat slice of one perfect crystal.",
+      "chapter": "So far",
+      "say": "So far: a wafer is a thin, round slice of silicon. It's one perfect crystal, extremely pure, and polished flatter than a mirror. Hundreds of chips are built on it, then cut apart. But how do we make one?"
+    },
+    {
+      "kind": "figure",
+      "head": "Where wafers come from",
+      "figure": [
+        "out/figs/day12_journey_0.png",
+        "out/figs/day12_journey_1.png",
+        "out/figs/day12_journey_2.png"
+      ],
+      "caption": "The journey this playlist will follow",
+      "chapter": "From sand to wafer",
+      "beats": [
+        {
+          "say": "Believe it or not, it starts with sand. Ordinary sand is mostly silicon joined to oxygen.",
+          "step": 0,
+          "point": "j0"
+        },
+        {
+          "say": "First, the silicon is separated and cleaned until it's super pure. That's episode two.",
+          "point": "j1",
+          "flow": [
+            "j0",
+            "j1"
+          ]
+        },
+        {
+          "say": "Then it's melted, and one giant crystal is slowly pulled out of the melt, like lifting a candle from wax. That crystal is called an ingot. That's episode three.",
+          "step": 1,
+          "point": "j2",
+          "define": {
+            "term": "Ingot",
+            "meaning": "a big cylinder of crystal, before it's sliced"
+          }
+        },
+        {
+          "say": "The ingot is sliced into thin discs, like slicing a loaf of bread.",
+          "point": "j3",
+          "flow": [
+            "j2",
+            "j3"
+          ]
+        },
+        {
+          "say": "Each slice is ground and polished until it's mirror-flat. Now it's a wafer, ready for chips.",
+          "step": 2,
+          "point": "j4",
+          "flow": [
+            "j3",
+            "j4",
+            "j5"
+          ]
+        },
+        {
+          "say": "Sand in, wafers out. We'll follow every step in this playlist.",
+          "point": "j5",
+          "zoom": 1.4,
+          "zoom_on": "j4"
+        },
+        {
+          "say": "That's the whole journey in one picture.",
+          "zoom": 1,
+          "point": "j2",
+          "spot": 300
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "The foundation of every chip",
+      "figure": [
+        "out/figs/day12_build_0.png",
+        "out/figs/day12_build_1.png",
+        "out/figs/day12_build_2.png"
+      ],
+      "caption": "A chip cut open, not to scale",
+      "chapter": "The foundation",
+      "beats": [
+        {
+          "say": "So what does the wafer actually do in a chip? Think of a building. The wafer is the ground it stands on.",
+          "step": 0,
+          "point": "base",
+          "spot": 230
+        },
+        {
+          "say": "It makes up almost all of the chip's thickness. It's strong, so the delicate parts on top don't break.",
+          "point": "base"
+        },
+        {
+          "say": "The transistors, the tiny switches, are built into the very top skin of the silicon. Less than one percent of its depth.",
+          "step": 1,
+          "point": "skin",
+          "zoom": 1.6,
+          "zoom_on": "skin",
+          "define": {
+            "term": "Transistor",
+            "meaning": "a tiny switch that turns electricity on and off"
+          }
+        },
+        {
+          "say": "That's why the top must be one perfect crystal. The switches live right there.",
+          "circle": "skin",
+          "r": 70
+        },
+        {
+          "say": "Then, layer by layer, copper wiring is built on top, like floors of a building, connecting the switches together.",
+          "step": 2,
+          "zoom": 1,
+          "point": "wires",
+          "flow": [
+            "up0",
+            "up1",
+            "up2",
+            "up3"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Why make chips on wafers?",
+      "chapter": "Why wafers?",
+      "left": {
+        "title": "One at a time",
+        "points": [
+          "Every step repeated",
+          "Slow and costly",
+          "Few chips"
+        ]
+      },
+      "right": {
+        "title": "Hundreds at once",
+        "points": [
+          "Each step done once",
+          "Cost shared by all",
+          "Cheap chips for all"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Why go to all this trouble? Why not make each chip separately?"
+        },
+        {
+          "say": "Imagine making one chip at a time. Every one of hundreds of steps would be repeated for each tiny chip. It would take forever, and cost a fortune."
+        },
+        {
+          "say": "On a wafer, each step treats the whole disc at once. Hundreds of chips get the same step together.",
+          "right": true
+        },
+        {
+          "say": "So the cost of each step is shared. It's like baking a full tray of cookies, not one. That's a big reason chips are cheap enough to be in your toothbrush and your car."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "How many chips per wafer?",
+      "figure": [
+        "out/figs/day12_count_0.png",
+        "out/figs/day12_count_1.png",
+        "out/figs/day12_count_2.png"
+      ],
+      "caption": "Smaller chips mean more per wafer",
+      "chapter": "Chips per wafer",
+      "beats": [
+        {
+          "say": "So how many chips fit on one wafer? It depends on the chip's size.",
+          "step": 0,
+          "point": "w0",
+          "spot": 200
+        },
+        {
+          "say": "Tiny chips, like simple sensors, can fit about three thousand on one wafer.",
+          "point": "w0",
+          "zoom": 1.5,
+          "zoom_on": "w0"
+        },
+        {
+          "say": "A phone's main chip is about the size of your fingernail. Around six hundred fit.",
+          "step": 1,
+          "zoom": 1,
+          "point": "w1",
+          "spot": 200
+        },
+        {
+          "say": "And a giant AI chip, as big as a postage stamp? Only about sixty.",
+          "step": 2,
+          "point": "w2",
+          "spot": 200,
+          "circle": "w2",
+          "r": 150
+        },
+        {
+          "say": "Not every chip works, though. A speck of dust can ruin one. The share that work is called the yield.",
+          "point": "w1",
+          "define": {
+            "term": "Yield",
+            "meaning": "the share of chips on a wafer that work"
+          }
+        },
+        {
+          "say": "Big chips are hit hardest. One speck can spoil a large area. That's why giant chips cost so much.",
+          "point": "w2"
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why are chips made on wafers, many at once?",
+      "options": [
+        "It shares the cost of each step",
+        "Wafers look nice and shiny",
+        "Silicon can't be made small"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. Why are chips made on wafers, many at once? To share the cost of each step, because wafers look shiny, or because silicon can't be made small? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "To share the cost. Each step treats hundreds of chips together, so every chip gets cheaper.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Wafers and India",
+      "points": [
+        "Fab: a chip factory",
+        "Dholera, Gujarat",
+        "Up to 50,000 wafers a month"
+      ],
+      "figure": [
+        "out/figs/day12_fab_0.png",
+        "out/figs/day12_fab_1.png",
+        "out/figs/day12_fab_2.png"
+      ],
+      "chapter": "Wafers in India",
+      "beats": [
+        {
+          "say": "A factory that turns blank wafers into chips is called a fab. It's short for fabrication plant.",
+          "step": 0,
+          "show": 1,
+          "point": "fab",
+          "spot": 230,
+          "define": {
+            "term": "Fab",
+            "meaning": "a factory that builds chips on wafers"
+          }
+        },
+        {
+          "say": "Blank, polished wafers go in.",
+          "step": 1,
+          "point": "in",
+          "flow": [
+            "in",
+            "fab"
+          ]
+        },
+        {
+          "say": "Weeks later, wafers covered in finished chips come out.",
+          "step": 2,
+          "point": "out",
+          "flow": [
+            "in",
+            "fab",
+            "out"
+          ]
+        },
+        {
+          "say": "India is building its first big commercial fab at Dholera, in Gujarat. Tata Electronics is building it, with Taiwan's PSMC as its technology partner.",
+          "show": 2,
+          "point": "fab"
+        },
+        {
+          "say": "As of late twenty twenty six, it's planned to handle up to fifty thousand wafers a month. We'll look at India's chip plans in a later episode.",
+          "show": 3,
+          "point": "plan",
+          "spot": 280
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Thin slice of one crystal",
+        "Pure and mirror-flat",
+        "Hundreds of chips at once"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: a wafer is a thin, round slice of silicon, cut from one perfect crystal. About as thick as a credit card.",
+          "show": 1
+        },
+        {
+          "say": "Two: it's extremely pure and polished flatter than a mirror, because the tiny switches are built right into its top skin.",
+          "show": 2
+        },
+        {
+          "say": "Three: hundreds of chips are built on one wafer at once, then cut apart. That's what makes chips cheap enough for everything around you.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 2: From quartz sand to pure polysilicon",
+      "chapter": "Coming up",
+      "say": "Every wafer begins as ordinary sand. Tomorrow, in episode two, we'll see how sand becomes silicon so pure it has fewer than one stray atom in a billion. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
