@@ -9,4 +9,4 @@
 2026-11-21 13:00 | day09 | How a MOSFET Works | Semiconductor Basics Ep 8 | Atoms to Chips | metricool 436279231 (approved by owner, scheduled 13:00; was draft 436278894)
 2026-11-22 13:00 | day10 | What Is a Chip? | Semiconductor Basics Ep 9 | Atoms to Chips | metricool 437275387 (approved by owner, scheduled 13:00; was draft 437177446)
 2026-11-23 13:00 | day11 | Moore's Law: What It Really Says, and Is It Dead? | Atoms to Chips | metricool 438309922 (approved by owner, scheduled 13:00; was draft 438157246)
-2026-11-24 13:00 | day12 | What Is a Wafer? | From Sand to Wafer Ep 1 | Atoms to Chips | metricool 439681946 (draft, awaiting owner approval)
+2026-11-24 13:00 | day12 | What Is a Wafer? | From Sand to Wafer Ep 1 | Atoms to Chips | metricool 439773490 (approved by owner, scheduled 13:00; was draft 439681946)
