@@ -26,7 +26,7 @@ Status key: [ ] planned · [x] posted
 
 ## Playlist 2 — From Sand to Wafer (Days 12–18)
 12. [x] What is a wafer?
-13. [ ] From quartz sand to electronic-grade polysilicon
+13. [x] From quartz sand to electronic-grade polysilicon
 14. [ ] Growing a single crystal: the Czochralski process
 15. [ ] Slicing, lapping and polishing wafers
 16. [ ] Wafer sizes: why 300 mm matters

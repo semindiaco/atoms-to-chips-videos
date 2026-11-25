@@ -1,0 +1,645 @@
+{
+  "day": 13,
+  "slug": "day13_polysilicon",
+  "label": "SAND TO WAFER · EP 2",
+  "series": "From Sand to Wafer",
+  "thumb_tag": "SAND TO WAFER · EP 2",
+  "thumb_line1": "SAND TO",
+  "thumb_line2": "PURE SILICON",
+  "yt_title": "From Sand to Pure Silicon | From Sand to Wafer Ep 2 | Atoms to Chips",
+  "yt_description": "How does ordinary quartz, the stuff of sand, become silicon so pure that only about one atom in a hundred billion is out of place? In this lesson you'll follow the journey step by step: the giant arc furnace, turning silicon into a liquid, distillation, and the Siemens reactor where pure silicon grows on hot rods like rock candy on a string. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 3, growing a single crystal with the Czochralski process.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Polysilicon #Semiconductors #ChipMaking #SiliconWafer #SemiconductorIndia #Electronics #AtomsToChips",
+  "yt_tags": [
+    "polysilicon",
+    "how silicon is made",
+    "sand to silicon",
+    "siemens process",
+    "trichlorosilane",
+    "metallurgical grade silicon",
+    "electronic grade silicon",
+    "quartz to silicon",
+    "how chips are made",
+    "silicon purification",
+    "india semiconductor",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "From Sand to Pure Silicon",
+      "sub": "How a beach becomes the purest stuff on Earth",
+      "chapter": "Intro",
+      "say": "Here's a strange fact. The sand on a beach and the chip in your phone are made of the same element. Silicon. But between the two lies one of the toughest cleaning jobs on Earth. Today you'll see how ordinary rock is turned into silicon so pure that almost every single atom is silicon. Welcome to episode two of From Sand to Wafer, on Atoms to Chips."
+    },
+    {
+      "kind": "stat",
+      "stat": "11 nines",
+      "caption": "Chip-grade silicon: up to 99.999999999% pure",
+      "chapter": "How pure?",
+      "beats": [
+        {
+          "say": "Let's start with a number. The best silicon for chips can be ninety nine point nine nine nine nine nine nine nine nine nine percent pure."
+        },
+        {
+          "say": "That's up to eleven nines in a row. Very few materials anywhere are made this clean."
+        },
+        {
+          "say": "Why does it matter to you? Because a few stray atoms in the wrong place can stop the tiny switches in your phone from working."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Sand is silicon in disguise",
+      "figure": [
+        "out/figs/day13_sand_0.png",
+        "out/figs/day13_sand_1.png",
+        "out/figs/day13_sand_2.png"
+      ],
+      "caption": "Silicon is locked to oxygen inside every grain",
+      "chapter": "Sand is silicon",
+      "beats": [
+        {
+          "say": "Look at this pile of ordinary sand. Most of it is a mineral called quartz.",
+          "step": 0,
+          "point": "sand",
+          "spot": 220,
+          "define": {
+            "term": "Quartz",
+            "meaning": "a hard, glassy mineral made of silicon and oxygen"
+          }
+        },
+        {
+          "say": "Now zoom into a single grain. In the middle sits a silicon atom.",
+          "step": 1,
+          "point": "si",
+          "zoom": 1.5,
+          "zoom_on": "grain"
+        },
+        {
+          "say": "But it's held tightly by oxygen atoms on every side. Think of rust. Rust is iron stuck to oxygen. Sand is silicon stuck to oxygen.",
+          "point": "o",
+          "circle": "o",
+          "r": 60
+        },
+        {
+          "say": "Chemists call this silicon dioxide. Our first job is to pull the oxygen away.",
+          "zoom": 1,
+          "point": "grain",
+          "spot": 220,
+          "define": {
+            "term": "Silicon dioxide",
+            "meaning": "silicon joined to oxygen, the stuff of sand"
+          }
+        },
+        {
+          "say": "Beach sand has lots of other minerals mixed in. So factories usually start with lumps of very pure quartz rock instead.",
+          "step": 2,
+          "point": "quartz",
+          "spot": 190
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 1: the giant furnace",
+      "figure": [
+        "out/figs/day13_furnace_0.png",
+        "out/figs/day13_furnace_1.png",
+        "out/figs/day13_furnace_2.png"
+      ],
+      "caption": "Carbon pulls the oxygen off the silicon",
+      "chapter": "The arc furnace",
+      "beats": [
+        {
+          "say": "Step one happens in a giant furnace, taller than a house.",
+          "step": 0,
+          "point": "furnace",
+          "spot": 230
+        },
+        {
+          "say": "Quartz goes in, mixed with carbon, like coal, coke and wood chips.",
+          "point": "in",
+          "flow": [
+            "in",
+            "charge"
+          ]
+        },
+        {
+          "say": "Huge carbon rods carry an enormous electric current down into the mix.",
+          "point": "e_top",
+          "flow": [
+            "e_top",
+            "arc"
+          ]
+        },
+        {
+          "say": "At their tips, electric sparks make it about two thousand degrees Celsius. That's hotter than lava.",
+          "step": 1,
+          "point": "arc",
+          "circle": "arc",
+          "r": 90,
+          "define": {
+            "term": "Electric arc",
+            "meaning": "a giant, lasting spark of electricity"
+          }
+        },
+        {
+          "say": "Here's the clever part. At this heat, carbon grabs the oxygen away from the silicon, like a magnet stealing a paperclip.",
+          "point": "charge",
+          "zoom": 1.4,
+          "zoom_on": "charge"
+        },
+        {
+          "say": "The oxygen leaves with the carbon as a gas, out of the top.",
+          "step": 2,
+          "zoom": 1,
+          "point": "gas",
+          "flow": [
+            "charge",
+            "gas"
+          ]
+        },
+        {
+          "say": "And liquid silicon pours out of the bottom, glowing like molten metal.",
+          "point": "ladle",
+          "flow": [
+            "arc",
+            "tap",
+            "ladle"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Pure enough? Not even close",
+      "chapter": "Metal grade vs chip grade",
+      "left": {
+        "title": "Metal grade",
+        "points": [
+          "98–99% pure",
+          "Used in alloys",
+          "Rough grey lumps"
+        ]
+      },
+      "right": {
+        "title": "Chip grade",
+        "points": [
+          "Up to 11 nines",
+          "Used for chips",
+          "Shiny silver rods"
+        ]
+      },
+      "beats": [
+        {
+          "say": "The silicon from the furnace is called metallurgical grade. It's about ninety eight to ninety nine percent pure.",
+          "define": {
+            "term": "Metallurgical grade",
+            "meaning": "silicon pure enough for metals, not for chips"
+          }
+        },
+        {
+          "say": "That sounds great. It's used to make aluminium car parts and silicone sealants. But for chips, it's a disaster."
+        },
+        {
+          "say": "Chip grade must be far, far purer. About a billion times fewer stray atoms.",
+          "right": true
+        },
+        {
+          "say": "Think of a glass of muddy river water. You can't just filter it once and call it medicine. You need a whole new way to clean it."
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "So far: sand plus carbon plus heat gives 99% silicon.",
+      "chapter": "So far",
+      "say": "So far: we took quartz, the stuff of sand. We used carbon and a hot furnace to pull off the oxygen. Now we have silicon that's ninety nine percent pure. Next, we need to remove nearly all of that last one percent."
+    },
+    {
+      "kind": "figure",
+      "head": "Step 2: turn it into a liquid",
+      "figure": [
+        "out/figs/day13_tcs_0.png",
+        "out/figs/day13_tcs_1.png",
+        "out/figs/day13_tcs_2.png"
+      ],
+      "caption": "Liquids are far easier to clean than solids",
+      "chapter": "Making a liquid",
+      "beats": [
+        {
+          "say": "Here's a trick. It's very hard to clean a solid lump. It's much easier to clean a liquid.",
+          "step": 0,
+          "point": "powder",
+          "spot": 180
+        },
+        {
+          "say": "So first the silicon is crushed into a fine powder.",
+          "point": "powder",
+          "zoom": 1.4,
+          "zoom_on": "powder"
+        },
+        {
+          "say": "Then it goes into a reactor at about three hundred degrees, with a gas called hydrogen chloride.",
+          "step": 1,
+          "zoom": 1,
+          "point": "reactor",
+          "flow": [
+            "r_in",
+            "reactor"
+          ]
+        },
+        {
+          "say": "The gas joins onto the silicon atoms, and carries them away.",
+          "point": "hcl",
+          "flow": [
+            "hcl",
+            "reactor"
+          ]
+        },
+        {
+          "say": "Out comes a clear liquid called trichlorosilane. It boils at about thirty two degrees, just above room temperature.",
+          "step": 2,
+          "point": "tcs",
+          "flow": [
+            "reactor",
+            "out",
+            "tcs"
+          ],
+          "define": {
+            "term": "Trichlorosilane",
+            "meaning": "a clear liquid of silicon, chlorine and hydrogen"
+          }
+        },
+        {
+          "say": "But look. The impurities come along too, hiding in the liquid. Now we can hunt them down.",
+          "point": "imp",
+          "circle": "imp",
+          "r": 60
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 3: distillation",
+      "figure": [
+        "out/figs/day13_still_0.png",
+        "out/figs/day13_still_1.png",
+        "out/figs/day13_still_2.png"
+      ],
+      "caption": "Separating liquids by how easily they boil",
+      "chapter": "Distillation",
+      "beats": [
+        {
+          "say": "To clean the liquid, factories use distillation. You've seen this idea before.",
+          "step": 0,
+          "point": "mix",
+          "spot": 200,
+          "define": {
+            "term": "Distillation",
+            "meaning": "boiling a liquid and catching the vapour to purify it"
+          }
+        },
+        {
+          "say": "Think of salty sea water. Boil it, catch the steam, and the salt stays behind. The steam turns back into clean water.",
+          "point": "heat"
+        },
+        {
+          "say": "Here the mixed liquid is gently heated at the bottom of a tall column.",
+          "point": "col_b",
+          "flow": [
+            "mix",
+            "col_b",
+            "col_m"
+          ]
+        },
+        {
+          "say": "Trichlorosilane turns to vapour, rises up the column, cools and drips into a clean container.",
+          "step": 1,
+          "point": "pure",
+          "flow": [
+            "col_b",
+            "col_t",
+            "cond",
+            "drip",
+            "pure"
+          ]
+        },
+        {
+          "say": "Why does this work? Each liquid boils at its own temperature. So they separate.",
+          "step": 2,
+          "point": "rule"
+        },
+        {
+          "say": "Many impurities stay behind at the bottom.",
+          "point": "left",
+          "circle": "left",
+          "r": 80
+        },
+        {
+          "say": "And the liquid is distilled again and again, until almost nothing else is left.",
+          "point": "again",
+          "zoom": 1.4,
+          "zoom_on": "pure"
+        },
+        {
+          "say": "This is where most of the cleaning happens.",
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why turn silicon into a liquid first?",
+      "options": [
+        "Liquids are easier to purify",
+        "It's cheaper to ship",
+        "Chips are made of liquid"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. Why turn the silicon into a liquid first? Because liquids are easier to purify, because it's cheaper to ship, or because chips are made of liquid? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Liquids are easier to purify. We can boil and separate them, again and again.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 4: growing silicon on rods",
+      "figure": [
+        "out/figs/day13_siemens_0.png",
+        "out/figs/day13_siemens_1.png",
+        "out/figs/day13_siemens_2.png",
+        "out/figs/day13_siemens_3.png"
+      ],
+      "caption": "The Siemens process: silicon builds up atom by atom",
+      "chapter": "The Siemens reactor",
+      "beats": [
+        {
+          "say": "Now we turn the pure liquid back into solid silicon. First, think of rock candy.",
+          "step": 0,
+          "point": "candy",
+          "spot": 200
+        },
+        {
+          "say": "Hang a string in sugary water, and sugar crystals slowly grow on the string.",
+          "point": "candy",
+          "zoom": 1.35,
+          "zoom_on": "candy"
+        },
+        {
+          "say": "The real thing looks like this. A tall steel dome, called a Siemens reactor.",
+          "step": 1,
+          "zoom": 1,
+          "point": "jar",
+          "spot": 240,
+          "define": {
+            "term": "Siemens process",
+            "meaning": "growing pure silicon on hot rods from a gas"
+          }
+        },
+        {
+          "say": "Inside stand thin rods of pure silicon. Electricity heats them to about eleven hundred degrees.",
+          "point": "rod",
+          "circle": "rod",
+          "r": 80
+        },
+        {
+          "say": "The purified liquid is turned to vapour and mixed with hydrogen gas. It flows into the dome.",
+          "step": 2,
+          "point": "gas_in",
+          "flow": [
+            "gas_in",
+            "g_mid",
+            "rod_mid"
+          ]
+        },
+        {
+          "say": "When it touches the hot rods, it breaks apart. Pure silicon sticks to the rods, one layer of atoms at a time.",
+          "point": "rod_mid",
+          "zoom": 1.5,
+          "zoom_on": "rod_mid"
+        },
+        {
+          "say": "The leftover gases flow out, and most are cleaned and used again.",
+          "zoom": 1,
+          "point": "g_out",
+          "flow": [
+            "g_mid2",
+            "g_out"
+          ]
+        },
+        {
+          "say": "After several days, the thin rods have grown thicker than your arm.",
+          "step": 3,
+          "point": "thick",
+          "spot": 200
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Polysilicon: the result",
+      "figure": [
+        "out/figs/day13_chunks_0.png",
+        "out/figs/day13_chunks_1.png",
+        "out/figs/day13_chunks_2.png"
+      ],
+      "caption": "Bagged chunks, ready to become crystals",
+      "chapter": "Polysilicon",
+      "beats": [
+        {
+          "say": "Here's one of those finished rods. Shiny, silver grey, and incredibly pure.",
+          "step": 0,
+          "point": "rod",
+          "spot": 200
+        },
+        {
+          "say": "It's called polysilicon. Poly means many. It's made of many small crystals stuck together, like the jumbled crystal from last episode.",
+          "step": 1,
+          "point": "chunks",
+          "define": {
+            "term": "Polysilicon",
+            "meaning": "pure silicon made of many small crystals"
+          }
+        },
+        {
+          "say": "The rods are broken into chunks, like snapping a chocolate bar.",
+          "point": "chunks",
+          "flow": [
+            "rod",
+            "chunks"
+          ]
+        },
+        {
+          "say": "The chunks are washed, then sealed in ultra-clean bags. Even a fingerprint would add impurities.",
+          "step": 2,
+          "point": "bag",
+          "flow": [
+            "chunks",
+            "bag"
+          ],
+          "circle": "bag",
+          "r": 120
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "How pure is that?",
+      "points": [
+        "Metal: 1 in 100 wrong",
+        "Chip: 1 in 100 billion",
+        "Boron, phosphorus watched"
+      ],
+      "figure": [
+        "out/figs/day13_pure_0.png",
+        "out/figs/day13_pure_1.png"
+      ],
+      "chapter": "How pure is that?",
+      "beats": [
+        {
+          "say": "Let's picture the difference. Here are a hundred atoms of furnace silicon.",
+          "step": 0,
+          "show": 1,
+          "point": "grid",
+          "spot": 230
+        },
+        {
+          "say": "About one of them is the wrong kind of atom.",
+          "point": "bad",
+          "circle": "bad",
+          "r": 45,
+          "zoom": 1.5,
+          "zoom_on": "bad"
+        },
+        {
+          "say": "In chip grade polysilicon, it's more like one wrong atom in a hundred billion.",
+          "step": 1,
+          "show": 2,
+          "zoom": 1,
+          "point": "chip",
+          "spot": 200
+        },
+        {
+          "say": "That's like finding one wrong person among more than ten times everyone alive on Earth.",
+          "point": "chip"
+        },
+        {
+          "say": "Two impurities are watched most closely: boron and phosphorus. Remember doping? These are the very atoms we add on purpose later. So the starting silicon must have almost none.",
+          "show": 3,
+          "point": "chip",
+          "spot": 260,
+          "define": {
+            "term": "Doping",
+            "meaning": "adding a pinch of other atoms on purpose"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "In the Siemens process, where does pure silicon grow?",
+      "options": [
+        "On hot silicon rods",
+        "In the arc furnace",
+        "In the sand"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. In the Siemens process, where does the pure silicon grow? On hot silicon rods, in the arc furnace, or in the sand? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "On hot silicon rods. Silicon builds up on them from the gas, like rock candy on a string.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Where does it go?",
+      "points": [
+        "Most: solar panels",
+        "A small slice: chips",
+        "India: plants planned"
+      ],
+      "figure": [
+        "out/figs/day13_use_0.png",
+        "out/figs/day13_use_1.png",
+        "out/figs/day13_use_2.png"
+      ],
+      "chapter": "Polysilicon today",
+      "beats": [
+        {
+          "say": "Here's a surprise. Most of the world's polysilicon doesn't go into chips at all. It goes into solar panels.",
+          "step": 0,
+          "show": 1,
+          "point": "solar",
+          "spot": 230
+        },
+        {
+          "say": "Chips use only a small slice. But they need the very purest kind, and only a handful of companies make it, in places like Germany, the United States and Japan.",
+          "show": 2,
+          "point": "chips",
+          "circle": "chips",
+          "r": 70
+        },
+        {
+          "say": "Solar grade polysilicon is mostly made in China. In twenty twenty four, nine of the ten biggest makers were Chinese.",
+          "step": 1,
+          "point": "china"
+        },
+        {
+          "say": "And India? As of late twenty twenty six, India doesn't yet make its own polysilicon. Companies like Adani and Reliance are working on plants, mostly for solar, and the government is planning support for them.",
+          "step": 2,
+          "show": 3,
+          "point": "india"
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Furnace: sand to 99%",
+        "Liquid, then distilled",
+        "Grown on hot rods"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: a hot furnace and carbon pull the oxygen off quartz. That gives silicon that's ninety nine percent pure.",
+          "show": 1
+        },
+        {
+          "say": "Two: the silicon is turned into a liquid, then distilled again and again to remove impurities.",
+          "show": 2
+        },
+        {
+          "say": "Three: in a Siemens reactor, pure silicon grows on hot rods, atom by atom. The result is polysilicon, up to eleven nines pure.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 3: Growing a single crystal",
+      "chapter": "Coming up",
+      "say": "Polysilicon is pure, but it's still a jumble of tiny crystals. Tomorrow, in episode three, we'll melt it and pull out one giant, perfect crystal, using the Czochralski process. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
