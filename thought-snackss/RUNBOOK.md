@@ -6,12 +6,12 @@ One reel per day, auto-posted at 13:00 IST via Metricool (blogId 8089583, tz Asi
 ## Steps
 1. Open queue.md and take the FIRST unchecked link. If none: stop and tell the owner the queue is empty (do not post anything).
 2. Read the article. substack.com/home/post/p-… links redirect to the author's page; if WebFetch refuses it, use a browser tool to read it.
-3. Write the reel as script.json (see work/02_chinese_philosophies/script.json): 8–10 scenes, 55–75 s total narration,
+3. Write the reel as script.json (see work/02_chinese_philosophies/script.json): 5–6 scenes, about 30 s total narration (25–35 s; roughly 70–85 words),
    fields id / text (captions) / say (what the voice reads — spell hard words phonetically here).
    - Retell the idea in YOUR OWN words, simply, for people with no philosophy background. Never copy sentences.
    - NEVER mention the article, the author, Substack, or "based on". Present it as Thought Snackss' own snack.
    - Keep it clean and kind: no profanity, no named TV shows/films/celebrities, no copyrighted characters.
-   - Scene 1 = hook question; middle = the idea + an everyday example; last scene says exactly:
+   - Scene 1 = hook question; middle = ONE core idea + one everyday example (for list articles, pick the 2–3 strongest points only); last scene says exactly:
      "... Follow Thought Snacks, for your daily bite of wisdom." (spelled "Snacks" in say/text, handle on screen).
 4. Voice: tools/tts.py (Kokoro voice af_heart, speed 1.08). Model files:
    https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx and voices-v1.0.bin
