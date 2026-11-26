@@ -1,0 +1,633 @@
+{
+  "day": 14,
+  "slug": "day14_czochralski",
+  "label": "SAND TO WAFER · EP 3",
+  "series": "From Sand to Wafer",
+  "thumb_tag": "SAND TO WAFER · EP 3",
+  "thumb_line1": "GROWING ONE",
+  "thumb_line2": "GIANT CRYSTAL",
+  "yt_title": "Growing a Single Crystal: Czochralski | From Sand to Wafer Ep 3",
+  "yt_description": "How do you grow one perfect crystal of silicon, nearly as tall as a person, where every atom lines up in the same pattern? In this lesson you'll see the Czochralski process step by step: melting polysilicon in a quartz bowl, dipping a tiny seed, and slowly pulling out a giant ingot while it spins. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 4, slicing, lapping and polishing wafers.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#Czochralski #SiliconIngot #Semiconductors #ChipMaking #SiliconWafer #SemiconductorIndia #AtomsToChips",
+  "yt_tags": [
+    "czochralski process",
+    "czochralski method",
+    "silicon ingot",
+    "single crystal silicon",
+    "crystal growth",
+    "monocrystalline silicon",
+    "how silicon wafers are made",
+    "float zone silicon",
+    "how chips are made",
+    "semiconductor manufacturing",
+    "india semiconductor",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Growing a Single Crystal",
+      "sub": "The Czochralski process, explained simply",
+      "chapter": "Intro",
+      "say": "In nineteen sixteen, a Polish chemist named Jan Czochralski was writing notes. The story goes that he dipped his pen into a pot of melted tin, instead of his ink. When he pulled it out, a thin thread of metal came with it. That thread was one single crystal. Decades later, in the nineteen fifties, engineers used his trick to grow crystals for electronics. Today, almost every chip in your phone starts with his idea. Welcome to episode three of From Sand to Wafer, on Atoms to Chips."
+    },
+    {
+      "kind": "stat",
+      "stat": "2 m",
+      "caption": "One perfect crystal, up to about two metres long",
+      "chapter": "One giant crystal",
+      "beats": [
+        {
+          "say": "Here's what we're going to grow. One crystal of silicon, up to about two metres long."
+        },
+        {
+          "say": "That's taller than most people. It can weigh hundreds of kilograms, as much as a piano."
+        },
+        {
+          "say": "And from end to end, every atom lines up in the very same pattern. Why does that matter to you? Because the switches in your phone work best in a perfect crystal."
+        },
+        {
+          "say": "Today you'll see exactly how it's grown, one layer of atoms at a time."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Many crystals vs one crystal",
+      "figure": [
+        "out/figs/day14_order_0.png",
+        "out/figs/day14_order_1.png",
+        "out/figs/day14_order_2.png"
+      ],
+      "caption": "Chips need one unbroken pattern",
+      "chapter": "Why one crystal?",
+      "beats": [
+        {
+          "say": "Last time, we made polysilicon. Look at it up close. It's made of many small crystals.",
+          "step": 0,
+          "point": "poly",
+          "spot": 230
+        },
+        {
+          "say": "Each one points a different way. Where two of them meet, the pattern breaks.",
+          "point": "boundary",
+          "zoom": 1.5,
+          "zoom_on": "boundary",
+          "define": {
+            "term": "Grain boundary",
+            "meaning": "the seam where two small crystals meet"
+          }
+        },
+        {
+          "say": "Electrons stumble at those seams. That's bad news for tiny switches.",
+          "circle": "boundary",
+          "r": 60
+        },
+        {
+          "say": "So we melt the polysilicon, and regrow it as one single crystal.",
+          "step": 1,
+          "zoom": 1,
+          "point": "single",
+          "spot": 230,
+          "flow": [
+            "poly",
+            "single"
+          ],
+          "define": {
+            "term": "Single crystal",
+            "meaning": "a solid where every atom follows one pattern"
+          }
+        },
+        {
+          "say": "Think of a crowd of people, all facing different ways. Now think of a marching band, everyone in neat rows. Chips need the marching band.",
+          "step": 2,
+          "point": "band"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "The secret: a seed",
+      "figure": [
+        "out/figs/day14_seed_0.png",
+        "out/figs/day14_seed_1.png",
+        "out/figs/day14_seed_2.png"
+      ],
+      "caption": "The new crystal copies the seed",
+      "chapter": "The seed",
+      "beats": [
+        {
+          "say": "How do you get every atom in line? You start with a seed. A small piece of silicon that is already a perfect crystal.",
+          "step": 0,
+          "point": "seed",
+          "spot": 220,
+          "define": {
+            "term": "Seed crystal",
+            "meaning": "a small perfect crystal that starts the growth"
+          }
+        },
+        {
+          "say": "Below it is liquid silicon. Its atoms move about freely, in no order at all.",
+          "point": "melt",
+          "spot": 200
+        },
+        {
+          "say": "When the seed touches the liquid and slowly rises, atoms from the liquid stick to its bottom.",
+          "step": 1,
+          "point": "join",
+          "flow": [
+            "from",
+            "join"
+          ]
+        },
+        {
+          "say": "And here's the magic. They line up in exactly the seed's pattern.",
+          "point": "join",
+          "zoom": 1.5,
+          "zoom_on": "join"
+        },
+        {
+          "say": "Even the direction the rows face is copied from the seed. So engineers choose the seed carefully.",
+          "point": "seed",
+          "spot": 220
+        },
+        {
+          "say": "It's like laying floor tiles. Get the first row straight, and every row after it follows.",
+          "step": 2,
+          "zoom": 1,
+          "point": "tiles"
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Inside the crystal puller",
+      "figure": [
+        "out/figs/day14_puller_0.png",
+        "out/figs/day14_puller_1.png",
+        "out/figs/day14_puller_2.png",
+        "out/figs/day14_puller_3.png"
+      ],
+      "caption": "The Czochralski method, often called CZ",
+      "chapter": "The puller",
+      "beats": [
+        {
+          "say": "Now let's look inside the real machine. It's called a crystal puller, and it's taller than a room.",
+          "step": 0,
+          "point": "chamber",
+          "spot": 260
+        },
+        {
+          "say": "In the middle sits a bowl made of pure quartz, called a crucible. It's held in a graphite cup.",
+          "point": "crucible",
+          "define": {
+            "term": "Crucible",
+            "meaning": "a heat-proof bowl for melting things"
+          }
+        },
+        {
+          "say": "Chunks of polysilicon go in. Heaters around the bowl glow red hot.",
+          "point": "heater",
+          "circle": "heater",
+          "r": 70
+        },
+        {
+          "say": "The silicon melts at about fourteen hundred degrees Celsius. That's hotter than lava.",
+          "step": 1,
+          "point": "melt",
+          "spot": 200
+        },
+        {
+          "say": "From the top, a cable lowers the seed until it just touches the melt.",
+          "step": 2,
+          "point": "seed",
+          "flow": [
+            "top",
+            "seed"
+          ],
+          "zoom": 1.5,
+          "zoom_on": "seed"
+        },
+        {
+          "say": "Then the seed is lifted very slowly, while it turns. A crystal grows below it, called an ingot.",
+          "step": 3,
+          "zoom": 1,
+          "point": "ingot",
+          "spot": 200,
+          "define": {
+            "term": "Ingot",
+            "meaning": "a big solid block of crystal"
+          }
+        },
+        {
+          "say": "All the while, a gentle stream of argon gas flows through the chamber. Argon never reacts, so it keeps the hot silicon clean.",
+          "point": "ar_mid",
+          "flow": [
+            "ar_in",
+            "ar_mid",
+            "ar_out"
+          ],
+          "define": {
+            "term": "Argon",
+            "meaning": "a gas that never reacts with anything"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "So far: melt it, dip a seed, pull it up slowly.",
+      "chapter": "So far",
+      "say": "So far: we melt pure polysilicon in a quartz bowl. We dip in a tiny perfect seed. Then we pull it up slowly, and the atoms copy the seed's pattern. Now let's watch the crystal grow, stage by stage."
+    },
+    {
+      "kind": "figure",
+      "head": "Five stages of growth",
+      "figure": [
+        "out/figs/day14_stages_0.png",
+        "out/figs/day14_stages_1.png",
+        "out/figs/day14_stages_2.png",
+        "out/figs/day14_stages_3.png"
+      ],
+      "caption": "Dip, neck, shoulder, body, tail",
+      "chapter": "Stages of growth",
+      "beats": [
+        {
+          "say": "Stage one: the dip. The seed touches the melt and waits a moment, so the temperatures match.",
+          "step": 0,
+          "point": "dip",
+          "spot": 170
+        },
+        {
+          "say": "Stage two: the neck. The seed is pulled up fast, so the crystal grows very thin. Just a few millimetres wide.",
+          "step": 1,
+          "point": "neck",
+          "zoom": 1.5,
+          "zoom_on": "neck"
+        },
+        {
+          "say": "Why so thin? The shock of the first touch leaves tiny faults in the pattern. In a thin neck, they run out to the side and vanish.",
+          "circle": "neck",
+          "r": 60
+        },
+        {
+          "say": "Stage three: the shoulder. The pull slows down, and the crystal widens like a cone.",
+          "step": 2,
+          "zoom": 1,
+          "point": "shoulder"
+        },
+        {
+          "say": "Stage four: the body. This is the useful part. It grows straight down at full width, for a day or more.",
+          "point": "body",
+          "spot": 190,
+          "flow": [
+            "dip",
+            "neck",
+            "shoulder",
+            "body"
+          ]
+        },
+        {
+          "say": "Stage five: the tail. The crystal narrows to a point, then lifts clear of the melt. A sudden break could crack it.",
+          "step": 3,
+          "point": "tail"
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why is the neck grown so thin?",
+      "options": [
+        "To let tiny faults escape",
+        "To save silicon",
+        "So it's easy to cut"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. Why is the neck grown so thin? To let tiny faults escape, to save silicon, or so it's easy to cut? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "To let tiny faults escape. In a thin neck, they run out to the edge, so the body starts perfect.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Speed sets the width",
+      "points": [
+        "Slow pull: thicker",
+        "Fast pull: thinner",
+        "Cameras watch the edge"
+      ],
+      "figure": [
+        "out/figs/day14_speed_0.png",
+        "out/figs/day14_speed_1.png"
+      ],
+      "chapter": "Controlling the width",
+      "beats": [
+        {
+          "say": "How do you keep the crystal exactly the right width? Think of pulling honey up with a spoon.",
+          "step": 0,
+          "show": 0,
+          "point": "slow",
+          "spot": 220
+        },
+        {
+          "say": "Pull slowly, and the crystal has time to spread out. It grows thicker.",
+          "show": 1,
+          "point": "slow",
+          "flow": [
+            "ring",
+            "slow"
+          ]
+        },
+        {
+          "say": "Pull faster, and it grows thinner.",
+          "step": 1,
+          "show": 2,
+          "point": "fast"
+        },
+        {
+          "say": "So the machine adjusts the speed and the heat, minute by minute. A camera watches the bright ring where crystal meets liquid.",
+          "show": 3,
+          "point": "ring",
+          "circle": "ring",
+          "r": 90,
+          "zoom": 1.3,
+          "zoom_on": "ring"
+        },
+        {
+          "say": "The pull is only about a millimetre a minute. That's much slower than a snail. So growing a whole ingot takes well over a day.",
+          "zoom": 1,
+          "point": "slow",
+          "spot": 230
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Spinning, stirring, seasoning",
+      "figure": [
+        "out/figs/day14_stir_0.png",
+        "out/figs/day14_stir_1.png",
+        "out/figs/day14_stir_2.png"
+      ],
+      "caption": "Turning keeps the crystal even",
+      "chapter": "Spin and dope",
+      "beats": [
+        {
+          "say": "Notice that the crystal spins one way, and the bowl spins the other way.",
+          "step": 0,
+          "point": "crystal",
+          "circle": "crystal",
+          "r": 90
+        },
+        {
+          "say": "It's like stirring soup. The hot liquid keeps moving, so the crystal grows evenly all the way round.",
+          "point": "stir",
+          "flow": [
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        },
+        {
+          "say": "Remember doping? This is where it happens. A tiny pinch of boron or phosphorus is added to the melt.",
+          "step": 1,
+          "point": "dopant",
+          "flow": [
+            "dop_in",
+            "dopant"
+          ],
+          "define": {
+            "term": "Doping",
+            "meaning": "adding a pinch of other atoms on purpose"
+          }
+        },
+        {
+          "say": "So the whole crystal comes out p-type or n-type, ready for chips.",
+          "point": "dopant",
+          "zoom": 1.4,
+          "zoom_on": "dopant"
+        },
+        {
+          "say": "One more thing. The hot quartz bowl slowly dissolves, and adds a little oxygen to the melt.",
+          "step": 2,
+          "zoom": 1,
+          "point": "oxy",
+          "circle": "oxy",
+          "r": 55
+        },
+        {
+          "say": "Most of it escapes as a gas, and the argon sweeps it away. A little oxygen stays in the crystal, and it can even be useful. Engineers keep a close eye on it, because too much oxygen can cause defects.",
+          "point": "ar_c",
+          "flow": [
+            "ar_a",
+            "ar_b",
+            "ar_c",
+            "ar_d"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Two ways to grow a crystal",
+      "chapter": "CZ vs Float Zone",
+      "left": {
+        "title": "Czochralski (CZ)",
+        "points": [
+          "Melt in a quartz bowl",
+          "Up to 300 mm wide",
+          "Most chips use it"
+        ]
+      },
+      "right": {
+        "title": "Float Zone (FZ)",
+        "points": [
+          "No bowl at all",
+          "Extra pure, less oxygen",
+          "Power devices, sensors"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Czochralski isn't the only way. But it's by far the most common. Almost every computer chip starts as a CZ crystal, up to three hundred millimetres wide."
+        },
+        {
+          "say": "The other method is called float zone. A rod of polysilicon hangs in the air, and a ring heater melts one thin band of it at a time.",
+          "right": true,
+          "define": {
+            "term": "Float zone",
+            "meaning": "melting a rod band by band, with no bowl"
+          }
+        },
+        {
+          "say": "The melted band travels along the rod, like a bead sliding down a string, and leaves a single crystal behind."
+        },
+        {
+          "say": "With no bowl, there's less oxygen. So float zone silicon goes into special chips, like high power switches. But it's smaller and costs more."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "What decides the pattern of the whole ingot?",
+      "options": [
+        "The quartz bowl",
+        "The seed crystal",
+        "The argon gas"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. What decides the atom pattern of the whole ingot? The quartz bowl, the seed crystal, or the argon gas? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "The seed crystal. Every new atom copies the seed, like tiles following the first row.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "After the crystal is grown",
+      "figure": [
+        "out/figs/day14_finish_0.png",
+        "out/figs/day14_finish_1.png",
+        "out/figs/day14_finish_2.png"
+      ],
+      "caption": "Trimmed, ground round, and marked",
+      "chapter": "Finishing the ingot",
+      "beats": [
+        {
+          "say": "After growing, the ingot cools down slowly inside the puller. Then it's lifted out, gleaming silver grey.",
+          "step": 0,
+          "point": "ingot",
+          "spot": 240
+        },
+        {
+          "say": "First, the cone shaped ends are cut off. They're not the right shape for wafers.",
+          "step": 1,
+          "point": "ends",
+          "circle": "ends",
+          "r": 70
+        },
+        {
+          "say": "Small samples are tested, to check the crystal is pure and correctly doped.",
+          "point": "end2"
+        },
+        {
+          "say": "Next, the outside is ground until it's perfectly round, to the exact width.",
+          "step": 2,
+          "point": "round",
+          "flow": [
+            "a",
+            "b",
+            "round"
+          ]
+        },
+        {
+          "say": "And a tiny notch is ground along one side. It marks which way the atoms are lined up, like the arrow on a map.",
+          "point": "notch",
+          "zoom": 1.6,
+          "zoom_on": "end_view"
+        },
+        {
+          "say": "That notch matters later. Machines use it to line up every wafer the same way.",
+          "point": "notch",
+          "circle": "notch",
+          "r": 45
+        },
+        {
+          "say": "Now the ingot is ready to be sliced into wafers.",
+          "zoom": 1,
+          "point": "round",
+          "spot": 240
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Who grows these crystals?",
+      "points": [
+        "Chip-grade: a few makers",
+        "Japan, Taiwan, Germany, Korea",
+        "India: solar ingots"
+      ],
+      "figure": [
+        "out/figs/day14_world_0.png",
+        "out/figs/day14_world_1.png"
+      ],
+      "chapter": "Who makes them",
+      "beats": [
+        {
+          "say": "Growing chip grade crystals is hard. Only a handful of big wafer makers do most of it.",
+          "step": 0,
+          "show": 1,
+          "point": "makers",
+          "spot": 260
+        },
+        {
+          "say": "They're based in Japan, Taiwan, Germany and South Korea.",
+          "show": 2,
+          "point": "makers",
+          "spot": 260
+        },
+        {
+          "say": "And India? Since twenty twenty two, the Adani Group has grown large single crystal ingots at Mundra, in Gujarat. They're for solar panels.",
+          "step": 1,
+          "show": 3,
+          "point": "india",
+          "spot": 230
+        },
+        {
+          "say": "As of late twenty twenty six, India still buys its chip grade wafers from abroad. Growing them at home could be a big next step.",
+          "point": "india",
+          "spot": 260
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Seed sets the pattern",
+        "Pull slowly while spinning",
+        "Dip, neck, shoulder, body, tail"
+      ],
+      "beats": [
+        {
+          "say": "Let's recap in three points. One: chips need a single crystal, and a tiny seed sets the pattern for every atom.",
+          "show": 1
+        },
+        {
+          "say": "Two: in a Czochralski puller, the seed is dipped into melted silicon and pulled up slowly, while it spins.",
+          "show": 2
+        },
+        {
+          "say": "Three: the crystal grows in stages, dip, neck, shoulder, body and tail, into an ingot up to two metres long.",
+          "show": 3
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 4: Slicing and polishing wafers",
+      "chapter": "Coming up",
+      "say": "We now have a giant, perfect crystal. But a chip can't be built on a log. Tomorrow, in episode four, we'll slice it into wafers less than a millimetre thick, and polish them flatter than almost anything on Earth. If this helped, subscribe to Atoms to Chips and turn on notifications. See you tomorrow."
+    }
+  ]
+}
