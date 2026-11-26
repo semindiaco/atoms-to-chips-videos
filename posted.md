@@ -11,3 +11,4 @@
 2026-11-23 13:00 | day11 | Moore's Law: What It Really Says, and Is It Dead? | Atoms to Chips | metricool 438309922 (approved by owner, scheduled 13:00; was draft 438157246)
 2026-11-24 13:00 | day12 | What Is a Wafer? | From Sand to Wafer Ep 1 | Atoms to Chips | metricool 439773490 (approved by owner, scheduled 13:00; was draft 439681946)
 2026-11-25 13:00 | day13 | From Sand to Pure Silicon | From Sand to Wafer Ep 2 | Atoms to Chips | metricool 441192820 (approved by owner, scheduled 13:00; was draft 441133301)
+2026-11-26 13:00 | day14 | Growing a Single Crystal: Czochralski | From Sand to Wafer Ep 3 | metricool 442536610 (draft, awaiting owner approval)
