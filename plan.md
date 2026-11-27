@@ -28,7 +28,7 @@ Status key: [ ] planned · [x] posted
 12. [x] What is a wafer?
 13. [x] From quartz sand to electronic-grade polysilicon
 14. [x] Growing a single crystal: the Czochralski process
-15. [ ] Slicing, lapping and polishing wafers
+15. [x] Slicing, lapping and polishing wafers
 16. [ ] Wafer sizes: why 300 mm matters
 17. [ ] Epitaxial and SOI wafers
 18. [ ] Beyond silicon: SiC, GaN and GaAs

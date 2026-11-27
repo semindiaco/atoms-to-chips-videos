@@ -1,0 +1,625 @@
+{
+  "day": 15,
+  "slug": "day15_slicing_polishing",
+  "label": "SAND TO WAFER · EP 4",
+  "series": "From Sand to Wafer",
+  "thumb_tag": "SAND TO WAFER · EP 4",
+  "thumb_line1": "SLICE IT",
+  "thumb_line2": "POLISH IT",
+  "yt_title": "Slicing & Polishing Silicon Wafers | From Sand to Wafer Ep 4",
+  "yt_description": "How does a giant silicon crystal become hundreds of mirror-smooth wafers, with bumps only about one atom tall? In this lesson you'll follow every step: the multi-wire saw, edge rounding, lapping, etching away hidden damage, chemical mechanical polishing (CMP), and the final clean and laser inspection. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 5, wafer sizes and why 300 mm matters.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#SiliconWafer #WaferPolishing #CMP #Semiconductors #ChipMaking #SemiconductorIndia #AtomsToChips",
+  "yt_tags": [
+    "silicon wafer",
+    "wafer slicing",
+    "wafer polishing",
+    "multi wire saw",
+    "wire saw",
+    "lapping",
+    "chemical mechanical polishing",
+    "cmp",
+    "how silicon wafers are made",
+    "wafer manufacturing",
+    "semiconductor manufacturing",
+    "how chips are made",
+    "india semiconductor",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Slicing & Polishing Wafers",
+      "sub": "From a crystal log to a perfect mirror",
+      "chapter": "Intro",
+      "say": "What's the flattest thing you've ever touched? A kitchen counter? A phone screen? A mirror? Here's a surprise. The silicon wafer inside a chip factory is flatter than all of them. Last time, we grew a giant crystal of silicon, shaped like a log. Today, we turn that log into hundreds of thin, perfect discs. Welcome to episode four of From Sand to Wafer, on Atoms to Chips."
+    },
+    {
+      "kind": "stat",
+      "stat": "1 atom",
+      "caption": "A polished wafer's bumps: about one atom tall",
+      "chapter": "Flatter than a mirror",
+      "beats": [
+        {
+          "say": "Look at this number. On a finished wafer, the tiny bumps on the surface are only about one atom tall."
+        },
+        {
+          "say": "Imagine stretching a wafer to the size of a football field. The whole field would be level to within a few sheets of paper."
+        },
+        {
+          "say": "Why does that matter to you? Every chip in your phone is printed on a surface like this. If the surface is bumpy, the chips come out wrong."
+        },
+        {
+          "say": "So let's follow the crystal log, step by step, until it becomes a mirror."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Six steps from log to mirror",
+      "figure": [
+        "out/figs/day15_journey_0.png",
+        "out/figs/day15_journey_1.png",
+        "out/figs/day15_journey_2.png",
+        "out/figs/day15_journey_3.png"
+      ],
+      "caption": "Cut, flatten, heal, shine, check",
+      "chapter": "The journey",
+      "beats": [
+        {
+          "say": "Here's the whole journey at a glance. First, we slice the log into thin discs.",
+          "step": 0,
+          "point": "s1",
+          "define": {
+            "term": "Wafer",
+            "meaning": "a thin, round slice of crystal"
+          }
+        },
+        {
+          "say": "Then we round off their sharp edges.",
+          "point": "s2"
+        },
+        {
+          "say": "Next, we flatten both faces, and gently remove the damage the saw left behind.",
+          "step": 1,
+          "point": "s3",
+          "flow": [
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "say": "Then we polish the front until it shines, clean it, and check every single wafer.",
+          "step": 2,
+          "point": "s5",
+          "flow": [
+            "s5",
+            "s6"
+          ]
+        },
+        {
+          "say": "A rough, scratched slice goes in. A mirror smooth wafer comes out.",
+          "step": 3,
+          "point": "rough",
+          "spot": 170,
+          "flow": [
+            "rough",
+            "mirror"
+          ]
+        },
+        {
+          "say": "Let's take each step in turn.",
+          "point": "mirror",
+          "spot": 170
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 1: the wire saw",
+      "figure": [
+        "out/figs/day15_saw_0.png",
+        "out/figs/day15_saw_1.png",
+        "out/figs/day15_saw_2.png",
+        "out/figs/day15_saw_3.png"
+      ],
+      "caption": "A multi-wire saw cuts hundreds of wafers at once",
+      "chapter": "Slicing",
+      "beats": [
+        {
+          "say": "How do you slice something as hard as silicon? Not with a knife. With a wire.",
+          "step": 0,
+          "point": "web",
+          "spot": 260
+        },
+        {
+          "say": "One very long, thin steel wire is wound round and round two grooved rollers, hundreds of times.",
+          "point": "rollerL",
+          "circle": "rollerL",
+          "r": 90
+        },
+        {
+          "say": "That makes a flat web of parallel wires, each one about as thin as two hairs. The wire races along at high speed.",
+          "point": "web",
+          "spot": 260,
+          "flow": [
+            "w_l",
+            "w_r"
+          ],
+          "define": {
+            "term": "Multi-wire saw",
+            "meaning": "one long wire looped into many cutting lines"
+          }
+        },
+        {
+          "say": "Now the crystal block is pressed slowly down into the moving web.",
+          "step": 1,
+          "point": "ingot",
+          "spot": 230
+        },
+        {
+          "say": "A liquid full of hard grit coats the wires. The grit does the cutting, grinding a thin path through the silicon.",
+          "point": "slurry",
+          "zoom": 1.6,
+          "zoom_on": "slurry",
+          "define": {
+            "term": "Slurry",
+            "meaning": "a liquid with tiny hard grains mixed in"
+          }
+        },
+        {
+          "say": "Some newer saws stick tiny diamonds onto the wire itself.",
+          "zoom": 1,
+          "point": "ingot",
+          "flow": [
+            "w_l",
+            "w_r"
+          ]
+        },
+        {
+          "say": "After many hours, every wire has cut all the way through. Hundreds of wafers, in a single cut.",
+          "step": 2,
+          "point": "result",
+          "spot": 230
+        },
+        {
+          "say": "It's just like an egg slicer, with lots of wires cutting at the same time.",
+          "step": 3,
+          "point": "egg"
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Sawdust costs money",
+      "points": [
+        "Each wire eats a gap",
+        "Gap becomes sawdust",
+        "A quarter or more lost"
+      ],
+      "figure": [
+        "out/figs/day15_kerf_0.png",
+        "out/figs/day15_kerf_1.png"
+      ],
+      "chapter": "Kerf loss",
+      "beats": [
+        {
+          "say": "There's a catch. Think of sawing wood. Every cut leaves a pile of sawdust.",
+          "step": 0,
+          "show": 1,
+          "point": "slices",
+          "spot": 260
+        },
+        {
+          "say": "The same happens here. Each wire grinds away a thin gap of silicon. That gap is called the kerf.",
+          "show": 2,
+          "point": "gap",
+          "zoom": 1.6,
+          "zoom_on": "gap",
+          "define": {
+            "term": "Kerf",
+            "meaning": "the material a saw turns into dust"
+          }
+        },
+        {
+          "say": "And that silicon took days of work and lots of energy to make.",
+          "zoom": 1,
+          "point": "slices",
+          "spot": 260
+        },
+        {
+          "say": "Add the sawing, grinding and polishing together, and a quarter or more of the crystal never becomes a wafer.",
+          "step": 1,
+          "show": 3,
+          "point": "lost",
+          "circle": "lost",
+          "r": 80
+        },
+        {
+          "say": "That's why engineers keep making the wires thinner, and recycle what they can.",
+          "point": "bar",
+          "spot": 230
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why is one wire wound round so many times?",
+      "options": [
+        "To cut hundreds of wafers at once",
+        "To make the wafers thicker",
+        "To keep the silicon cold"
+      ],
+      "answer": 0,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. Why is one long wire wound round so many times? To cut hundreds of wafers at once, to make the wafers thicker, or to keep the silicon cold? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "To cut hundreds of wafers at once. Each loop of wire is one cut, all happening together.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 2: rounding the edge",
+      "figure": [
+        "out/figs/day15_edge_0.png",
+        "out/figs/day15_edge_1.png",
+        "out/figs/day15_edge_2.png"
+      ],
+      "caption": "A rounded edge doesn't chip",
+      "chapter": "Edge rounding",
+      "beats": [
+        {
+          "say": "Fresh from the saw, each wafer has a sharp, square edge. Look closely at that corner.",
+          "step": 0,
+          "point": "sharp",
+          "zoom": 1.6,
+          "zoom_on": "sharp"
+        },
+        {
+          "say": "Sharp corners chip easily, like the edge of a glass plate. A tiny chip can start a crack that splits the whole wafer.",
+          "point": "sharp",
+          "circle": "sharp",
+          "r": 70
+        },
+        {
+          "say": "So a spinning grinding wheel, with a curved groove cut into it, runs all the way round the edge.",
+          "step": 1,
+          "zoom": 1,
+          "point": "groove",
+          "flow": [
+            "wheel",
+            "groove"
+          ]
+        },
+        {
+          "say": "The edge comes out smooth and rounded. It's like a glazier smoothing the edge of a glass tabletop, so nobody gets hurt.",
+          "step": 2,
+          "point": "round",
+          "spot": 200,
+          "define": {
+            "term": "Edge grinding",
+            "meaning": "shaping a wafer's rim so it won't chip"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "So far: slice the log, then round every edge.",
+      "chapter": "So far",
+      "say": "So far: a wire saw slices the crystal log into hundreds of thin discs, and a grinding wheel rounds off every sharp edge. But the faces are still rough, like sawn wood. Next, we make them flat."
+    },
+    {
+      "kind": "figure",
+      "head": "Step 3: lapping",
+      "figure": [
+        "out/figs/day15_lap_0.png",
+        "out/figs/day15_lap_1.png",
+        "out/figs/day15_lap_2.png"
+      ],
+      "caption": "Two plates grind both faces flat and parallel",
+      "chapter": "Lapping",
+      "beats": [
+        {
+          "say": "The saw leaves fine grooves on both faces, and the wafer may be a tiny bit thicker at one side.",
+          "step": 0,
+          "point": "wafers",
+          "spot": 220
+        },
+        {
+          "say": "So the wafers are laid on a heavy, flat metal plate.",
+          "point": "bottom"
+        },
+        {
+          "say": "A second plate comes down on top, like a sandwich. Both plates turn, with gritty slurry in between.",
+          "step": 1,
+          "point": "sandwich",
+          "spot": 230,
+          "flow": [
+            "in",
+            "sandwich",
+            "out"
+          ],
+          "define": {
+            "term": "Lapping",
+            "meaning": "grinding flat between two turning plates with grit"
+          }
+        },
+        {
+          "say": "Think of sanding a piece of wood, on both sides at once.",
+          "point": "press"
+        },
+        {
+          "say": "Look at the surface before. Hills and valleys from the saw.",
+          "step": 2,
+          "point": "before",
+          "zoom": 1.5,
+          "zoom_on": "before"
+        },
+        {
+          "say": "And after. Flat, even, with both faces parallel. For the biggest wafers, factories often use fine grinding wheels for this step instead.",
+          "point": "after",
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 4: etching off the damage",
+      "figure": [
+        "out/figs/day15_etch_0.png",
+        "out/figs/day15_etch_1.png",
+        "out/figs/day15_etch_2.png"
+      ],
+      "caption": "A chemical bath removes the cracked skin",
+      "chapter": "Etching",
+      "beats": [
+        {
+          "say": "Here's something you can't see. All that sawing and grinding leaves a thin damaged skin on each face.",
+          "step": 0,
+          "point": "damage",
+          "spot": 200
+        },
+        {
+          "say": "Inside it are tiny hidden cracks. Left there, they would cause trouble later.",
+          "point": "damage",
+          "zoom": 1.6,
+          "zoom_on": "damage",
+          "define": {
+            "term": "Saw damage",
+            "meaning": "a thin skin of broken crystal near the surface"
+          }
+        },
+        {
+          "say": "So the wafers are dipped into a chemical bath, an acid or alkaline liquid.",
+          "step": 1,
+          "zoom": 1,
+          "point": "bath2",
+          "spot": 230,
+          "flow": [
+            "bath",
+            "bath2"
+          ],
+          "define": {
+            "term": "Etching",
+            "meaning": "dissolving away a surface with chemicals"
+          }
+        },
+        {
+          "say": "The chemicals eat away the damaged skin, evenly, from every side.",
+          "point": "bulk",
+          "spot": 220
+        },
+        {
+          "say": "What's left is healthy, perfect crystal. It's like peeling a bruised apple, to reach the good fruit inside.",
+          "step": 2,
+          "point": "clean",
+          "spot": 220
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 5: polishing to a mirror",
+      "figure": [
+        "out/figs/day15_polish_0.png",
+        "out/figs/day15_polish_1.png",
+        "out/figs/day15_polish_2.png",
+        "out/figs/day15_polish_3.png"
+      ],
+      "caption": "Chemical mechanical polishing (CMP)",
+      "chapter": "Polishing",
+      "beats": [
+        {
+          "say": "So far, our wafers are sliced, rounded, flat and healed. Now for the shine. Picture polishing a silver spoon, with polish paste and a soft cloth.",
+          "step": 0,
+          "point": "pad",
+          "spot": 240
+        },
+        {
+          "say": "The machine works the same way. A soft pad sits on a big spinning table.",
+          "point": "pad",
+          "spot": 240
+        },
+        {
+          "say": "A holder presses the wafer, face down, gently onto the pad, and spins it too.",
+          "step": 1,
+          "point": "head",
+          "circle": "head",
+          "r": 90
+        },
+        {
+          "say": "Then a milky liquid drips onto the pad. It's full of tiny glass-like grains, much smaller than a speck of dust.",
+          "step": 2,
+          "point": "nozzle",
+          "flow": [
+            "nozzle",
+            "drop",
+            "under"
+          ]
+        },
+        {
+          "say": "The liquid's chemistry softens the very top layer of silicon. The grains wipe it away, a little at a time. That's why it's called chemical mechanical polishing.",
+          "point": "under",
+          "zoom": 1.5,
+          "zoom_on": "under",
+          "define": {
+            "term": "CMP",
+            "meaning": "chemicals soften, tiny grains wipe away"
+          }
+        },
+        {
+          "say": "Before, the surface still had fine bumps.",
+          "step": 3,
+          "zoom": 1,
+          "point": "before",
+          "spot": 170
+        },
+        {
+          "say": "After, it's a perfect mirror, with bumps only about an atom tall.",
+          "point": "mirror",
+          "spot": 170,
+          "circle": "mirror",
+          "r": 80
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Why so flat?",
+      "chapter": "Why flatness matters",
+      "left": {
+        "title": "Bumpy wafer",
+        "points": [
+          "Light focuses unevenly",
+          "Patterns come out blurry",
+          "Many chips fail"
+        ]
+      },
+      "right": {
+        "title": "Mirror-flat wafer",
+        "points": [
+          "Sharp focus everywhere",
+          "Tiny patterns print cleanly",
+          "More working chips"
+        ]
+      },
+      "beats": [
+        {
+          "say": "Why go to all this trouble? Imagine a projector, shining a film onto a wrinkled bedsheet. Parts of the picture go blurry."
+        },
+        {
+          "say": "Chips are printed with light, in a similar way. And the zone of sharp focus is incredibly thin."
+        },
+        {
+          "say": "On a mirror flat wafer, the whole pattern stays sharp. Tiny lines print cleanly, and more chips work.",
+          "right": true
+        },
+        {
+          "say": "That's why the whole wafer's thickness can't vary by more than about a thousandth of a millimetre."
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "In polishing, what does the slurry do?",
+      "options": [
+        "Adds new silicon atoms",
+        "Softens the surface, then wipes it",
+        "Cools the saw wire"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. In polishing, what does the slurry do? Add new silicon atoms, soften the surface and wipe it away, or cool the saw wire? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "It softens the surface, then wipes it away. Chemistry and tiny grains, working together.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Step 6: clean, check, ship",
+      "figure": [
+        "out/figs/day15_ship_0.png",
+        "out/figs/day15_ship_1.png",
+        "out/figs/day15_ship_2.png"
+      ],
+      "caption": "Every wafer is inspected before it leaves",
+      "chapter": "Clean and inspect",
+      "beats": [
+        {
+          "say": "A single speck of dust on a wafer can ruin a chip. So the wafers are washed in a row of chemical baths.",
+          "step": 0,
+          "point": "clean",
+          "spot": 230,
+          "flow": [
+            "t1",
+            "clean",
+            "t3"
+          ]
+        },
+        {
+          "say": "They're rinsed in ultra pure water, cleaner than any drinking water, and then dried.",
+          "point": "t3",
+          "define": {
+            "term": "Ultrapure water",
+            "meaning": "water with almost nothing else in it"
+          }
+        },
+        {
+          "say": "Next, every wafer is checked. A laser sweeps across the surface. Any speck of dust scatters the light, and a sensor catches it.",
+          "step": 1,
+          "point": "laser",
+          "zoom": 1.5,
+          "zoom_on": "laser"
+        },
+        {
+          "say": "Machines also measure its thickness and flatness, all over.",
+          "zoom": 1,
+          "point": "laser",
+          "spot": 200
+        },
+        {
+          "say": "Wafers that pass go into sealed boxes, usually twenty five at a time, and travel to the chip factory.",
+          "step": 2,
+          "point": "box",
+          "flow": [
+            "laser",
+            "box"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "Wire saw slices the log",
+        "Lap and etch: flat, healed",
+        "Polish to a one-atom mirror"
+      ],
+      "say": "Let's recap. One: a wire saw slices the crystal log into hundreds of thin wafers, like an egg slicer. Two: grinding wheels round the edges, lapping makes the faces flat, and a chemical bath removes the hidden damage. Three: chemical mechanical polishing turns the front into a mirror, with bumps only about an atom tall. Then every wafer is cleaned, checked and packed."
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 5: Wafer sizes, why 300 mm matters",
+      "chapter": "Coming up",
+      "say": "Wafers have grown from the size of a coin to the size of a dinner plate. Why do factories want them bigger? And why did the jump to four hundred and fifty millimetres never happen? Tomorrow, in episode five, we'll find out. If this helped, subscribe and share it with a friend. See you tomorrow, on Atoms to Chips."
+    }
+  ]
+}
