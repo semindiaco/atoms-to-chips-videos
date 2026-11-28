@@ -1,0 +1,615 @@
+{
+  "day": 16,
+  "slug": "day16_wafer_sizes",
+  "label": "SAND TO WAFER · EP 5",
+  "series": "From Sand to Wafer",
+  "thumb_tag": "SAND TO WAFER · EP 5",
+  "thumb_line1": "WHY 300 MM",
+  "thumb_line2": "MATTERS",
+  "yt_title": "Wafer Sizes: Why 300 mm Matters | From Sand to Wafer Ep 5",
+  "yt_description": "Silicon wafers grew from the size of a coin to the size of a dinner plate. Why do chip factories want them bigger, why do most of today's advanced chips come from 300 mm wafers, and why did the jump to 450 mm stall? Pizza maths, edge waste, cost per chip, robots that carry wafers, and what it means for India's first big fab. Simple analogies, no heavy maths.\n\nIn this lesson:\n\nNext video: From Sand to Wafer Ep 6, epitaxial and SOI wafers.\n\nA new video every morning on Atoms to Chips. No prior knowledge needed.\n\n#SiliconWafer #300mm #WaferSize #Semiconductors #ChipMaking #SemiconductorIndia #AtomsToChips",
+  "yt_tags": [
+    "wafer size",
+    "300mm wafer",
+    "450mm wafer",
+    "200mm wafer",
+    "silicon wafer",
+    "why 300mm",
+    "cost per chip",
+    "die per wafer",
+    "FOUP",
+    "semiconductor manufacturing",
+    "how chips are made",
+    "india semiconductor",
+    "dholera fab",
+    "atoms to chips"
+  ],
+  "slides": [
+    {
+      "kind": "title",
+      "head": "Wafer Sizes: Why 300 mm Matters",
+      "sub": "Bigger plates, cheaper chips",
+      "chapter": "Intro",
+      "say": "You're ordering pizza for a party. Do you buy lots of small pizzas, or a few big ones? Most people pick the big ones. You get more food for your money. Chip factories think the same way about wafers. Last time, we polished wafers into perfect mirrors. Today, we ask a simple question. Why are wafers the size they are? Welcome to episode five of From Sand to Wafer, on Atoms to Chips."
+    },
+    {
+      "kind": "stat",
+      "stat": "2.25x",
+      "caption": "The room on a 300 mm wafer, compared with 200 mm",
+      "chapter": "A surprising number",
+      "beats": [
+        {
+          "say": "Here's a surprise. A three hundred millimetre wafer is only one and a half times wider than a two hundred millimetre one."
+        },
+        {
+          "say": "But it has two and a quarter times the room for chips."
+        },
+        {
+          "say": "Why does that matter to you? It's a big reason the chips in your phone, laptop and car don't cost a fortune."
+        },
+        {
+          "say": "Let's see how wafers got this big, and why the growing stopped."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Wafers keep growing",
+      "figure": [
+        "out/figs/day16_history_0.png",
+        "out/figs/day16_history_1.png",
+        "out/figs/day16_history_2.png",
+        "out/figs/day16_history_3.png"
+      ],
+      "caption": "Every jump meant more chips per wafer",
+      "chapter": "A short history",
+      "beats": [
+        {
+          "say": "In the nineteen sixties, the first wafers were tiny. About one inch across, the size of a coin.",
+          "step": 0,
+          "point": "h0",
+          "spot": 110,
+          "zoom": 1.7,
+          "zoom_on": "h1",
+          "define": {
+            "term": "Diameter",
+            "meaning": "the distance straight across a circle"
+          }
+        },
+        {
+          "say": "Soon they grew to two inches.",
+          "point": "h1",
+          "spot": 110
+        },
+        {
+          "say": "In the seventies came one hundred millimetres, and in the eighties, one hundred and fifty.",
+          "step": 1,
+          "zoom": 1,
+          "point": "h3",
+          "flow": [
+            "h1",
+            "h2",
+            "h3"
+          ]
+        },
+        {
+          "say": "Around nineteen ninety, factories moved to two hundred millimetres.",
+          "step": 2,
+          "point": "h4",
+          "spot": 170
+        },
+        {
+          "say": "And from around two thousand and one, three hundred millimetres. About the size of a dinner plate. That's still the main size today.",
+          "step": 3,
+          "point": "h5",
+          "spot": 220,
+          "circle": "h5",
+          "r": 150
+        },
+        {
+          "say": "Each jump took about ten years, and each one let factories make many more chips at once.",
+          "point": "h5",
+          "spot": 220,
+          "flow": [
+            "h0",
+            "h2",
+            "h4",
+            "h5"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Pizza maths",
+      "figure": [
+        "out/figs/day16_area_0.png",
+        "out/figs/day16_area_1.png",
+        "out/figs/day16_area_2.png",
+        "out/figs/day16_area_3.png"
+      ],
+      "caption": "Area grows faster than width",
+      "chapter": "Why bigger wins",
+      "beats": [
+        {
+          "say": "So why does a little extra width give so much more room? Look at this two hundred millimetre wafer. Twenty centimetres across.",
+          "step": 0,
+          "point": "small",
+          "spot": 170
+        },
+        {
+          "say": "Now the three hundred millimetre wafer. Thirty centimetres. One and a half times wider.",
+          "step": 1,
+          "point": "big",
+          "spot": 230
+        },
+        {
+          "say": "Here's the trick. A wafer grows in two directions at once, wider and taller. Look at these square tiles.",
+          "step": 2,
+          "point": "tiles",
+          "spot": 220,
+          "define": {
+            "term": "Area",
+            "meaning": "how much flat space a shape covers"
+          }
+        },
+        {
+          "say": "Two tiles wide gives four tiles. Three tiles wide gives nine. That's more than double.",
+          "point": "tiles",
+          "zoom": 1.6,
+          "zoom_on": "tiles"
+        },
+        {
+          "say": "So one and a half times wider means two and a quarter times the area. Just like a big pizza has far more slices than a small one.",
+          "step": 3,
+          "zoom": 1,
+          "point": "rule",
+          "spot": 200
+        },
+        {
+          "say": "Try it yourself with a ruler. Double the width of a square, and you get four times the space inside.",
+          "point": "tiles",
+          "spot": 220
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "Less waste at the edge",
+      "points": [
+        "Square chips, round wafer",
+        "Edge pieces are wasted",
+        "Bigger wafer, less waste"
+      ],
+      "figure": [
+        "out/figs/day16_edge_0.png",
+        "out/figs/day16_edge_1.png",
+        "out/figs/day16_edge_2.png"
+      ],
+      "chapter": "Edge waste",
+      "beats": [
+        {
+          "say": "There's a second win. Chips are square, but wafers are round. Think of cutting square crackers from round dough.",
+          "step": 0,
+          "show": 1,
+          "point": "waferA",
+          "spot": 200
+        },
+        {
+          "say": "Around the edge, some squares get cut off. Those red pieces can't become working chips.",
+          "show": 2,
+          "point": "edgeA",
+          "zoom": 1.6,
+          "zoom_on": "edgeA",
+          "define": {
+            "term": "Die",
+            "meaning": "one chip, cut from the wafer"
+          }
+        },
+        {
+          "say": "Now take the same big chips, on a three hundred millimetre wafer.",
+          "step": 1,
+          "zoom": 1,
+          "point": "waferB",
+          "spot": 260
+        },
+        {
+          "say": "The small wafer fits fifty eight whole chips. The big one fits one hundred and forty eight. More than two and a half times as many.",
+          "step": 2,
+          "show": 3,
+          "point": "countB",
+          "circle": "countB",
+          "r": 90
+        },
+        {
+          "say": "That's even better than the area alone, because a smaller share of the big wafer is wasted at the edge.",
+          "point": "waferB",
+          "spot": 260
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "A wafer gets 1.5 times wider. How much more area?",
+      "options": [
+        "1.5 times",
+        "2.25 times",
+        "3 times"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 1",
+      "beats": [
+        {
+          "say": "Quick check. A wafer gets one and a half times wider. How much more area does it have? One and a half times, two and a quarter times, or three times? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "Two and a quarter times. It grows in both directions, so one and a half times one and a half.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Cheaper chips",
+      "figure": [
+        "out/figs/day16_cost_0.png",
+        "out/figs/day16_cost_1.png",
+        "out/figs/day16_cost_2.png"
+      ],
+      "caption": "Each step's cost is shared by more chips",
+      "chapter": "Cost per chip",
+      "beats": [
+        {
+          "say": "Now, money. Making chips takes hundreds of steps. And in most steps, a machine treats one whole wafer in one go.",
+          "step": 0,
+          "point": "tool",
+          "spot": 230,
+          "flow": [
+            "in",
+            "tool",
+            "out"
+          ]
+        },
+        {
+          "say": "Think of a washing machine. One load costs about the same, whether it holds three shirts or ten.",
+          "point": "tool",
+          "spot": 230,
+          "flow": [
+            "in",
+            "tool",
+            "out"
+          ]
+        },
+        {
+          "say": "A bigger wafer is a fuller load. Each pass through the machine now makes far more chips.",
+          "step": 1,
+          "point": "chips300",
+          "spot": 200
+        },
+        {
+          "say": "The chemicals, the electricity and the hours in the machine are shared out across all those chips. So each chip carries a smaller slice of the bill.",
+          "point": "chips",
+          "spot": 260
+        },
+        {
+          "say": "The machines do cost more, and run a little slower. But the cost of each chip still falls.",
+          "step": 2,
+          "point": "cost",
+          "spot": 230
+        },
+        {
+          "say": "When the industry moved to three hundred millimetres, the saving was often put at around thirty percent per chip.",
+          "point": "cost300",
+          "circle": "cost300",
+          "r": 90
+        }
+      ]
+    },
+    {
+      "kind": "quote",
+      "quote": "So far: wider wafers hold far more chips, and each chip costs less.",
+      "chapter": "So far",
+      "say": "So far: wafers grew from coin size to dinner plate size. A little extra width gives a lot more area, less waste at the edge, and cheaper chips. So why not just keep making them bigger?"
+    },
+    {
+      "kind": "figure",
+      "head": "Bigger is harder",
+      "figure": [
+        "out/figs/day16_hard_0.png",
+        "out/figs/day16_hard_1.png",
+        "out/figs/day16_hard_2.png",
+        "out/figs/day16_hard_3.png"
+      ],
+      "caption": "Every size jump is a huge engineering job",
+      "chapter": "Why it's hard",
+      "beats": [
+        {
+          "say": "Because bigger is hard. First, weight. A two hundred millimetre wafer weighs about fifty grams. A three hundred millimetre one, about one hundred and thirty.",
+          "step": 0,
+          "point": "weight",
+          "spot": 200
+        },
+        {
+          "say": "Second, a wide, thin sheet sags, like a big floppy pizza you hold by the edges.",
+          "step": 1,
+          "point": "sag",
+          "zoom": 1.5,
+          "zoom_on": "sag"
+        },
+        {
+          "say": "So three hundred millimetre wafers are made a little thicker, to keep them stiff.",
+          "point": "sag",
+          "spot": 200
+        },
+        {
+          "say": "Third, the crystal they're sliced from must be much bigger too. It can weigh hundreds of kilograms, as much as a few people.",
+          "step": 2,
+          "zoom": 1,
+          "point": "ingot",
+          "spot": 220,
+          "define": {
+            "term": "Ingot",
+            "meaning": "the big crystal log wafers are sliced from"
+          }
+        },
+        {
+          "say": "And fourth, the biggest cost of all. Every machine in the factory must be designed again for the new size.",
+          "step": 3,
+          "point": "machines",
+          "spot": 200
+        },
+        {
+          "say": "That's why moving to a new size is a decision for a whole industry, not just one company. Everyone has to move together.",
+          "point": "machines",
+          "spot": 200,
+          "circle": "machines",
+          "r": 110
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "Robots carry the wafers",
+      "figure": [
+        "out/figs/day16_foup_0.png",
+        "out/figs/day16_foup_1.png",
+        "out/figs/day16_foup_2.png"
+      ],
+      "caption": "300 mm factories are highly automated",
+      "chapter": "Moving wafers",
+      "beats": [
+        {
+          "say": "A box of twenty five big wafers is too heavy and too precious for people to carry all day.",
+          "step": 0,
+          "point": "foup",
+          "spot": 220
+        },
+        {
+          "say": "So the wafers ride in a sealed plastic box, like a lunchbox that keeps out every speck of dust.",
+          "point": "foup",
+          "zoom": 1.5,
+          "zoom_on": "foup",
+          "define": {
+            "term": "FOUP",
+            "meaning": "a sealed box that carries wafers around a factory"
+          }
+        },
+        {
+          "say": "Inside the box, every wafer sits in its own slot, never touching its neighbours. A full box weighs about as much as a big watermelon.",
+          "point": "foup",
+          "spot": 220
+        },
+        {
+          "say": "In three hundred millimetre factories, little robot carts carry these boxes along tracks on the ceiling.",
+          "step": 1,
+          "zoom": 1,
+          "point": "cart",
+          "flow": [
+            "r0",
+            "r1",
+            "r2"
+          ]
+        },
+        {
+          "say": "They lower each box right onto the machine that needs it. Print, etch, clean, and on to the next.",
+          "step": 2,
+          "point": "drop",
+          "spot": 200,
+          "flow": [
+            "r1",
+            "drop",
+            "t1"
+          ]
+        },
+        {
+          "say": "Like a busy airport baggage system, running day and night.",
+          "point": "t1",
+          "spot": 230,
+          "flow": [
+            "r0",
+            "r1",
+            "r2"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "compare",
+      "head": "Is 200 mm dead?",
+      "chapter": "200 mm still matters",
+      "left": {
+        "title": "200 mm",
+        "points": [
+          "Sensors and power chips",
+          "Older, paid-off machines",
+          "Still busy today"
+        ]
+      },
+      "right": {
+        "title": "300 mm",
+        "points": [
+          "Processors and memory",
+          "Newest, tiniest features",
+          "Most chips by area"
+        ]
+      },
+      "beats": [
+        {
+          "say": "So is two hundred millimetres finished? Not at all. Think of an old, reliable car that's fully paid for."
+        },
+        {
+          "say": "Many factories still run two hundred millimetre lines. They make simpler chips, like sensors and power chips for cars and chargers."
+        },
+        {
+          "say": "Three hundred millimetre factories make the most advanced chips. Phone and laptop processors, and memory.",
+          "right": true
+        },
+        {
+          "say": "Both sizes are busy, each doing the job it's best at."
+        }
+      ]
+    },
+    {
+      "kind": "figure",
+      "head": "What happened to 450 mm?",
+      "figure": [
+        "out/figs/day16_450_0.png",
+        "out/figs/day16_450_1.png",
+        "out/figs/day16_450_2.png",
+        "out/figs/day16_450_3.png"
+      ],
+      "caption": "A bigger wafer that never arrived",
+      "chapter": "The 450 mm story",
+      "beats": [
+        {
+          "say": "In the twenty tens, the industry planned the next jump, to four hundred and fifty millimetres. Look how much bigger it is.",
+          "step": 0,
+          "point": "w450",
+          "spot": 260
+        },
+        {
+          "say": "Once again, two and a quarter times the area. Big companies even formed a joint research group in New York to test it.",
+          "step": 1,
+          "point": "w450",
+          "zoom": 1.4,
+          "zoom_on": "w450"
+        },
+        {
+          "say": "But hundreds of different machines would need to be designed from scratch.",
+          "step": 2,
+          "zoom": 1,
+          "point": "cost",
+          "spot": 230
+        },
+        {
+          "say": "And only a few giant chipmakers could ever afford to buy them. Machine makers couldn't get their money back.",
+          "point": "cost",
+          "spot": 230
+        },
+        {
+          "say": "So around twenty sixteen, the effort was put on hold. Three hundred millimetres is still the biggest size in mass production.",
+          "step": 3,
+          "point": "hold",
+          "circle": "hold",
+          "r": 90
+        }
+      ]
+    },
+    {
+      "kind": "quiz",
+      "question": "Why did 450 mm wafers stall?",
+      "options": [
+        "Silicon ran out",
+        "New machines cost too much",
+        "Chips got too big"
+      ],
+      "answer": 1,
+      "chapter": "Quick check 2",
+      "beats": [
+        {
+          "say": "One more. Why did four hundred and fifty millimetre wafers stall? Silicon ran out, new machines cost too much, or chips got too big? Pause and think."
+        },
+        {
+          "say": "Three, two, one."
+        },
+        {
+          "say": "New machines cost too much. Redesigning a whole factory's worth of tools, for very few buyers, didn't add up.",
+          "reveal": true
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "head": "300 mm comes to India",
+      "points": [
+        "Tata's fab at Dholera",
+        "Built for 300 mm wafers",
+        "Up to 50,000 a month"
+      ],
+      "figure": [
+        "out/figs/day16_india_0.png",
+        "out/figs/day16_india_1.png",
+        "out/figs/day16_india_2.png"
+      ],
+      "chapter": "India",
+      "beats": [
+        {
+          "say": "What about India? Tata Electronics is building the country's first big commercial chip factory, at Dholera in Gujarat.",
+          "step": 0,
+          "show": 1,
+          "point": "fab",
+          "spot": 260
+        },
+        {
+          "say": "It's designed for three hundred millimetre wafers, the same size used by the world's leading factories.",
+          "step": 1,
+          "show": 2,
+          "point": "wafer",
+          "flow": [
+            "wafer",
+            "door",
+            "fab"
+          ]
+        },
+        {
+          "say": "As of twenty twenty six, the plan is up to fifty thousand wafers a month when it's fully running.",
+          "step": 2,
+          "show": 3,
+          "point": "plan",
+          "spot": 200
+        },
+        {
+          "say": "So the next time you hear about a chip factory, ask one question. What size wafers? Today, the answer that matters most is three hundred millimetres.",
+          "point": "wafer",
+          "spot": 200,
+          "flow": [
+            "wafer",
+            "door",
+            "fab"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "points",
+      "head": "Today's recap",
+      "chapter": "Recap",
+      "points": [
+        "1.5x wider: 2.25x area",
+        "Less edge waste, cheaper chips",
+        "450 mm stalled on cost"
+      ],
+      "say": "Let's recap. One: wafers grew from coin size to three hundred millimetres. One and a half times wider gives two and a quarter times the area, like a bigger pizza. Two: bigger wafers waste less at the edge, and each machine step is shared by more chips, so every chip costs less. Three: the jump to four hundred and fifty millimetres stalled, because redesigning every machine cost too much. So three hundred millimetres is still king."
+    },
+    {
+      "kind": "outro",
+      "head": "Tomorrow · From Sand to Wafer",
+      "sub": "Ep 6: Epitaxial and SOI wafers",
+      "chapter": "Coming up",
+      "say": "Some wafers get a special upgrade before any chips are built on them. A fresh, perfect skin of crystal, or a hidden layer of glass inside. Tomorrow, in episode six, we'll meet epitaxial and SOI wafers. If this helped, subscribe and share it with a friend. See you tomorrow, on Atoms to Chips."
+    }
+  ]
+}
