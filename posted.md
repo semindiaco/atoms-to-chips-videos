@@ -13,3 +13,4 @@
 2026-11-25 13:00 | day13 | From Sand to Pure Silicon | From Sand to Wafer Ep 2 | Atoms to Chips | metricool 441192820 (approved by owner, scheduled 13:00; was draft 441133301)
 2026-11-26 13:00 | day14 | Growing a Single Crystal: Czochralski | From Sand to Wafer Ep 3 | metricool 442625282 (approved by owner, scheduled 13:00; was draft 442536610)
 2026-11-27 13:00 | day15 | Slicing & Polishing Silicon Wafers | From Sand to Wafer Ep 4 | metricool 443895865 (approved by owner, scheduled 13:00; was draft 443823076)
+2026-11-28 13:00 | day16 | Wafer Sizes: Why 300 mm Matters | From Sand to Wafer Ep 5 | metricool 445056213 (draft, awaiting owner approval)
